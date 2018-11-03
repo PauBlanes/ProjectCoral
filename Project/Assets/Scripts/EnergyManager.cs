@@ -1,42 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnergyManager : MonoBehaviour {
 
     public GameObject energyPrefab;
-    public float xRange;
+    public float xRange; //màxima distancia des del centre de la camera per on pot apareixer
 
     public float averageSpawnTime;
-    public float spawnTimeRange;
+    public float spawnTimeRange; //per controlar si hi ha molta variabilitat de temps de spawn.
 
-    public List<GameObject> allEnergy;
-
-    public float speed;
-    public float mapYLimit;
+    private int energyCounter;
+    public Text energyText; 
 
     // Use this for initialization
     void Start () {
+        energyText.text = "Energy : " + energyCounter;
         StartCoroutine(WaitAndSpawn());
     }
 	
 	// Update is called once per frame
 	void Update () {
-        //Move Energy
-		foreach (GameObject e in allEnergy)
-        {
-            e.transform.position += (new Vector3(0, 1, 0) * speed * Time.deltaTime);
-        }
-
-        //Kill Energy if out of map limits
-        for (int i = 0; i < allEnergy.Count; i++)
-        {
-            if (allEnergy[i].transform.position.y - allEnergy[i].GetComponent<SpriteRenderer>().size.y / 2 > mapYLimit)
-            {
-                Destroy(allEnergy[i]);
-                allEnergy.RemoveAt(i);
-            }
-        }
+        
     }
 
     IEnumerator WaitAndSpawn()
@@ -50,10 +36,14 @@ public class EnergyManager : MonoBehaviour {
 
     public void SpawnEnergy()
     {
-        GameObject temp = Instantiate(energyPrefab, new Vector3(Random.Range(transform.position.x - xRange, transform.position.x + xRange),
+        Instantiate(energyPrefab, new Vector3(Random.Range(transform.position.x - xRange, transform.position.x + xRange),
             transform.position.y - Camera.main.orthographicSize - energyPrefab.GetComponent<SpriteRenderer>().size.y/2, 0),
             Quaternion.identity); //cuidao que aixo funciona pq el script el té la camera
+    }
 
-        allEnergy.Add(temp);
+    public void UpdateCounter ()
+    {
+        energyCounter++;
+        energyText.text = "Energy : " + energyCounter;
     }
 }
