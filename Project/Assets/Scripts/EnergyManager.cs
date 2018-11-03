@@ -44,6 +44,6 @@ public class EnergyManager : MonoBehaviour {
     public void UpdateCounter ()
     {
         energyCounter++;
-        energyText.text = "Energy : " + energyCounter;
+        energyText.text = "" + energyCounter;
     }
 }
