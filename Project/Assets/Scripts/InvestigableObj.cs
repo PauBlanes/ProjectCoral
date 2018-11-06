@@ -18,7 +18,6 @@ public class InvestigableObj : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        print(rB.iRobotSelected);
       if(rB.iRobotSelected)
         {
             rB.SpawnRobot(transform, Vector3.zero);

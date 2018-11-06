@@ -46,4 +46,9 @@ public class EnergyManager : MonoBehaviour {
         energyCounter++;
         energyText.text = "" + energyCounter;
     }
+
+    public int GetCount ()
+    {
+        return energyCounter;
+    }
 }
