@@ -8,8 +8,6 @@ public class RobotManager : MonoBehaviour {
     public GameObject[] possibleITargets; //targets for the investigation robot
     public bool iRobotSelected;
 
-    private bool robotSelected;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -22,18 +20,21 @@ public class RobotManager : MonoBehaviour {
 
     public void SelectRobot(GameObject robot)
     {
-        robot2Spawn = robot;
-        if (robot2Spawn.name == "InvestigationRobot")
+        if (GetComponent<EnergyManager>().GetCount() > robot.GetComponent<Robot>().cost) //si tens suficient diners
         {
-            iRobotSelected = true;
-        }
+            robot2Spawn = robot;
+            if (robot2Spawn.name == "InvestigationRobot")
+            {
+                iRobotSelected = true;
+            }
+        }        
     }
     public void SpawnRobot (Transform t, Vector3 o)
     {
         GameObject newRobot = Instantiate(robot2Spawn, Vector3.zero ,Quaternion.identity);
         if (robot2Spawn.name == "InvestigationRobot")
         {
-            newRobot.GetComponent<RobotInvest>().target = t;
+            newRobot.GetComponent<Robot>().target = t;
             iRobotSelected = false;
         }
 

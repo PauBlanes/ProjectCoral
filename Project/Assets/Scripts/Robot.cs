@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RobotInvest : MonoBehaviour {
+public class Robot : MonoBehaviour {
     
-    enum States { walking, investigating};
-
+    enum States { walking, working};
+    public enum RobotType {investigation, repair, clean, netCutter }
 
     public Transform target;
     public float speed;
 
-    public float waitTime;
+    public float workTime;
     private float waitCounter;
 
     States state = States.walking;
+
+    public RobotType rT;
+
+    public int cost;
 
 	// Use this for initialization
 	void Start () {
@@ -35,26 +39,29 @@ public class RobotInvest : MonoBehaviour {
             }
             else
             {
-                state = States.investigating;
-                waitCounter = waitTime;
+                state = States.working;
+                waitCounter = workTime;
             }
                 
         }
-        else if (state == States.investigating)
+        else if (state == States.working)
         {
+            //El temps que dura el treball
             if(waitCounter > 0)
-                waitCounter -= Time.deltaTime;
-            else
             {
-                //show info
+                waitCounter -= Time.deltaTime;
+                //Coses que fer mentre treballes
+            }
+            else //Acció que fer quan acabes
+            {
+                if(rT == RobotType.investigation)
+                {
+                    //show info
+                }
 
                 //destroy robot
                 Destroy(gameObject);
             }
-
-        }
-
-        
-        
+        }        
     }
 }
