@@ -1450,6 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  sprRenderer: {fileID: 1857233270}
 --- !u!1 &553561608
 GameObject:
   m_ObjectHideFlags: 0
