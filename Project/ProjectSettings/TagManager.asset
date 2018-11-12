@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ROBOT
   - FISH
+  - CORAL
+  - PLANTA
   layers:
   - Default
   - TransparentFX
