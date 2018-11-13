@@ -12,21 +12,23 @@ public class CameraMovement : MonoBehaviour {
 
     public int speed;
 
-    public SpriteRenderer sprRenderer;
+    private SpriteRenderer sprRendererBG;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        sprRendererBG = GameObject.FindGameObjectWithTag("BG").GetComponent<SpriteRenderer>();
 
         cam = GetComponent<Camera>();
-
+        
         camHeight = cam.orthographicSize * 2f;
         camWidth = camHeight * cam.aspect;
 
-        maxX = sprRenderer.size.x / 2 - camWidth / 2;
-        minX = -(sprRenderer.size.x / 2) + camWidth / 2;
+        maxX = sprRendererBG.size.x / 2 - camWidth / 2;
+        minX = -(sprRendererBG.size.x / 2) + camWidth / 2;
 
-        maxY = sprRenderer.size.y / 2 - camHeight / 2;
-        minY = -(sprRenderer.size.y / 2) + camHeight / 2;
+        maxY = sprRendererBG.size.y / 2 - camHeight / 2;
+        minY = -(sprRendererBG.size.y / 2) + camHeight / 2;
 
     }
 	
