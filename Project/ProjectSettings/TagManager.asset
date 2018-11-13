@@ -46,6 +46,30 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: CORAL
+    uniqueID: 3388635279
+    locked: 0
   - name: Energy
     uniqueID: 3417595071
+    locked: 0
+  - name: ROBOT
+    uniqueID: 2719750219
+    locked: 0
+  - name: THINGS
+    uniqueID: 154235505
+    locked: 0
+  - name: BLUE FILTER 1
+    uniqueID: 245019753
+    locked: 0
+  - name: FISH
+    uniqueID: 1725742059
+    locked: 0
+  - name: FISH BACKGROUND
+    uniqueID: 1383257839
+    locked: 0
+  - name: BACKGROUND
+    uniqueID: 1068907923
+    locked: 0
+  - name: BLUE FILTER 2
+    uniqueID: 3914015439
     locked: 0
