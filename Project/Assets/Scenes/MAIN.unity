@@ -217,7 +217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 28
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &47842738
 Animator:
@@ -285,8 +285,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: fec5600eeb0aeb040bf501e51339dbc1, type: 3}
+  m_SortingOrder: 14
+  m_Sprite: {fileID: 21300000, guid: 520ba165c4e7313499c48ba9bfcd1846, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -306,9 +306,8 @@ GameObject:
   m_Component:
   - component: {fileID: 100728923}
   - component: {fileID: 100728924}
-  - component: {fileID: 100728925}
   m_Layer: 0
-  m_Name: 09.Jasmine Polyp Purple
+  m_Name: 09.Jasmine Polyp Purple C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -325,7 +324,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 8
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &100728924
 SpriteRenderer:
@@ -373,24 +372,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &100728925
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 100728922}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03f7c56da8d881b46b0fcf79b0dd825d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &157468419
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +739,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 32
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &290432736
 Animator:
@@ -812,8 +793,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 1e7ec66528fde984bae423bd25e3ccbc, type: 3}
+  m_SortingOrder: 12
+  m_Sprite: {fileID: 21300000, guid: 2c170fc906163b842a47017e65d68cce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -833,9 +814,8 @@ GameObject:
   m_Component:
   - component: {fileID: 312547808}
   - component: {fileID: 312547809}
-  - component: {fileID: 312547810}
   m_Layer: 0
-  m_Name: 12.Soft Finger Coral Purple 2
+  m_Name: 12.Soft Finger Coral Purple 2 C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -852,7 +832,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 12
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &312547809
 SpriteRenderer:
@@ -900,24 +880,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &312547810
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 312547807}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b24437da729bf064280c97f9069bd7b1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &336873254
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,9 +889,8 @@ GameObject:
   m_Component:
   - component: {fileID: 336873255}
   - component: {fileID: 336873257}
-  - component: {fileID: 336873256}
   m_Layer: 0
-  m_Name: 13.Plate Coral Purple
+  m_Name: 13.Plate Coral Purple C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -946,26 +907,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 13
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &336873256
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 336873254}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d9ba810e411d244eb9a240265e2ed32, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &336873257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1370,9 +1313,8 @@ GameObject:
   m_Component:
   - component: {fileID: 485789179}
   - component: {fileID: 485789180}
-  - component: {fileID: 485789181}
   m_Layer: 0
-  m_Name: 10.Jasmine Polyp Blue
+  m_Name: 10.Jasmine Polyp Blue C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1389,7 +1331,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 9
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &485789180
 SpriteRenderer:
@@ -1425,7 +1367,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: c3f2108c3dbd7854d83acd6f497d4c09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1437,24 +1379,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &485789181
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 485789178}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7c2d463fe37e02b4d80d507eeefdfae4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &488058387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,7 +1680,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 36
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &563246657
 Animator:
@@ -1811,7 +1735,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 155cde718513abf4294650a4e9478b29, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef6db266edf8fbf47b77cfbacb3ad6e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1926,7 +1850,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 33
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &601759510
 Animator:
@@ -1994,8 +1918,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 047e63ec407efcf4789882c3f11a98cb, type: 3}
+  m_SortingOrder: 14
+  m_Sprite: {fileID: 21300000, guid: 7275bdbda2e312e49ae306112a5719e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2090,9 +2014,8 @@ GameObject:
   m_Component:
   - component: {fileID: 615953719}
   - component: {fileID: 615953720}
-  - component: {fileID: 615953721}
   m_Layer: 0
-  m_Name: 17.Acropora Coral Brown
+  m_Name: 17.Acropora Coral Brown C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2109,7 +2032,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 17
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &615953720
 SpriteRenderer:
@@ -2157,24 +2080,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &615953721
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 615953718}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3146806bd3c33044abdaebb83f54b220, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &636370165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,7 +2107,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.39999998}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 19
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &636370168
 SpriteRenderer:
@@ -2429,7 +2334,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 25
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &692666346
 Animator:
@@ -2497,8 +2402,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: 88577748b3df6e74f8d025a58752cc60, type: 3}
+  m_SortingOrder: 13
+  m_Sprite: {fileID: 21300000, guid: c37efcb927f593b4c8d8d064261ade5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2593,10 +2498,8 @@ GameObject:
   m_Component:
   - component: {fileID: 720805814}
   - component: {fileID: 720805817}
-  - component: {fileID: 720805816}
-  - component: {fileID: 720805815}
   m_Layer: 0
-  m_Name: 01.Acropora Coral, Blue
+  m_Name: 01.Acropora Coral, Blue C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2613,40 +2516,8 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &720805815
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 720805813}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db345c770a3b98c4da4c7be05e5abfcb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &720805816
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 720805813}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!212 &720805817
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3497,9 +3368,8 @@ GameObject:
   m_Component:
   - component: {fileID: 847917486}
   - component: {fileID: 847917487}
-  - component: {fileID: 847917488}
   m_Layer: 0
-  m_Name: 19.Acropora Coral Purpul
+  m_Name: 19.Acropora Coral Purpul C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3516,7 +3386,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 20
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &847917487
 SpriteRenderer:
@@ -3564,24 +3434,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &847917488
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 847917485}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8421e0bff58ec7442b8b82a376670526, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &851635657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,7 +3612,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.39999998}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 40
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &880367038
 Animator:
@@ -3814,8 +3666,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 75fbc789cc4607147a1dda50534cccd1, type: 3}
+  m_SortingOrder: 12
+  m_Sprite: {fileID: 21300000, guid: 97444db971ed2db4286fabfcd222b6ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3854,7 +3706,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 35
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &895185391
 Animator:
@@ -3908,8 +3760,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 35c69c4b90c7d4f4fb223b2b628ef492, type: 3}
+  m_SortingOrder: 12
+  m_Sprite: {fileID: 21300000, guid: 28a8fd44f49b72042a22ce3345b3ee44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3929,9 +3781,8 @@ GameObject:
   m_Component:
   - component: {fileID: 911243450}
   - component: {fileID: 911243451}
-  - component: {fileID: 911243452}
   m_Layer: 0
-  m_Name: 08.Jasmine Polyp Orange
+  m_Name: 08.Jasmine Polyp Orange C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3948,7 +3799,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 7
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &911243451
 SpriteRenderer:
@@ -3996,24 +3847,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &911243452
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 911243449}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c3324f9dc6106004385582ab12abed14, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &917931465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4118,7 +3951,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 23
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &937404803
 Animator:
@@ -4186,8 +4019,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: dcc6fa6319f69484f9d1161e8a3f45f2, type: 3}
+  m_SortingOrder: 14
+  m_Sprite: {fileID: 21300000, guid: cdd29a0016555284badb2d7d3bd92c9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4301,7 +4134,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 34
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1008718420
 Animator:
@@ -4355,8 +4188,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 837d019851965114d91833b6ccc1b47b, type: 3}
+  m_SortingOrder: 12
+  m_Sprite: {fileID: 21300000, guid: ad463f43e2787a3499f7ab16470337ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4669,7 +4502,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 30
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1035647487
 Animator:
@@ -4723,8 +4556,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: aca8947073481bf459a8d58c0be74711, type: 3}
+  m_SortingOrder: 12
+  m_Sprite: {fileID: 21300000, guid: abd90a1b05501a04797b99290b15975c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4839,7 +4672,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 26
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1051617253
 Animator:
@@ -4907,8 +4740,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 8b029e269bdc5a34abf45c48ceb7dccc, type: 3}
+  m_SortingOrder: 13
+  m_Sprite: {fileID: 21300000, guid: 334ab3185184ffb40b09e674447edc72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5051,10 +4884,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1110502426}
   - component: {fileID: 1110502427}
-  - component: {fileID: 1110502429}
-  - component: {fileID: 1110502428}
   m_Layer: 0
-  m_Name: "02.Ricordea Mushroom\uFF0C Purple"
+  m_Name: "02.Ricordea Mushroom\uFF0C Purple C"
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5071,7 +4902,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1110502427
 SpriteRenderer:
@@ -5107,7 +4938,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: dcc6fa6319f69484f9d1161e8a3f45f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5119,38 +4950,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1110502428
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1110502425}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 27b5c2aa8cad6784390f58fc804c378c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1110502429
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1110502425}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1116785466
 GameObject:
   m_ObjectHideFlags: 0
@@ -5179,7 +4978,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 18
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1116785468
 SpriteRenderer:
@@ -5215,7 +5014,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: e4489837b4694904199038a0fdb2cb45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5404,9 +5203,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1201854813}
   - component: {fileID: 1201854814}
-  - component: {fileID: 1201854815}
   m_Layer: 0
-  m_Name: 11.Soft Finger Coral Yellow
+  m_Name: 11.Soft Finger Coral Yellow C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5423,7 +5221,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 10
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1201854814
 SpriteRenderer:
@@ -5471,24 +5269,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1201854815
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1201854812}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6dfd39bacf4cbf4488a3e8ae4c6968a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1255706651
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,10 +5278,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1255706652}
   - component: {fileID: 1255706653}
-  - component: {fileID: 1255706655}
-  - component: {fileID: 1255706654}
   m_Layer: 0
-  m_Name: 03.Ricordea Mushroom, Orange
+  m_Name: 03.Ricordea Mushroom, Orange C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5518,7 +5296,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1255706653
 SpriteRenderer:
@@ -5566,38 +5344,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1255706654
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1255706651}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 71be1d9d432ca0a449f577581169d983, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1255706655
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1255706651}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1270890621
 GameObject:
   m_ObjectHideFlags: 0
@@ -5682,9 +5428,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1323937877}
   - component: {fileID: 1323937879}
-  - component: {fileID: 1323937878}
   m_Layer: 0
-  m_Name: 15.Plate Coral Brown
+  m_Name: 15.Plate Coral Brown C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5701,26 +5446,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 15
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1323937878
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1323937876}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4cdf841770861464aac4982a7b9ad452, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1323937879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5755,7 +5482,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: da022ded67a4c2e40aec087a7ffa92bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5956,10 +5683,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1372007744}
   - component: {fileID: 1372007745}
-  - component: {fileID: 1372007747}
-  - component: {fileID: 1372007746}
   m_Layer: 0
-  m_Name: 05.Ricordea Mushroom, Red
+  m_Name: 05.Ricordea Mushroom, Red C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5976,7 +5701,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1372007745
 SpriteRenderer:
@@ -6012,7 +5737,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 8b029e269bdc5a34abf45c48ceb7dccc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6024,38 +5749,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1372007746
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1372007743}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: adff850e8e1e0c742846f6bfc94e35ac, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1372007747
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1372007743}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1384759564
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,9 +5973,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1444736543}
   - component: {fileID: 1444736545}
-  - component: {fileID: 1444736544}
   m_Layer: 0
-  m_Name: 14.Plate Coral Green
+  m_Name: 14.Plate Coral Green C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6299,26 +5991,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 14
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1444736544
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1444736542}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3c17eeafa5f43e94aa45aa1185569715, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1444736545
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6375,9 +6049,8 @@ GameObject:
   - component: {fileID: 1445779883}
   - component: {fileID: 1445779884}
   - component: {fileID: 1445779886}
-  - component: {fileID: 1445779885}
   m_Layer: 0
-  m_Name: 12.Soft Finger Coral Purple 1
+  m_Name: 12.Soft Finger Coral Purple 1 C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6394,7 +6067,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 11
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1445779884
 SpriteRenderer:
@@ -6430,7 +6103,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: 047e63ec407efcf4789882c3f11a98cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6442,24 +6115,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1445779885
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1445779882}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 74ef6a4461fa9bc49854e00fc46e4e39, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!111 &1445779886
 Animation:
   m_ObjectHideFlags: 0
@@ -6603,7 +6258,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 27
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1454594459
 Animator:
@@ -6671,8 +6326,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: e7a74f9da24322d46989b1ef2f86c876, type: 3}
+  m_SortingOrder: 14
+  m_Sprite: {fileID: 21300000, guid: 98fc77bd851d08a4fbf2f83a5a616380, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6692,9 +6347,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1477555966}
   - component: {fileID: 1477555967}
-  - component: {fileID: 1477555968}
   m_Layer: 0
-  m_Name: 20.Acropora Coral Neon
+  m_Name: 20.Acropora Coral Neon C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6711,7 +6365,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 21
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1477555967
 SpriteRenderer:
@@ -6759,24 +6413,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1477555968
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1477555965}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2645147c480ad0c43b58a88e08806acb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1482878057
 GameObject:
   m_ObjectHideFlags: 0
@@ -6877,48 +6513,48 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2055422439}
   - {fileID: 720805814}
+  - {fileID: 937404802}
   - {fileID: 1110502426}
+  - {fileID: 2079082741}
   - {fileID: 1255706652}
+  - {fileID: 692666345}
   - {fileID: 1692860943}
+  - {fileID: 1051617252}
   - {fileID: 1372007744}
+  - {fileID: 1454594458}
   - {fileID: 1598743901}
+  - {fileID: 47842737}
   - {fileID: 1734946583}
+  - {fileID: 1859074018}
   - {fileID: 911243450}
+  - {fileID: 1035647486}
   - {fileID: 100728923}
+  - {fileID: 2138401028}
   - {fileID: 485789179}
+  - {fileID: 290432735}
   - {fileID: 1201854813}
+  - {fileID: 601759509}
   - {fileID: 1445779883}
+  - {fileID: 1008718419}
   - {fileID: 312547808}
+  - {fileID: 895185390}
   - {fileID: 336873255}
+  - {fileID: 563246656}
   - {fileID: 1444736543}
+  - {fileID: 1605897410}
   - {fileID: 1323937877}
+  - {fileID: 2106493053}
   - {fileID: 1900366084}
+  - {fileID: 1974218303}
   - {fileID: 615953719}
   - {fileID: 1116785467}
   - {fileID: 636370166}
-  - {fileID: 847917486}
-  - {fileID: 1477555966}
-  - {fileID: 2055422439}
-  - {fileID: 937404802}
-  - {fileID: 2079082741}
-  - {fileID: 692666345}
-  - {fileID: 1051617252}
-  - {fileID: 1454594458}
-  - {fileID: 47842737}
-  - {fileID: 1859074018}
-  - {fileID: 1035647486}
-  - {fileID: 2138401028}
-  - {fileID: 290432735}
-  - {fileID: 601759509}
-  - {fileID: 1008718419}
-  - {fileID: 895185390}
-  - {fileID: 563246656}
-  - {fileID: 1605897410}
-  - {fileID: 2106493053}
-  - {fileID: 1974218303}
   - {fileID: 880367037}
+  - {fileID: 847917486}
   - {fileID: 1722324868}
+  - {fileID: 1477555966}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6931,10 +6567,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1598743901}
   - component: {fileID: 1598743902}
-  - component: {fileID: 1598743904}
-  - component: {fileID: 1598743903}
   m_Layer: 0
-  m_Name: 06.Brown Sea Fan
+  m_Name: 06.Brown Sea Fan C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6951,7 +6585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1598743902
 SpriteRenderer:
@@ -6987,7 +6621,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: e7a74f9da24322d46989b1ef2f86c876, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6999,38 +6633,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1598743903
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1598743900}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d73fdbe2924c9324d827667e4220d207, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1598743904
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1598743900}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1603627647
 GameObject:
   m_ObjectHideFlags: 0
@@ -7134,7 +6736,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 37
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1605897411
 Animator:
@@ -7188,8 +6790,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: da022ded67a4c2e40aec087a7ffa92bb, type: 3}
+  m_SortingOrder: 13
+  m_Sprite: {fileID: 21300000, guid: ecb3f6d9730a72448b2b1a0f3fe2ff0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7359,10 +6961,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1692860943}
   - component: {fileID: 1692860944}
-  - component: {fileID: 1692860946}
-  - component: {fileID: 1692860945}
   m_Layer: 0
-  m_Name: 04.Ricordea Mushroom, Blue
+  m_Name: 04.Ricordea Mushroom, Blue C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7379,7 +6979,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1692860944
 SpriteRenderer:
@@ -7427,38 +7027,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1692860945
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1692860942}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d391bd3ae4528104589f525b4093a2cc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1692860946
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1692860942}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1712722351
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,7 +7124,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.39999998}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1722324869
 Animator:
@@ -7610,8 +7178,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: ab6b32ee7e6c4534792d37db6ab923a7, type: 3}
+  m_SortingOrder: 12
+  m_Sprite: {fileID: 21300000, guid: 377aa559fd4fe5b4b8d954aff97874cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7631,10 +7199,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1734946583}
   - component: {fileID: 1734946584}
-  - component: {fileID: 1734946586}
-  - component: {fileID: 1734946585}
   m_Layer: 0
-  m_Name: 07.Red Sea Fan
+  m_Name: 07.Red Sea Fan C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7651,7 +7217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 6
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1734946584
 SpriteRenderer:
@@ -7687,7 +7253,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: fec5600eeb0aeb040bf501e51339dbc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7699,38 +7265,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1734946585
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1734946582}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3826b327f2cf31a45b3fe85fb93c8d19, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1734946586
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1734946582}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1753322399
 GameObject:
   m_ObjectHideFlags: 0
@@ -8418,7 +7952,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 29
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1859074019
 Animator:
@@ -8472,8 +8006,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
-  m_Sprite: {fileID: 21300000, guid: 7030bb3be40c5f8439f6b13fed55b3fc, type: 3}
+  m_SortingOrder: 14
+  m_Sprite: {fileID: 21300000, guid: 12897e0d205457140bf4a1ff9a0892dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8568,9 +8102,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1900366084}
   - component: {fileID: 1900366085}
-  - component: {fileID: 1900366086}
   m_Layer: 0
-  m_Name: 16.Acropora Coral Blue
+  m_Name: 16.Acropora Coral Blue C
   m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8587,7 +8120,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 16
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1900366085
 SpriteRenderer:
@@ -8623,7 +8156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 15eb10966d3126c4ab3c6503d246f657, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8635,24 +8168,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1900366086
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1900366083}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ffe80ab0b71cb104bafa8b7edcd528dd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1918901421
 GameObject:
   m_ObjectHideFlags: 0
@@ -8831,7 +8346,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.39999998}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 39
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1974218304
 Animator:
@@ -8885,8 +8400,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
-  m_Sprite: {fileID: 21300000, guid: 13829fdd55483a74f9fe11f8107b8544, type: 3}
+  m_SortingOrder: 14
+  m_Sprite: {fileID: 21300000, guid: f63d6411afafffd4f8333ab45844d1f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9218,7 +8733,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 22
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2055422440
 Animator:
@@ -9286,8 +8801,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: a91fe11264b55bf43811e888d222c1c8, type: 3}
+  m_SortingOrder: 12
+  m_Sprite: {fileID: 21300000, guid: f35fbec7f153aeb42b947149a0de9b06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9360,7 +8875,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 24
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2079082742
 Animator:
@@ -9428,8 +8943,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: fbb5be86f5aecc540b1e6822fbf1d231, type: 3}
+  m_SortingOrder: 13
+  m_Sprite: {fileID: 21300000, guid: 8d33a7bb246127e4cbac119cda2b9c68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9574,7 +9089,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.39999998}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 38
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2106493054
 Animator:
@@ -9628,8 +9143,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 15eb10966d3126c4ab3c6503d246f657, type: 3}
+  m_SortingOrder: 13
+  m_Sprite: {fileID: 21300000, guid: 010cbda1b08751546a0e25ec6c506bf5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9668,7 +9183,7 @@ Transform:
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1576494841}
-  m_RootOrder: 31
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2138401029
 Animator:
@@ -9722,8 +9237,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: c3f2108c3dbd7854d83acd6f497d4c09, type: 3}
+  m_SortingOrder: 13
+  m_Sprite: {fileID: 21300000, guid: 8bba1848c9eeea54da91e740567a5dd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
