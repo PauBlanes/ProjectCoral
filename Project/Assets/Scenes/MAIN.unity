@@ -1280,7 +1280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &148868303
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1419,7 +1419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &167389409
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2209,7 +2209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &282763423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5445,7 +5445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &652066992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6079,7 +6079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &727318056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10132,7 +10132,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 10 cm
 
-    INFO : '
+    INFO : Pseudochromis is a genus of fish in the family Pseudochromidae found in
+    Indian and Pacific Ocean.'
 --- !u!222 &1182337963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11341,7 +11342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1369482634
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11884,7 +11885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1423759667
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15112,7 +15113,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 10 cm
 
-    INFO : '
+    INFO : They are brightly coloured, with stripes, rings, or spots. They are typically
+    mainly red, orange, purplish and white.'
 --- !u!222 &1899291166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15286,7 +15288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1920391591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15359,7 +15361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1925851127
 RectTransform:
   m_ObjectHideFlags: 0
