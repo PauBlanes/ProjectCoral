@@ -8,8 +8,6 @@ public class FishManager : MonoBehaviour {
 
     public GameObject[] fishes;
 
-    public GameObject[] actualFishes;
-
     // Use this for initialization
     void Start () {
 		
@@ -18,17 +16,12 @@ public class FishManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        //if(actualFishes.Length < maxFishes) {
+        while(GameObject.FindGameObjectsWithTag("FISH").Length < maxFishes) {
 
-            //Instantiate(fishes[0], Vector3.zero, Quaternion.identity).GetComponent<FishMovement>().movementType = FishMovement.Type.HorizontalToLeft;
-            
-            /*actualFishes.SetValue(Instantiate(fishes[0], Vector3.zero, Quaternion.identity), 1);
-            actualFishes[1].GetComponent<FishMovement>().movementType = FishMovement.Type.HorizontalToRight;
+            int indexFish = Random.Range(0, fishes.Length);
+            Instantiate(fishes[indexFish], Vector3.zero, fishes[indexFish].transform.rotation);
 
-            actualFishes.SetValue(Instantiate(fishes[0], Vector3.zero, Quaternion.identity), 2);
-            actualFishes[2].GetComponent<FishMovement>().movementType = FishMovement.Type.Vertical;*/
-
-        //}
+        }
 		
 	}
 }

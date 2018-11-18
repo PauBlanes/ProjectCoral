@@ -6,7 +6,7 @@ public class FishMovement : MonoBehaviour {
 
     private bool alive;
 
-    public enum Type { HorizontalToLeft, HorizontalToRight, Vertical };
+    public enum Type { HorizontalRandom, Vertical, HorizontalToLeft, HorizontalToRight };
     public Type movementType;
 
     public int speed;
@@ -26,7 +26,36 @@ public class FishMovement : MonoBehaviour {
 
         alive = true;
 
-        if (movementType == Type.HorizontalToRight) sprFish.flipX = true;
+        if (movementType == Type.HorizontalRandom) movementType = (Random.value < 0.5f) ? Type.HorizontalToLeft : Type.HorizontalToRight;
+
+        Vector3 initPos = transform.position;
+
+        if (movementType == Type.HorizontalToRight) {
+
+            if(transform.rotation != Quaternion.identity) {
+                sprFish.flipY = true;
+            } else {
+                sprFish.flipX = true;
+            }
+            
+            initPos.x = -(sprRendererBG.size.x / 2 + sprFish.size.x / 2);
+            initPos.y = Random.Range(-(sprRendererBG.size.y / 2 - sprFish.size.y / 2), sprRendererBG.size.y / 2 - sprFish.size.y / 2);
+
+        } else if (movementType == Type.HorizontalToLeft) {
+
+            initPos.x = sprRendererBG.size.x / 2 + sprFish.size.x / 2;
+            initPos.y = Random.Range(-(sprRendererBG.size.y / 2 - sprFish.size.y / 2), sprRendererBG.size.y / 2 - sprFish.size.y / 2);
+
+        } else {
+
+            initPos.y = -(sprRendererBG.size.y / 2 + sprFish.size.y / 2);
+            initPos.x = Random.Range(-(sprRendererBG.size.x / 2 - sprFish.size.x / 2), sprRendererBG.size.x / 2 - sprFish.size.x / 2);
+
+        }
+
+        speed = Random.Range(speed - speed / 2, speed + speed / 2);
+
+        transform.position = initPos;
 		
 	}
 	
