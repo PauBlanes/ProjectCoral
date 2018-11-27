@@ -45,45 +45,39 @@ public class Robot : MonoBehaviour {
             waitCounter -= Time.deltaTime;
 
             //anar cap a un objecte
-            if (state == States.walking)
+            if (state == States.walking && target != null)
             {
-                //Per si tenim més d'un robot alhora i ens el roben
-                if (target == null)
+
+                //Mirar al target
+                Vector3 vectorToTarget = target.transform.position - transform.position;
+                float angle = Mathf.Atan2(-vectorToTarget.y, -vectorToTarget.x) * Mathf.Rad2Deg;
+                Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 2);
+
+                //Moures
+                if ((transform.position - target.position).magnitude < 0.1f)
                 {
-                    state = States.wander;
+                    state = States.working;
                 }
                 else
                 {
-                    //Mirar al target
-                    Vector3 vectorToTarget = target.transform.position - transform.position;
-                    float angle = Mathf.Atan2(-vectorToTarget.y, -vectorToTarget.x) * Mathf.Rad2Deg;
-                    Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 2);
+                    // The step size is equal to speed times frame time.
+                    float step = speed * Time.deltaTime;
 
-                    //Moures
-                    if ((transform.position - target.position).magnitude < 0.1f)
-                    {
-                        state = States.working;
-                    }
-                    else
-                    {
-                        // The step size is equal to speed times frame time.
-                        float step = speed * Time.deltaTime;
+                    // Move our position a step closer to the target.
+                    transform.position = Vector2.MoveTowards(transform.position, target.position, step);
+                }
 
-                        // Move our position a step closer to the target.
-                        transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-                    }
-                }                        
 
             } //treballar
-            else if (state == States.working)
+            else if (state == States.working && target != null)
             {
                 //manternirse enganxat
                 transform.position = target.position; //per si encara estava moventse l'enemic quan l'atrapem que el continui seguint
 
                 //Quant triga a cargar-se l'enemic
                 Color col = target.GetComponent<SpriteRenderer>().color;
-                col.a -= Time.deltaTime*workPerSecond;
+                col.a -= Time.deltaTime * workPerSecond;
                 target.GetComponent<SpriteRenderer>().color = col;
                 if (col.a <= 0)
                 {
@@ -91,8 +85,8 @@ public class Robot : MonoBehaviour {
                     Destroy(target.gameObject);
                     target = GetCloserObject(GameObject.FindGameObjectsWithTag(rT.ToString()));
                     if (target == null) //si ja no hi ha més
-                    {                        
-                        state = States.wander;                        
+                    {
+                        state = States.wander;
                         StartCoroutine(ChoseDirection());
                     }
                     else
@@ -102,11 +96,13 @@ public class Robot : MonoBehaviour {
             else if (state == States.wander)
             {
 
-             //if its moving and didn't move too much            
-             transform.position += new Vector3(randX, randY, 0).normalized/2* speed * Time.deltaTime;
-                    
+                //if its moving and didn't move too much            
+                transform.position += new Vector3(randX, randY, 0).normalized / 2 * speed * Time.deltaTime;
+
 
             }
+            else if (target == null)
+                state = States.wander;
         }
         else //Acció que fer quan acabes
         {

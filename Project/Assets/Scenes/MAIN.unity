@@ -942,6 +942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100728923}
   - component: {fileID: 100728924}
+  - component: {fileID: 100728925}
   m_Layer: 0
   m_Name: 09.Jasmine Polyp Purple C
   m_TagString: CORAL
@@ -1008,6 +1009,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &100728925
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100728922}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 4.01}
+    newSize: {x: 5.12, y: 4.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 4.01}
+  m_EdgeRadius: 0
 --- !u!1 &118047652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,11 +1513,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148868302}
   m_CullTransparentMesh: 0
---- !u!4 &157468422 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1177419886}
 --- !u!1 &167389408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,6 +2616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312547808}
   - component: {fileID: 312547809}
+  - component: {fileID: 312547810}
   m_Layer: 0
   m_Name: 12.Soft Finger Coral Purple 2 C
   m_TagString: CORAL
@@ -2661,6 +2683,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &312547810
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 312547807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.01, y: 8.26}
+    newSize: {x: 6.01, y: 8.26}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.01, y: 8.26}
+  m_EdgeRadius: 0
 --- !u!1 &317621460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,6 +2863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336873255}
   - component: {fileID: 336873257}
+  - component: {fileID: 336873256}
   m_Layer: 0
   m_Name: 13.Plate Coral Purple C
   m_TagString: Untagged
@@ -2836,6 +2884,31 @@ Transform:
   m_Father: {fileID: 1576494841}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &336873256
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336873254}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.49, y: 5.35}
+    newSize: {x: 7.49, y: 5.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.49, y: 5.35}
+  m_EdgeRadius: 0
 --- !u!212 &336873257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3594,7 +3667,7 @@ GameObject:
   - component: {fileID: 409182213}
   m_Layer: 0
   m_Name: 03.Red Grape Algae
-  m_TagString: PLANTA
+  m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4161,6 +4234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485789179}
   - component: {fileID: 485789180}
+  - component: {fileID: 485789181}
   m_Layer: 0
   m_Name: 10.Jasmine Polyp Blue C
   m_TagString: CORAL
@@ -4227,6 +4301,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &485789181
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485789178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 4.98}
+    newSize: {x: 7.37, y: 4.98}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 4.98}
+  m_EdgeRadius: 0
 --- !u!1 &502304225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,7 +4472,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4496,55 +4595,13 @@ MonoBehaviour:
   - {fileID: 636370165}
   - {fileID: 847917485}
   - {fileID: 1477555965}
+  - {fileID: 878216768}
+  - {fileID: 777557311}
+  - {fileID: 409182211}
   threats:
   - {fileID: 1297480688085770, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
   - {fileID: 1969856285918720, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
---- !u!1001 &537418485
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1297480688085770, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_Name
-      value: basura (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-  m_IsPrefabAsset: 0
+  - {fileID: 1901318450206990, guid: 01a981e1cf0086c459b25393d031eacc, type: 2}
 --- !u!1 &539310778
 GameObject:
   m_ObjectHideFlags: 0
@@ -4729,81 +4786,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 544887701}
   m_CullTransparentMesh: 0
---- !u!1 &553561608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 553561609}
-  - component: {fileID: 553561610}
-  m_Layer: 0
-  m_Name: body
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &553561609
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 553561608}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1384759567}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &553561610
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 553561608}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8e7e3553021683649ba18cf4988621a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 9.96, y: 11.44}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &563246655
 GameObject:
   m_ObjectHideFlags: 0
@@ -4898,52 +4880,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &597396814
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 7.074744
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.029257536
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1969856285918720, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_Name
-      value: petrol (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &601759508
 GameObject:
   m_ObjectHideFlags: 0
@@ -5131,6 +5067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615953719}
   - component: {fileID: 615953720}
+  - component: {fileID: 615953721}
   m_Layer: 0
   m_Name: 17.Acropora Coral Brown C
   m_TagString: CORAL
@@ -5197,6 +5134,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &615953721
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 615953718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.49, y: 5.35}
+    newSize: {x: 7.49, y: 5.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.49, y: 5.35}
+  m_EdgeRadius: 0
 --- !u!1 &627964559
 GameObject:
   m_ObjectHideFlags: 0
@@ -5279,6 +5241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636370166}
   - component: {fileID: 636370168}
+  - component: {fileID: 636370167}
   m_Layer: 0
   m_Name: 18.Acropora Coral Green C
   m_TagString: CORAL
@@ -5299,6 +5262,31 @@ Transform:
   m_Father: {fileID: 1576494841}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &636370167
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 636370165}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.49, y: 4.87}
+    newSize: {x: 7.49, y: 4.87}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.49, y: 4.87}
+  m_EdgeRadius: 0
 --- !u!212 &636370168
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5947,6 +5935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720805814}
   - component: {fileID: 720805817}
+  - component: {fileID: 720805815}
   m_Layer: 0
   m_Name: 01.Acropora Coral, Blue C
   m_TagString: CORAL
@@ -5967,6 +5956,31 @@ Transform:
   m_Father: {fileID: 1576494841}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &720805815
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720805813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 6.31}
+    newSize: {x: 7.37, y: 6.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 6.31}
+  m_EdgeRadius: 0
 --- !u!212 &720805817
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6504,7 +6518,7 @@ GameObject:
   - component: {fileID: 777557313}
   m_Layer: 0
   m_Name: 02.Shaving Brush Plant
-  m_TagString: PLANTA
+  m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6776,7 +6790,7 @@ Transform:
   - {fileID: 225562850}
   - {fileID: 821158026}
   m_Father: {fileID: 2062540857}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818230926
 GameObject:
@@ -6838,7 +6852,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821158025
 GameObject:
@@ -7124,7 +7138,7 @@ Transform:
   - {fileID: 1482878058}
   - {fileID: 1973505224}
   m_Father: {fileID: 2062540857}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &844613331
 GameObject:
@@ -7213,6 +7227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 847917486}
   - component: {fileID: 847917487}
+  - component: {fileID: 847917488}
   m_Layer: 0
   m_Name: 19.Acropora Coral Purpul C
   m_TagString: CORAL
@@ -7279,81 +7294,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &851635657
-GameObject:
+--- !u!61 &847917488
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 851635658}
-  - component: {fileID: 851635659}
-  m_Layer: 0
-  m_Name: gas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &851635658
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 851635657}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.53, y: -3.65, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1384759567}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &851635659
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 851635657}
+  m_GameObject: {fileID: 847917485}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300004, guid: e8fcb48ab5e92b54cb6d0cbf70bf39a4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 7.62, y: 6.97}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.49, y: 4.47}
+    newSize: {x: 7.49, y: 4.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.49, y: 4.47}
+  m_EdgeRadius: 0
 --- !u!1 &878216768
 GameObject:
   m_ObjectHideFlags: 0
@@ -7365,7 +7330,7 @@ GameObject:
   - component: {fileID: 878216770}
   m_Layer: 0
   m_Name: 01.Maiden's Hair Plant
-  m_TagString: PLANTA
+  m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7737,6 +7702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 911243450}
   - component: {fileID: 911243451}
+  - component: {fileID: 911243452}
   m_Layer: 0
   m_Name: 08.Jasmine Polyp Orange C
   m_TagString: CORAL
@@ -7803,6 +7769,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &911243452
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911243449}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 4.09}
+    newSize: {x: 7.37, y: 4.09}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 4.09}
+  m_EdgeRadius: 0
 --- !u!1 &917931465
 GameObject:
   m_ObjectHideFlags: 0
@@ -8509,7 +8500,7 @@ Transform:
   - {fileID: 502304226}
   - {fileID: 668825771}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1024958654
 GameObject:
@@ -8791,48 +8782,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1038434911}
   m_CullTransparentMesh: 0
---- !u!1001 &1048028540
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2062540857}
-    m_Modifications:
-    - target: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -21.201065
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.1436155
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.07192756
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d78f621466bd57342a10ca42e5689919, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1048729306
 GameObject:
   m_ObjectHideFlags: 0
@@ -9452,6 +9401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1110502426}
   - component: {fileID: 1110502427}
+  - component: {fileID: 1110502428}
   m_Layer: 0
   m_Name: "02.Ricordea Mushroom\uFF0C Purple C"
   m_TagString: CORAL
@@ -9518,6 +9468,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1110502428
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110502425}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 6.31}
+    newSize: {x: 7.37, y: 6.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 6.31}
+  m_EdgeRadius: 0
 --- !u!1 &1116785466
 GameObject:
   m_ObjectHideFlags: 0
@@ -9756,48 +9731,6 @@ Transform:
   m_Father: {fileID: 1023698428}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1177419886
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2062540857}
-    m_Modifications:
-    - target: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -13.9710655
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.27638465
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.07192756
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.0004573546
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.99999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047066962241022, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1182337960
 GameObject:
   m_ObjectHideFlags: 0
@@ -9954,6 +9887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201854813}
   - component: {fileID: 1201854814}
+  - component: {fileID: 1201854815}
   m_Layer: 0
   m_Name: 11.Soft Finger Coral Yellow C
   m_TagString: CORAL
@@ -10020,6 +9954,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1201854815
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1201854812}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 7.12}
+    newSize: {x: 7.37, y: 7.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 7.12}
+  m_EdgeRadius: 0
 --- !u!1 &1205465181
 GameObject:
   m_ObjectHideFlags: 0
@@ -10470,6 +10429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1255706652}
   - component: {fileID: 1255706653}
+  - component: {fileID: 1255706654}
   m_Layer: 0
   m_Name: 03.Ricordea Mushroom, Orange C
   m_TagString: CORAL
@@ -10536,6 +10496,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1255706654
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255706651}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 5.43}
+    newSize: {x: 7.37, y: 5.43}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 5.43}
+  m_EdgeRadius: 0
 --- !u!1 &1260383505
 GameObject:
   m_ObjectHideFlags: 0
@@ -10845,6 +10830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323937877}
   - component: {fileID: 1323937879}
+  - component: {fileID: 1323937878}
   m_Layer: 0
   m_Name: 15.Plate Coral Brown C
   m_TagString: Untagged
@@ -10865,6 +10851,31 @@ Transform:
   m_Father: {fileID: 1576494841}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1323937878
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323937876}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.49, y: 5.73}
+    newSize: {x: 7.49, y: 5.73}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.49, y: 5.73}
+  m_EdgeRadius: 0
 --- !u!212 &1323937879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10906,81 +10917,6 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 7.49, y: 5.73}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &1326475698
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1326475699}
-  - component: {fileID: 1326475700}
-  m_Layer: 0
-  m_Name: arma
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1326475699
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1326475698}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.74, y: -4.14, z: 0}
-  m_LocalScale: {x: 0.8252015, y: 0.77107, z: 0.77107}
-  m_Children: []
-  m_Father: {fileID: 1384759567}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1326475700
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1326475698}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300002, guid: 8e7e3553021683649ba18cf4988621a5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 9.13, y: 3.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11312,7 +11248,7 @@ Transform:
   - {fileID: 1857233271}
   - {fileID: 675825740}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372007743
 GameObject:
@@ -11323,6 +11259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372007744}
   - component: {fileID: 1372007745}
+  - component: {fileID: 1372007746}
   m_Layer: 0
   m_Name: 05.Ricordea Mushroom, Red C
   m_TagString: CORAL
@@ -11389,71 +11326,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1384759564
-GameObject:
+--- !u!61 &1372007746
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1384759567}
-  - component: {fileID: 1384759566}
-  - component: {fileID: 1384759565}
-  m_Layer: 0
-  m_Name: RobotCut
-  m_TagString: ROBOT
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &1384759565
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384759564}
+  m_GameObject: {fileID: 1372007743}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb4c356d242db1b4a9685e44b5c5a69d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1384759566
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384759564}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: af1209c7dd0edfd428cd859304728d17, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!4 &1384759567
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384759564}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.031066, y: -3.3636155, z: 0.07192756}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
-  m_Children:
-  - {fileID: 553561609}
-  - {fileID: 1326475699}
-  - {fileID: 851635658}
-  m_Father: {fileID: 2062540857}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 6.9}
+    newSize: {x: 7.37, y: 6.9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 6.9}
+  m_EdgeRadius: 0
 --- !u!1 &1391031369
 GameObject:
   m_ObjectHideFlags: 0
@@ -11761,6 +11658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1444736543}
   - component: {fileID: 1444736545}
+  - component: {fileID: 1444736544}
   m_Layer: 0
   m_Name: 14.Plate Coral Green C
   m_TagString: Untagged
@@ -11781,6 +11679,31 @@ Transform:
   m_Father: {fileID: 1576494841}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1444736544
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1444736542}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.49, y: 6.55}
+    newSize: {x: 7.49, y: 6.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.49, y: 6.55}
+  m_EdgeRadius: 0
 --- !u!212 &1444736545
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11837,6 +11760,7 @@ GameObject:
   - component: {fileID: 1445779883}
   - component: {fileID: 1445779884}
   - component: {fileID: 1445779886}
+  - component: {fileID: 1445779885}
   m_Layer: 0
   m_Name: 12.Soft Finger Coral Purple 1 C
   m_TagString: CORAL
@@ -11903,6 +11827,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1445779885
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1445779882}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 8.26}
+    newSize: {x: 7.37, y: 8.26}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 8.26}
+  m_EdgeRadius: 0
 --- !u!111 &1445779886
 Animation:
   m_ObjectHideFlags: 0
@@ -12107,7 +12056,7 @@ RectTransform:
   - {fileID: 727318056}
   - {fileID: 652066992}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12232,6 +12181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1477555966}
   - component: {fileID: 1477555967}
+  - component: {fileID: 1477555968}
   m_Layer: 0
   m_Name: 20.Acropora Coral Neon C
   m_TagString: CORAL
@@ -12298,6 +12248,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1477555968
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477555965}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.49, y: 6.12}
+    newSize: {x: 7.49, y: 6.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.49, y: 6.12}
+  m_EdgeRadius: 0
 --- !u!1 &1482878057
 GameObject:
   m_ObjectHideFlags: 0
@@ -12525,136 +12500,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1512586906}
   m_CullTransparentMesh: 0
---- !u!1001 &1520755912
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.1416717
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.283503
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1001 &1536827271
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -11.360409
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.5581064
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4592374860561018, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1969856285918720, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-      propertyPath: m_Name
-      value: petrol (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5946c1b7d9b9caa42a36f3a896aceba3, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1001 &1554433494
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 11.437977
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.464534
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801715990049138, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa53d4b8a0b1dec4aa7c5146e3d9108c, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1576494840
 GameObject:
   m_ObjectHideFlags: 0
@@ -12677,7 +12522,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1576494840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 4.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2055422439}
@@ -12723,7 +12568,7 @@ Transform:
   - {fileID: 1722324868}
   - {fileID: 1477555966}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1598743900
 GameObject:
@@ -12734,6 +12579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1598743901}
   - component: {fileID: 1598743902}
+  - component: {fileID: 1598743903}
   m_Layer: 0
   m_Name: 06.Brown Sea Fan C
   m_TagString: CORAL
@@ -12800,6 +12646,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1598743903
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598743900}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 4.12}
+    newSize: {x: 7.37, y: 4.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 4.12}
+  m_EdgeRadius: 0
 --- !u!1 &1605897409
 GameObject:
   m_ObjectHideFlags: 0
@@ -13053,6 +12924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692860943}
   - component: {fileID: 1692860944}
+  - component: {fileID: 1692860945}
   m_Layer: 0
   m_Name: 04.Ricordea Mushroom, Blue C
   m_TagString: CORAL
@@ -13119,6 +12991,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1692860945
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1692860942}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 7.01}
+    newSize: {x: 7.37, y: 7.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 7.01}
+  m_EdgeRadius: 0
 --- !u!1 &1707567643
 GameObject:
   m_ObjectHideFlags: 0
@@ -13502,6 +13399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734946583}
   - component: {fileID: 1734946584}
+  - component: {fileID: 1734946585}
   m_Layer: 0
   m_Name: 07.Red Sea Fan C
   m_TagString: CORAL
@@ -13568,6 +13466,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1734946585
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734946582}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.37, y: 3.76}
+    newSize: {x: 7.37, y: 3.76}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.37, y: 3.76}
+  m_EdgeRadius: 0
 --- !u!1 &1780726678
 GameObject:
   m_ObjectHideFlags: 0
@@ -14051,7 +13974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1841235760
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14109,7 +14032,7 @@ Transform:
   m_LocalScale: {x: 0.160828, y: 0.160828, z: 0.80414}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.066}
 --- !u!61 &1841235762
 BoxCollider2D:
@@ -14769,6 +14692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900366084}
   - component: {fileID: 1900366085}
+  - component: {fileID: 1900366086}
   m_Layer: 0
   m_Name: 16.Acropora Coral Blue C
   m_TagString: CORAL
@@ -14835,6 +14759,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1900366086
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900366083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.49, y: 5.89}
+    newSize: {x: 7.49, y: 5.89}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.49, y: 5.89}
+  m_EdgeRadius: 0
 --- !u!1 &1920391590
 GameObject:
   m_ObjectHideFlags: 0
@@ -15637,11 +15586,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2032359591}
   m_CullTransparentMesh: 0
---- !u!4 &2039016817 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4076425822716360, guid: d78f621466bd57342a10ca42e5689919,
-    type: 2}
-  m_PrefabInternal: {fileID: 1048028540}
 --- !u!1 &2043875519
 GameObject:
   m_ObjectHideFlags: 0
@@ -15851,13 +15795,10 @@ Transform:
   m_LocalPosition: {x: 5.491066, y: -0.28638464, z: -0.07192756}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 157468422}
-  - {fileID: 1384759567}
   - {fileID: 839261608}
-  - {fileID: 2039016817}
   - {fileID: 815911974}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071538380
 GameObject:
@@ -16170,14 +16111,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080548995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 4.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 878216769}
   - {fileID: 777557312}
   - {fileID: 409182212}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082271238
 GameObject:

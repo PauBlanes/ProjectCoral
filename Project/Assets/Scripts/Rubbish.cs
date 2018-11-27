@@ -32,7 +32,7 @@ public class Rubbish : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "FISH")
+        if (collision.tag.Contains("FISH"))
         {   
             //Si un peix el toca es debilita l'ecosistema
             Camera.main.GetComponent<EcosystemManager>().ecosystemEvolution--;

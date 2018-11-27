@@ -45,9 +45,12 @@ public class EcosystemManager : MonoBehaviour {
     
     IEnumerator SpawnThreads()
     {
-        timeToWait = Random.Range(3, 10);
-        yield return new WaitForSeconds(timeToWait);
-        Instantiate(threats[Random.Range(0, threats.Length)], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
+        while (true)
+        {
+            timeToWait = Random.Range(1, 3);
+            yield return new WaitForSeconds(timeToWait);
+            Instantiate(threats[Random.Range(0, threats.Length)], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
+        }        
     }
 
     IEnumerator CheckCoralReefState()
@@ -65,7 +68,10 @@ public class EcosystemManager : MonoBehaviour {
                 }
                 lastCheckpoint = ecosystemEvolution;
                 if (Camera.main.GetComponent<FishManager>().maxFishes < 25)
+                {
                     Camera.main.GetComponent<FishManager>().maxFishes++;
+                    //Sumar maxFishType
+                }                    
             }
             if (ecosystemEvolution - lastCheckpoint < -breakPoint)
             {
@@ -78,9 +84,19 @@ public class EcosystemManager : MonoBehaviour {
                 }
                 lastCheckpoint = ecosystemEvolution;
                 if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
+                {
                     Camera.main.GetComponent<FishManager>().maxFishes--;
+                    //sumar maxFishType
+                }
             }
             yield return new WaitForSeconds(1f);
         }        
+    }
+    
+    public void HideCoral (GameObject coral)
+    {
+        hiddenCorals.Add(coral);
+        coral.SetActive(false);
+        activeCorals.Remove(coral);
     }
 }
