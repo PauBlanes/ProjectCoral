@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 4047066962241022}
   - component: {fileID: 95189107874915074}
   - component: {fileID: 111792469134450910}
+  - component: {fileID: 114687267585507030}
   m_Layer: 0
   m_Name: rubishRobot
   m_TagString: ROBOT
@@ -193,6 +194,21 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114687267585507030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999844737649432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd48e4cc7a3f992499778271843b22df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  workTime: 12
+  workPerSecond: 1
+  rT: 2
 --- !u!212 &212636334852908182
 SpriteRenderer:
   m_ObjectHideFlags: 1

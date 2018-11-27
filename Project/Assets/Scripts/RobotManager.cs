@@ -8,6 +8,7 @@ public class RobotManager : MonoBehaviour {
     [System.Serializable]
     public struct RobotHud
     {
+        public string tagName;
         public Button robotButton;
         public int cost;
         public GameObject robot;
@@ -30,25 +31,24 @@ public class RobotManager : MonoBehaviour {
         ButtonsOpacity();
     }
 
-    public void SelectRobot(GameObject robot)
+    public void SelectRobot(Button b)
     {
-        RobotHud selected = new RobotHud();
-        foreach (RobotHud r in robots)
-        {
-            if (r.robot == robot)
-                selected = r;
-        }
-        if (GetComponent<EnergyManager>().GetCount() >= selected.cost) //si tens suficient diners
+        if (b.GetComponent<Image>().color.a == 1) //si tens suficient diners
         {
             /*robot2Spawn = robot;
             if (robot2Spawn.name == "InvestigationRobot")
             {
                 iRobotSelected = true;
             }*/
-            Instantiate(robot, new Vector2(Camera.main.transform.position.x,Camera.main.transform.position.y) , Quaternion.identity);
+            foreach (RobotHud r in robots)
+            {
+                if (r.robotButton == b)
+                {
+                    Instantiate(r.robot, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), Quaternion.identity);
+                    Camera.main.GetComponent<EnergyManager>().energyCounter -= r.cost;
+                }
+            }            
         }
-        
-
     }
     /*public void SpawnRobot (Transform t, Vector3 o)
     {
@@ -65,10 +65,18 @@ public class RobotManager : MonoBehaviour {
     {
         foreach (RobotHud rH in robots)
         {
+            
+            //si no tens la pasta no es pot fer spawn, que passsa si no hi ha l'amenaça
             if (rH.cost > GetComponent<EnergyManager>().GetCount())
             {
                 Color color = rH.robotButton.GetComponent<Image>().color;
                 color.a = 0.5f;
+                rH.robotButton.GetComponent<Image>().color = color;
+            }
+            else if(rH.robotButton.GetComponent<Image>().color.a < 1)
+            {
+                Color color = rH.robotButton.GetComponent<Image>().color;
+                color.a = 1f;
                 rH.robotButton.GetComponent<Image>().color = color;
             }
         }

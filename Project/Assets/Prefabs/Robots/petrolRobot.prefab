@@ -266,7 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  workTime: 3
+  workTime: 10
+  workPerSecond: 1
   rT: 4
 --- !u!212 &212101187258261404
 SpriteRenderer:

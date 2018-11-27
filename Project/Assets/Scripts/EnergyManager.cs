@@ -11,7 +11,7 @@ public class EnergyManager : MonoBehaviour {
     public float averageSpawnTime;
     public float spawnTimeRange; //per controlar si hi ha molta variabilitat de temps de spawn.
 
-    private int energyCounter;
+    public int energyCounter;
     public Text energyText; 
 
     // Use this for initialization

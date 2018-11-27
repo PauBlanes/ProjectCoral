@@ -10,6 +10,7 @@ TagManager:
   - PLANTA
   - BG
   - Petrol
+  - Rubbish
   layers:
   - Default
   - TransparentFX

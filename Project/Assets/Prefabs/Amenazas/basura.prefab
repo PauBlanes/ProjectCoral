@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50627145767962798}
   m_Layer: 0
   m_Name: basura
-  m_TagString: Untagged
+  m_TagString: Rubbish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
