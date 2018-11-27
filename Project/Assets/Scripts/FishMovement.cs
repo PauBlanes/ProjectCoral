@@ -17,6 +17,13 @@ public class FishMovement : MonoBehaviour {
 
     private Vector3 movement = Vector3.zero;
 
+    private float wanderAngle = 5;
+    private int circleDistance = 50;
+    private int circleRadius = 1;
+    private float angleChange = 5;
+
+    public bool captured = false;
+
     // Use this for initialization
     void Start () {
 
@@ -56,13 +63,14 @@ public class FishMovement : MonoBehaviour {
         speed = Random.Range(speed - speed / 2, speed + speed / 2);
 
         transform.position = initPos;
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         if (alive) {
+
             switch (movementType) {
                 case Type.HorizontalToLeft:
                     if (transform.position.x + sprFish.size.x / 2 < -(sprRendererBG.size.x / 2)) alive = false;
@@ -79,11 +87,38 @@ public class FishMovement : MonoBehaviour {
                     movement.y = speed * Time.deltaTime;
                     break;
             }
+
+            movement = Wander(movement) * speed * Time.deltaTime;
+
         } else {
             Destroy(this.gameObject);
         }
 
-        transform.position += movement;
+        if (!captured) {
+            transform.position += movement;
+        }
 		
 	}
+
+    private Vector3 Wander(Vector3 move) {
+
+        Vector3 circleCenter = move.normalized * circleDistance;
+
+        Vector3 displacement = new Vector3(0, 1, 0) * circleRadius;
+        displacement = setAngle(displacement, wanderAngle);
+        wanderAngle += Random.value * angleChange - angleChange * .5f;
+
+        return (circleCenter + displacement).normalized;
+
+    }
+
+    private Vector3 setAngle(Vector3 vec, float angle) {
+
+        float len = vec.magnitude;
+        vec.x = Mathf.Cos(angle) * len;
+        vec.y = Mathf.Sin(angle) * len;
+
+        return vec;
+
+    }
 }
