@@ -11,12 +11,12 @@ public class EnergyManager : MonoBehaviour {
     public float averageSpawnTime;
     public float spawnTimeRange; //per controlar si hi ha molta variabilitat de temps de spawn.
 
-    private int energyCounter;
+    public int energyCounter;
     public Text energyText; 
 
     // Use this for initialization
     void Start () {
-        energyText.text = "Energy : " + energyCounter;
+        energyText.text = ""+energyCounter;
         StartCoroutine(WaitAndSpawn());
     }
 	
@@ -37,7 +37,7 @@ public class EnergyManager : MonoBehaviour {
     public void SpawnEnergy()
     {
         Instantiate(energyPrefab, new Vector3(Random.Range(transform.position.x - xRange, transform.position.x + xRange),
-            transform.position.y - Camera.main.orthographicSize - energyPrefab.GetComponent<SpriteRenderer>().size.y/2, 0),
+            /*transform.position.y - Camera.main.orthographicSize - energyPrefab.GetComponent<SpriteRenderer>().size.y/2*/-12, 0),
             Quaternion.identity); //cuidao que aixo funciona pq el script el té la camera
     }
 

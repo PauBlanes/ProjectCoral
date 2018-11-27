@@ -9,6 +9,8 @@ TagManager:
   - CORAL
   - PLANTA
   - BG
+  - Petrol
+  - Rubbish
   layers:
   - Default
   - TransparentFX
@@ -52,11 +54,11 @@ TagManager:
   - name: Energy
     uniqueID: 3417595071
     locked: 0
-  - name: ROBOT
-    uniqueID: 2719750219
-    locked: 0
   - name: THINGS
     uniqueID: 154235505
+    locked: 0
+  - name: ROBOT
+    uniqueID: 2719750219
     locked: 0
   - name: BLUE FILTER 1
     uniqueID: 245019753
