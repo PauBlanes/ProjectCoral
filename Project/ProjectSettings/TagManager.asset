@@ -9,6 +9,7 @@ TagManager:
   - CORAL
   - PLANTA
   - BG
+  - Petrol
   layers:
   - Default
   - TransparentFX

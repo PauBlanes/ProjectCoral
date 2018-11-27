@@ -20,7 +20,7 @@ public class InvestigableObj : MonoBehaviour {
     {
       if(rB.iRobotSelected)
         {
-            rB.SpawnRobot(transform, Vector3.zero);
+            //rB.SpawnRobot(transform, Vector3.zero);
         }
     }
 }

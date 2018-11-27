@@ -5,9 +5,9 @@ using UnityEngine;
 public class Robot : MonoBehaviour {
     
     enum States { walking, working};
-    public enum RobotType {investigation, repair, clean, netCutter }
+    public enum RobotType {investigation, repair, clean, netCutter, petrol }
 
-    public Transform target;
+    private Transform target;
     public float speed;
 
     public float workTime;
@@ -17,12 +17,25 @@ public class Robot : MonoBehaviour {
 
     public RobotType rT;
 
-    public int cost;
-
 	// Use this for initialization
 	void Start () {
-		
-	}
+        switch (rT)
+        {
+            case RobotType.investigation:
+                break;
+            case RobotType.repair:
+                break;
+            case RobotType.clean:
+                break;
+            case RobotType.netCutter:
+                break;
+            case RobotType.petrol:
+                target = GetCloserObject(GameObject.FindGameObjectsWithTag("Petrol"));
+                break;
+            default:
+                break;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -63,5 +76,19 @@ public class Robot : MonoBehaviour {
                 Destroy(gameObject);
             }
         }        
+    }
+
+    Transform GetCloserObject(GameObject[] objs)
+    {
+        float maxDist = 0;
+        Transform result = null;
+
+        foreach (GameObject o in objs)
+        {
+            float distance = (o.transform.position - transform.position).magnitude;
+            if (distance > maxDist)
+                result = o.transform;
+        }
+        return result;
     }
 }
