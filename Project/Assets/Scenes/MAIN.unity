@@ -4623,7 +4623,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxFishes: 5
+  smallFishesSpawn: 5
+  mediumFishesSpawn: 3
+  maxFishType: 5
   fishes:
+  - {fileID: 1632311470251738, guid: 4fbcc92459c761f40a8f9f105bbe978f, type: 2}
+  - {fileID: 1608568545580422, guid: 66bfc64b4e2ad6f45947716a7dd88b7d, type: 2}
+  - {fileID: 1180691179156114, guid: 672f45b1edf9d8245b9d6fd41db81596, type: 2}
+  - {fileID: 1038299225701414, guid: c00021291606d5a44aad0257cf5fbd8a, type: 2}
+  - {fileID: 1697608942329880, guid: 852c81f819bc21842bd7847fb40c7929, type: 2}
+  - {fileID: 1820962436298936, guid: 900bb4f3bfc2d09468777cd10f744641, type: 2}
+  - {fileID: 1948189798598716, guid: 4fa41732a53550945809dd9326219c0d, type: 2}
+  - {fileID: 1766386675116370, guid: e70fc95a6deac024a86c2fb0473d723e, type: 2}
+  - {fileID: 1375915909150802, guid: 5624ed6e50a91f04199b04f847723715, type: 2}
   - {fileID: 1778542313459030, guid: d89471d728185484d8c25c3056648e35, type: 2}
   - {fileID: 1990568906753222, guid: f2f3a1d49d5b5f541a65d2ce85a67277, type: 2}
   - {fileID: 1723610490158538, guid: 65108b70a2ea89e4186d01d865737ec1, type: 2}

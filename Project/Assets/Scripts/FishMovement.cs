@@ -18,8 +18,8 @@ public class FishMovement : MonoBehaviour {
     private Vector3 movement = Vector3.zero;
 
     private float wanderAngle = 5;
-    private int circleDistance = 50;
-    private int circleRadius = 1;
+    private float circleDistance;
+    private float circleRadius;
     private float angleChange = 5;
 
     public bool captured = false;
@@ -36,6 +36,9 @@ public class FishMovement : MonoBehaviour {
         if (movementType == Type.HorizontalRandom) movementType = (Random.value < 0.5f) ? Type.HorizontalToLeft : Type.HorizontalToRight;
 
         Vector3 initPos = transform.position;
+
+        circleDistance = sprFish.size.x * 5f;
+        circleRadius = sprFish.size.y / 2;
 
         if (movementType == Type.HorizontalToRight) {
 
@@ -57,6 +60,9 @@ public class FishMovement : MonoBehaviour {
 
             initPos.y = -(sprRendererBG.size.y / 2 + sprFish.size.y / 2);
             initPos.x = Random.Range(-(sprRendererBG.size.x / 2 - sprFish.size.x / 2), sprRendererBG.size.x / 2 - sprFish.size.x / 2);
+
+            circleDistance = sprFish.size.y * 5f;
+            circleRadius = sprFish.size.x / 2;
 
         }
 

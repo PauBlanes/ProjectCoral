@@ -11,6 +11,7 @@ TagManager:
   - BG
   - Petrol
   - Rubbish
+  - SMALL_FISH
   layers:
   - Default
   - TransparentFX
