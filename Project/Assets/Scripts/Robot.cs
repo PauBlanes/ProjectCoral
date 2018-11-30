@@ -19,6 +19,8 @@ public class Robot : MonoBehaviour {
 
     public RobotType rT;
 
+    public GameObject[] investigableObjects;
+
     //Wander
     float wanderAngle = 0;
     private float minAngleChange = -30;
@@ -36,6 +38,8 @@ public class Robot : MonoBehaviour {
 
         //Cojemos el más cercano como target
         target = GetCloserTarget(GameObject.FindGameObjectsWithTag(rT.ToString()));
+        
+        //nos guardamos todos los corales como investigalbles
         
     }
 	
@@ -199,5 +203,5 @@ public class Robot : MonoBehaviour {
 
         //destroy robot
         Destroy(gameObject);
-    }
+    }    
 }

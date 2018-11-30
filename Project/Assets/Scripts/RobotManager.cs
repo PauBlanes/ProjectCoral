@@ -44,7 +44,15 @@ public class RobotManager : MonoBehaviour {
             {
                 if (r.robotButton == b)
                 {
-                    Instantiate(r.robot, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), Quaternion.identity);
+                    if(r.tagName != "Investigable") //si no es de investigacion spawneamos tal cual
+                    {
+                        Instantiate(r.robot, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), Quaternion.identity);
+                    }
+                    else
+                    {
+                        iRobotSelected = true;
+                        ShowInvestigable();
+                    }
                     Camera.main.GetComponent<EnergyManager>().energyCounter -= r.cost;
                 }
             }            
@@ -80,5 +88,10 @@ public class RobotManager : MonoBehaviour {
                 rH.robotButton.GetComponent<Image>().color = color;
             }
         }
+    }
+
+    void ShowInvestigable()
+    {
+
     }
 }
