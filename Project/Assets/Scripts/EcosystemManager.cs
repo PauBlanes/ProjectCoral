@@ -47,7 +47,7 @@ public class EcosystemManager : MonoBehaviour {
     {
         while (true)
         {
-            timeToWait = Random.Range(1, 3);
+            timeToWait = Random.Range(20, 20);
             yield return new WaitForSeconds(timeToWait);
             Instantiate(threats[Random.Range(0, threats.Length)], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
         }        

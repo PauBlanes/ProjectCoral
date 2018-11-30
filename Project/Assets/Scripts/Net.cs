@@ -40,7 +40,11 @@ public class Net : MonoBehaviour {
         }
         else if (state == States.moving)
         {            
-            transform.position += new Vector3(direction,0,0) * Time.deltaTime * speed;    
+            transform.position += new Vector3(direction,0,0) * Time.deltaTime * speed; 
+            if (transform.position.x > 23 || transform.position.x < -23)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

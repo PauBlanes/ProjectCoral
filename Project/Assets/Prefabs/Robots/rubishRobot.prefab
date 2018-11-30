@@ -207,6 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   workTime: 12
+  state: 0
   workPerSecond: 1
   rT: 2
 --- !u!212 &212636334852908182

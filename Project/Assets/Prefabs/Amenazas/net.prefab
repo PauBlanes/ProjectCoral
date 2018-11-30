@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114451766373972364}
   m_Layer: 0
   m_Name: net
-  m_TagString: Untagged
+  m_TagString: Net
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1901318450206990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.709449, y: 18.6, z: 0}
+  m_LocalPosition: {x: -38.276833, y: -11.418684, z: 0}
   m_LocalScale: {x: 0.31, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.59808755, y: 0}
+  m_Offset: {x: 0.052710533, y: -0.7407975}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.5134053, y: 20.23}
+  m_Size: {x: 13.277571, y: 18.748405}
   m_EdgeRadius: 0
 --- !u!114 &114451766373972364
 MonoBehaviour:

@@ -2866,7 +2866,7 @@ GameObject:
   - component: {fileID: 336873256}
   m_Layer: 0
   m_Name: 13.Plate Coral Purple C
-  m_TagString: Untagged
+  m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4599,6 +4599,10 @@ MonoBehaviour:
     robotButton: {fileID: 1053034960}
     cost: 0
     robot: {fileID: 1999844737649432, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
+  - tagName: Net
+    robotButton: {fileID: 425542308}
+    cost: 0
+    robot: {fileID: 1536682777461618, guid: 04e6cb4724e47e74c983eaee7198e143, type: 2}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11145,7 +11149,7 @@ GameObject:
   - component: {fileID: 1323937878}
   m_Layer: 0
   m_Name: 15.Plate Coral Brown C
-  m_TagString: Untagged
+  m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11973,7 +11977,7 @@ GameObject:
   - component: {fileID: 1444736544}
   m_Layer: 0
   m_Name: 14.Plate Coral Green C
-  m_TagString: Untagged
+  m_TagString: CORAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,6 +12,7 @@ TagManager:
   - Petrol
   - Rubbish
   - SMALL_FISH
+  - Net
   layers:
   - Default
   - TransparentFX

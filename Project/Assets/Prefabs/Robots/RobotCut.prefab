@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 4161681292651968}
   - component: {fileID: 111512409085786780}
   - component: {fileID: 95900323146465424}
+  - component: {fileID: 114087366507186232}
   m_Layer: 0
   m_Name: RobotCut
   m_TagString: ROBOT
@@ -96,8 +97,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536682777461618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.031066, y: -3.3636155, z: 0.07192756}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: -28.630573, y: -7.846753, z: 0.07192756}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4960077163060088}
   - {fileID: 4010554681047268}
@@ -163,6 +164,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114087366507186232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1536682777461618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd48e4cc7a3f992499778271843b22df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  workTime: 10
+  state: 0
+  workPerSecond: 1
+  rT: 3
 --- !u!212 &212477593253833012
 SpriteRenderer:
   m_ObjectHideFlags: 1
