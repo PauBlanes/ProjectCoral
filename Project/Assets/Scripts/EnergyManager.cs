@@ -51,4 +51,10 @@ public class EnergyManager : MonoBehaviour {
     {
         return energyCounter;
     }
+    public void InvestigationReward(GameObject info, int reward)
+    {
+        Camera.main.GetComponent<EnergyManager>().energyCounter += reward;
+        UpdateCounter();
+        Destroy(info);
+    }
 }

@@ -206,11 +206,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  workTime: 12
+  workTime: 2
   state: 0
   workPerSecond: 1
   rT: 0
-  investigableObjects: []
 --- !u!212 &212409466785110024
 SpriteRenderer:
   m_ObjectHideFlags: 1

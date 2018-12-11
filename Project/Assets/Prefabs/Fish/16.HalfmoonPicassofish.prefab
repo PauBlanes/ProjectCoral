@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212714500512066950}
   - component: {fileID: 114841772374645934}
   - component: {fileID: 61641932762388364}
+  - component: {fileID: 114659785806360906}
   m_Layer: 0
   m_Name: 16.HalfmoonPicassofish
   m_TagString: FISH
@@ -67,6 +68,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.38, y: 2.64}
   m_EdgeRadius: 0
+--- !u!114 &114659785806360906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1418456792296888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b088228b677784aaf0bf54eee758f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 1919716293489846, guid: 756f6dfdfedf28042bb157f53992e0b2, type: 2}
 --- !u!114 &114841772374645934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementType: 0
   speed: 3
+  captured: 0
 --- !u!212 &212714500512066950
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -28,6 +28,13 @@ public class EcosystemManager : MonoBehaviour {
         {
             c.SetActive(false);
         }
+
+        //Afegim els corals actius al array del robot de investigacio
+        foreach (GameObject activeCoral in activeCorals)
+        {
+            Robot.investigableObjects.Add(activeCoral);
+        }
+
         //Setegem els peixos
         Camera.main.GetComponent<FishManager>().maxFishes = 5;
 
@@ -63,6 +70,7 @@ public class EcosystemManager : MonoBehaviour {
                 {
                     GameObject temp = hiddenCorals[Random.Range(0, hiddenCorals.Count - 1)];
                     activeCorals.Add(temp);
+                    Robot.investigableObjects.Add(temp);
                     temp.SetActive(true);
                     hiddenCorals.Remove(temp);
                 }
@@ -81,6 +89,7 @@ public class EcosystemManager : MonoBehaviour {
                     hiddenCorals.Add(temp);
                     temp.SetActive(false);
                     activeCorals.Remove(temp);
+                    Robot.investigableObjects.Remove(temp);
                 }
                 lastCheckpoint = ecosystemEvolution;
                 if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
@@ -98,5 +107,5 @@ public class EcosystemManager : MonoBehaviour {
         hiddenCorals.Add(coral);
         coral.SetActive(false);
         activeCorals.Remove(coral);
-    }
+    }    
 }

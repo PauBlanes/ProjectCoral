@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212129650342115070}
   - component: {fileID: 114325285338651124}
   - component: {fileID: 61260659323493020}
+  - component: {fileID: 114672686944090960}
   m_Layer: 0
   m_Name: 14.Pacific Seahorse
   m_TagString: FISH
@@ -81,6 +82,18 @@ MonoBehaviour:
   movementType: 0
   speed: 5
   captured: 0
+--- !u!114 &114672686944090960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1260650315190090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b088228b677784aaf0bf54eee758f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 1919716293489846, guid: 756f6dfdfedf28042bb157f53992e0b2, type: 2}
 --- !u!212 &212129650342115070
 SpriteRenderer:
   m_ObjectHideFlags: 1

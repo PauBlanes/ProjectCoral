@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212925955103703452}
   - component: {fileID: 114440687888596418}
   - component: {fileID: 61077028441227958}
+  - component: {fileID: 114581883967948444}
   m_Layer: 0
   m_Name: 19.Jellyfish
   m_TagString: FISH
@@ -80,6 +81,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementType: 1
   speed: 2
+  captured: 0
+--- !u!114 &114581883967948444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933303862963120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b088228b677784aaf0bf54eee758f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 1919716293489846, guid: 756f6dfdfedf28042bb157f53992e0b2, type: 2}
 --- !u!212 &212925955103703452
 SpriteRenderer:
   m_ObjectHideFlags: 1

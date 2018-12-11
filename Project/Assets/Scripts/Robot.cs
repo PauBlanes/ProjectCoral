@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Robot : MonoBehaviour {
     
-    public enum States { walking, working, wander};
+    public enum States { walking, working, wander, investigating};
     public enum RobotType {Investigation, Repair, Rubbish, Net, Petrol } //cuidao que el nom del robot es el del tag de l'amenaça
 
     private Transform target;
@@ -19,7 +19,7 @@ public class Robot : MonoBehaviour {
 
     public RobotType rT;
 
-    public GameObject[] investigableObjects;
+    public static List<GameObject> investigableObjects = new List<GameObject>();
 
     //Wander
     float wanderAngle = 0;
@@ -40,7 +40,7 @@ public class Robot : MonoBehaviour {
         if (rT != RobotType.Investigation)
             target = GetCloserTarget(GameObject.FindGameObjectsWithTag(rT.ToString()));
         else
-            target = null;
+            ChooseInvestigationTarget();
         
         //nos guardamos todos los corales como investigalbles
         
@@ -49,7 +49,7 @@ public class Robot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (waitCounter > 0) //si encara te temps de vida
+        if (waitCounter > 0 || rT == RobotType.Investigation) //si encara te temps de vida. AL de investigacio li dona igual
         {
             //restem temps de vida
             waitCounter -= Time.deltaTime;
@@ -106,16 +106,29 @@ public class Robot : MonoBehaviour {
                     //manternirse enganxat
                     transform.position = target.position; //per si encara estava moventse l'enemic quan l'atrapem que el continui seguint
 
-                    //Quant triga a cargar-se l'enemic
-                    float enemyHealth = Attack();
-                    if (enemyHealth <= 0)
+                    //Quant triga a destruir l'amenaça
+                    if (rT != RobotType.Investigation)
                     {
-                        KillEnemy();
+                        float enemyHealth = Attack();
+                        if (enemyHealth <= 0)
+                        {
+                            KillEnemy();
+                        }
+                    }
+                    else
+                    {
+                        float timeLeft = Investigate();                        
+                        if (timeLeft <= 0) //quan hem acabat d'investigar mostrem info i morim
+                        {
+                            investigableObjects.Remove(target.gameObject); //treiem l'objecte que ja hem investigat
+                            target.GetComponent<InvestigableObj>().ShowInfo();
+                            Die();
+                        }
                     }
                 }
             }                    
         }
-        else //Acció que fer  mors
+        else //Acció que fer quan s'acaba el temps de vida
         {
             Die();
         }
@@ -179,6 +192,12 @@ public class Robot : MonoBehaviour {
         return col.a;
     }
 
+    float Investigate()
+    {
+        workTime -= Time.deltaTime;
+        return workTime;
+    }
+
     void KillEnemy()
     {
         //Sumar al nivell del sistema
@@ -199,12 +218,30 @@ public class Robot : MonoBehaviour {
 
     void Die ()
     {
-        if (rT == RobotType.Investigation)
-        {
-            //show info
-        }
-
         //destroy robot
         Destroy(gameObject);
-    }    
+    }
+    
+    void ChooseInvestigationTarget()
+    {
+        int fishOrCoral = Random.Range(0, 1);
+        if (fishOrCoral == 0)
+            target = investigableObjects[Random.Range(0, investigableObjects.Count)].transform;
+        else
+        {
+            GameObject[] fishes = GameObject.FindGameObjectsWithTag("FISH");
+            GameObject chosen;
+            do
+            {
+                chosen = fishes[Random.Range(0, fishes.Length)];
+            } while (chosen.transform.position.x > 8 && chosen.transform.position.x < -8);
+            target = chosen.transform;
+            speed *= 2;
+            workTime *= 0.5f;
+
+        }
+            
+        
+    }
+    
 }

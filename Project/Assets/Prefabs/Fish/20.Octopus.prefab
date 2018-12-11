@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212207505118179816}
   - component: {fileID: 114701096352106450}
   - component: {fileID: 61926143188977052}
+  - component: {fileID: 114168665720776758}
   m_Layer: 0
   m_Name: 20.Octopus
   m_TagString: FISH
@@ -67,6 +68,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.37, y: 7.39}
   m_EdgeRadius: 0
+--- !u!114 &114168665720776758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193486093795808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b088228b677784aaf0bf54eee758f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 1919716293489846, guid: 756f6dfdfedf28042bb157f53992e0b2, type: 2}
 --- !u!114 &114701096352106450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementType: 0
   speed: 2
+  captured: 0
 --- !u!212 &212207505118179816
 SpriteRenderer:
   m_ObjectHideFlags: 1
