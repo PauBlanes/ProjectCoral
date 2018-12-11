@@ -54,9 +54,17 @@ public class EcosystemManager : MonoBehaviour {
     {
         while (true)
         {
-            timeToWait = Random.Range(20, 20);
-            yield return new WaitForSeconds(timeToWait);
-            Instantiate(threats[Random.Range(0, threats.Length)], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
+            if (!Tutorial.showingInfo && Tutorial.acceptedThreads-1 >= 0)
+            {
+                timeToWait = Random.Range(20, 20);
+                yield return new WaitForSeconds(timeToWait);
+
+                int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);
+                if (threadIndex < 3) //si no es el de reparar
+                    Instantiate(threats[threadIndex], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
+                else
+                    RepairThread();
+            }            
         }        
     }
 
@@ -64,41 +72,45 @@ public class EcosystemManager : MonoBehaviour {
     {
         while (true)
         {
-            if (ecosystemEvolution - lastCheckpoint > breakPoint)
+            if (!Tutorial.showingInfo) // no fer això mentre estem mostran info del tutorial
             {
-                if (hiddenCorals.Count > 0)
+                if (ecosystemEvolution - lastCheckpoint > breakPoint)
                 {
-                    GameObject temp = hiddenCorals[Random.Range(0, hiddenCorals.Count - 1)];
-                    activeCorals.Add(temp);
-                    Robot.investigableObjects.Add(temp);
-                    temp.SetActive(true);
-                    hiddenCorals.Remove(temp);
+                    if (hiddenCorals.Count > 0)
+                    {
+                        GameObject temp = hiddenCorals[Random.Range(0, hiddenCorals.Count - 1)];
+                        activeCorals.Add(temp);
+                        Robot.investigableObjects.Add(temp);
+                        temp.SetActive(true);
+                        hiddenCorals.Remove(temp);
+                    }
+                    lastCheckpoint = ecosystemEvolution;
+                    if (Camera.main.GetComponent<FishManager>().maxFishes < 25)
+                    {
+                        Camera.main.GetComponent<FishManager>().maxFishes++;
+                        //Sumar maxFishType
+                    }
                 }
-                lastCheckpoint = ecosystemEvolution;
-                if (Camera.main.GetComponent<FishManager>().maxFishes < 25)
+                if (ecosystemEvolution - lastCheckpoint < -breakPoint)
                 {
-                    Camera.main.GetComponent<FishManager>().maxFishes++;
-                    //Sumar maxFishType
-                }                    
+                    if (activeCorals.Count > 0)
+                    {
+                        GameObject temp = activeCorals[Random.Range(0, activeCorals.Count - 1)];
+                        hiddenCorals.Add(temp);
+                        temp.SetActive(false);
+                        activeCorals.Remove(temp);
+                        Robot.investigableObjects.Remove(temp);
+                    }
+                    lastCheckpoint = ecosystemEvolution;
+                    if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
+                    {
+                        Camera.main.GetComponent<FishManager>().maxFishes--;
+                        //sumar maxFishType
+                    }
+                }
+                yield return new WaitForSeconds(1f);
             }
-            if (ecosystemEvolution - lastCheckpoint < -breakPoint)
-            {
-                if (activeCorals.Count > 0)
-                {
-                    GameObject temp = activeCorals[Random.Range(0, activeCorals.Count - 1)];
-                    hiddenCorals.Add(temp);
-                    temp.SetActive(false);
-                    activeCorals.Remove(temp);
-                    Robot.investigableObjects.Remove(temp);
-                }
-                lastCheckpoint = ecosystemEvolution;
-                if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
-                {
-                    Camera.main.GetComponent<FishManager>().maxFishes--;
-                    //sumar maxFishType
-                }
-            }
-            yield return new WaitForSeconds(1f);
+            
         }        
     }
     
@@ -107,5 +119,10 @@ public class EcosystemManager : MonoBehaviour {
         hiddenCorals.Add(coral);
         coral.SetActive(false);
         activeCorals.Remove(coral);
-    }    
+    }
+    
+    void RepairThread()
+    {
+
+    }
 }

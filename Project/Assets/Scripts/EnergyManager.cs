@@ -27,10 +27,14 @@ public class EnergyManager : MonoBehaviour {
 
     IEnumerator WaitAndSpawn()
     {
+        yield return new WaitForSeconds(1.5f);
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(averageSpawnTime - spawnTimeRange, averageSpawnTime + spawnTimeRange));
-            SpawnEnergy();
+            if (!Tutorial.showingInfo)
+            {
+                yield return new WaitForSeconds(Random.Range(averageSpawnTime - spawnTimeRange, averageSpawnTime + spawnTimeRange));
+                SpawnEnergy();
+            }            
         }
     }
 
