@@ -14,7 +14,7 @@ public class Tutorial : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //Amagar tot
-        /*foreach (GameObject i in infoImages)
+        foreach (GameObject i in infoImages)
         {
             i.SetActive(false);
         }
@@ -24,7 +24,7 @@ public class Tutorial : MonoBehaviour {
         }
 
         //Començar routina
-        StartCoroutine(TutorialCoroutine());*/
+        StartCoroutine(TutorialCoroutine());
 	}
 	
 	// Update is called once per frame
@@ -37,8 +37,6 @@ public class Tutorial : MonoBehaviour {
 
     IEnumerator TutorialCoroutine()
     {
-        yield return new WaitForSeconds(1);
-
         //Mostrem imatge amb info general
         infoImages[0].SetActive(true);
         showingInfo = true;
@@ -56,7 +54,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[1].SetActive(false);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(20f);
 
         //Mostrar segona info de botó i activar el primer botó
         infoImages[2].SetActive(true);
@@ -67,7 +65,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[2].SetActive(false);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(20f);
 
         //Mostrar tercera info de botó i activar el primer botó
         infoImages[3].SetActive(true);
@@ -78,7 +76,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[3].SetActive(false);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(20f);
 
         //Mostrar quarta info de botó i activar el primer botó
         infoImages[4].SetActive(true);
@@ -89,7 +87,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[4].SetActive(false);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(20f);
 
         //Mostrar cinquena info de botó i activar el primer botó
         infoImages[5].SetActive(true);
@@ -100,7 +98,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[5].SetActive(false);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(20f);
     }
 
 

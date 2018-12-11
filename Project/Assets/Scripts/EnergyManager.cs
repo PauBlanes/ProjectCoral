@@ -26,8 +26,7 @@ public class EnergyManager : MonoBehaviour {
     }
 
     IEnumerator WaitAndSpawn()
-    {
-        yield return new WaitForSeconds(1.5f);
+    {        
         while (true)
         {
             if (!Tutorial.showingInfo)
