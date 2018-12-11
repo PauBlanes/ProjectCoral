@@ -37,7 +37,10 @@ public class Robot : MonoBehaviour {
         waitCounter = workTime;
 
         //Cojemos el más cercano como target
-        target = GetCloserTarget(GameObject.FindGameObjectsWithTag(rT.ToString()));
+        if (rT != RobotType.Investigation)
+            target = GetCloserTarget(GameObject.FindGameObjectsWithTag(rT.ToString()));
+        else
+            target = null;
         
         //nos guardamos todos los corales como investigalbles
         

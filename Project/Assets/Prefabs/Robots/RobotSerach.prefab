@@ -205,10 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd48e4cc7a3f992499778271843b22df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  workTime: 0
+  speed: 4
+  workTime: 12
   state: 0
-  workPerSecond: 0
+  workPerSecond: 1
   rT: 0
   investigableObjects: []
 --- !u!212 &212409466785110024

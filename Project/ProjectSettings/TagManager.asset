@@ -13,6 +13,7 @@ TagManager:
   - Rubbish
   - SMALL_FISH
   - Net
+  - Investigation
   layers:
   - Default
   - TransparentFX

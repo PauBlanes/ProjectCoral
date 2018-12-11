@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class InvestigableObj : MonoBehaviour {
 
-    private RobotManager rB;
+    
 
 	// Use this for initialization
-	void Start () {
-        rB = Camera.main.GetComponent<RobotManager>();	
+	void Start () {        
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//pintar aura quan toqui
 	}
-
-    private void OnMouseDown()
-    {
-      if(rB.iRobotSelected)
-        {
-            //rB.SpawnRobot(transform, Vector3.zero);
-        }
-    }
+    
 }

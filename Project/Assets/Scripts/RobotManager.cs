@@ -12,14 +12,13 @@ public class RobotManager : MonoBehaviour {
         public Button robotButton;
         public int cost;
         public GameObject robot;
-    }
-
-    private GameObject robot2Spawn;
-
-    public GameObject[] possibleITargets; //targets for the investigation robot
-    public bool iRobotSelected;
+        public Image cooldownIcon;
+    }          
 
     public List<RobotHud> robots = new List<RobotHud>();
+
+    public float iRobotTimer;
+    private float iRobotCounter;
 
 	// Use this for initialization
 	void Start () {
@@ -28,54 +27,51 @@ public class RobotManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ButtonsOpacity();
+        UpdateCooldown();
     }
 
     public void SelectRobot(Button b)
     {
-        if (b.GetComponent<Image>().color.a == 1) //si tens suficient diners
-        {
-            /*robot2Spawn = robot;
-            if (robot2Spawn.name == "InvestigationRobot")
-            {
-                iRobotSelected = true;
-            }*/
+        if (b.transform.GetChild(0).GetComponent<Image>().fillAmount == 0) //si tens suficient diners
+        {            
             foreach (RobotHud r in robots)
             {
                 if (r.robotButton == b)
-                {
-                    if(r.tagName != "Investigable") //si no es de investigacion spawneamos tal cual
+                {                  
+                    Instantiate(r.robot, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), Quaternion.identity);           
+                    
+                    if (r.tagName != "Investigable") //si no es de investigacio restem el cost
                     {
-                        Instantiate(r.robot, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), Quaternion.identity);
+                        Camera.main.GetComponent<EnergyManager>().energyCounter -= r.cost;
                     }
-                    else
+                    else //si es de investigació resetegem el temps
                     {
-                        iRobotSelected = true;
-                        ShowInvestigable();
+                        iRobotCounter = iRobotTimer;
                     }
-                    Camera.main.GetComponent<EnergyManager>().energyCounter -= r.cost;
                 }
             }            
         }
     }
-    /*public void SpawnRobot (Transform t, Vector3 o)
-    {
-        GameObject newRobot = Instantiate(robot2Spawn, Vector3.zero ,Quaternion.identity);
-        if (robot2Spawn.name == "InvestigationRobot")
-        {
-            newRobot.GetComponent<Robot>().target = t;
-            iRobotSelected = false;
-        }  
-        
-    }*/
-
-    void ButtonsOpacity()
+    
+    void UpdateCooldown()
     {
         foreach (RobotHud rH in robots)
         {
-            
+            if (rH.cost != 0 && rH.tagName != "Investigable")
+            {                
+                float a = Mathf.Clamp(rH.cost - GetComponent<EnergyManager>().GetCount(), 0, rH.cost);
+                float b = a / rH.cost;                
+                rH.cooldownIcon.fillAmount = b;
+            }
+            else if (rH.tagName == "Investigable")
+            {
+                iRobotCounter -= Time.deltaTime;
+                iRobotCounter = Mathf.Clamp(iRobotCounter, 0, iRobotTimer);
+                rH.cooldownIcon.fillAmount = iRobotCounter / iRobotTimer;
+            }
+                
             //si no tens la pasta no es pot fer spawn, que passsa si no hi ha l'amenaça
-            if (rH.cost > GetComponent<EnergyManager>().GetCount())
+            /*if (rH.cost > GetComponent<EnergyManager>().GetCount())
             {
                 Color color = rH.robotButton.GetComponent<Image>().color;
                 color.a = 0.5f;
@@ -86,12 +82,7 @@ public class RobotManager : MonoBehaviour {
                 Color color = rH.robotButton.GetComponent<Image>().color;
                 color.a = 1f;
                 rH.robotButton.GetComponent<Image>().color = color;
-            }
+            }*/
         }
-    }
-
-    void ShowInvestigable()
-    {
-
-    }
+    }   
 }
