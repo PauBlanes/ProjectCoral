@@ -20,6 +20,7 @@ public class Robot : MonoBehaviour {
     public RobotType rT;
 
     public static List<GameObject> investigableObjects = new List<GameObject>();
+    private static List<GameObject> investigatedFish = new List<GameObject>();
 
     //Wander
     float wanderAngle = 0;
@@ -234,11 +235,11 @@ public class Robot : MonoBehaviour {
             do
             {
                 chosen = fishes[Random.Range(0, fishes.Length)];
-            } while (chosen.transform.position.x > 8 && chosen.transform.position.x < -8);
+            } while (chosen.transform.position.x > 8 && chosen.transform.position.x < -8 && !investigatedFish.Contains(chosen));
             target = chosen.transform;
             speed *= 2;
             workTime *= 0.5f;
-
+            investigatedFish.Add(chosen);
         }
             
         
