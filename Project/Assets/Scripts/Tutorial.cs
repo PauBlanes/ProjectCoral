@@ -14,7 +14,7 @@ public class Tutorial : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //Amagar tot
-        foreach (GameObject i in infoImages)
+        /*foreach (GameObject i in infoImages)
         {
             i.SetActive(false);
         }
@@ -24,7 +24,7 @@ public class Tutorial : MonoBehaviour {
         }
 
         //Començar routina
-        StartCoroutine(TutorialCoroutine());
+        StartCoroutine(TutorialCoroutine());*/
 	}
 	
 	// Update is called once per frame

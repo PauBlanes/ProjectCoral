@@ -34,7 +34,9 @@ public class EnergyManager : MonoBehaviour {
             {
                 yield return new WaitForSeconds(Random.Range(averageSpawnTime - spawnTimeRange, averageSpawnTime + spawnTimeRange));
                 SpawnEnergy();
-            }            
+            }
+            else
+                yield return null;
         }
     }
 

@@ -53,8 +53,8 @@ public class EcosystemManager : MonoBehaviour {
     IEnumerator SpawnThreads()
     {
         while (true)
-        {
-            if (!Tutorial.showingInfo && Tutorial.acceptedThreads-1 >= 0)
+        {            
+            if (!Tutorial.showingInfo && Tutorial.acceptedThreads - 1 >= 0)
             {
                 timeToWait = Random.Range(20, 20);
                 yield return new WaitForSeconds(timeToWait);
@@ -64,7 +64,9 @@ public class EcosystemManager : MonoBehaviour {
                     Instantiate(threats[threadIndex], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
                 else
                     RepairThread();
-            }            
+            }
+            else
+                yield return null;
         }        
     }
 
@@ -110,7 +112,9 @@ public class EcosystemManager : MonoBehaviour {
                 }
                 yield return new WaitForSeconds(1f);
             }
-            
+            else
+                yield return null;
+
         }        
     }
     
