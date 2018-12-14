@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Robot : MonoBehaviour {
     
@@ -36,6 +37,9 @@ public class Robot : MonoBehaviour {
     Vector3 circleCenter;
     Vector3 circlePoint;
 
+    //UI
+    public Image lifeBar;
+
     // Use this for initialization
     void Start()
     {        
@@ -60,6 +64,8 @@ public class Robot : MonoBehaviour {
         {
             //restem temps de vida
             lifeCounter -= Time.deltaTime;
+            if(rT != RobotType.Investigation)
+                lifeBar.fillAmount = lifeCounter / lifeTime;
 
             //Si no tenim objectiu fem wander
             if (target == null)
@@ -86,7 +92,7 @@ public class Robot : MonoBehaviour {
 
                     if (target != null)
                     {
-                        speed *= 1.5f;
+                        speed *= 2f;
                         state = States.walking;
                     }
                         
@@ -210,7 +216,7 @@ public class Robot : MonoBehaviour {
 
     void StartWander ()
     {
-        speed /= 1.5f;
+        speed /= 2f;
         state = States.wander;
         StartCoroutine(SetRandomDirection());
     }
