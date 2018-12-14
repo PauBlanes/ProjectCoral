@@ -302,6 +302,7 @@ public class Robot : MonoBehaviour {
             workIcon.enabled = true;
             yield return new WaitForSeconds(0.2f);
             workIcon.enabled = false;
+            yield return new WaitForSeconds(0.2f);
         }
 
         workIcon.enabled = false;

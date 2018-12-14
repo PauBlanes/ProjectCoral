@@ -61,6 +61,7 @@ public class EnergyManager : MonoBehaviour {
     {
         Camera.main.GetComponent<EnergyManager>().energyCounter += reward;
         UpdateCounter();
+        Time.timeScale = 1;
         Destroy(info);
     }
 }
