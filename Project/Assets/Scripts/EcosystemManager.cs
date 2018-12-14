@@ -99,7 +99,8 @@ public class EcosystemManager : MonoBehaviour {
                     if (Camera.main.GetComponent<FishManager>().maxFishes < 25)
                     {
                         Camera.main.GetComponent<FishManager>().maxFishes++;
-                        //Sumar maxFishType
+                        Camera.main.GetComponent<FishManager>().maxFishType++;
+                        //ensenyar popup
                     }
                 }
                 if (ecosystemEvolution - lastCheckpoint < -breakPoint)
@@ -123,7 +124,9 @@ public class EcosystemManager : MonoBehaviour {
                     lastCheckpoint = ecosystemEvolution;
                     if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
                     {
-                        Camera.main.GetComponent<FishManager>().maxFishes--;                        
+                        Camera.main.GetComponent<FishManager>().maxFishes--;
+                        Camera.main.GetComponent<FishManager>().maxFishType--;
+                        //ensenyar popup
                     }
                 }
                 yield return new WaitForSeconds(1f);
