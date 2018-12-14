@@ -55,6 +55,9 @@ TagManager:
   - name: CORAL
     uniqueID: 3388635279
     locked: 0
+  - name: BleachedCoral
+    uniqueID: 1776354257
+    locked: 0
   - name: Energy
     uniqueID: 3417595071
     locked: 0

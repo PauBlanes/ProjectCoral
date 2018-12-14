@@ -63,7 +63,7 @@ public class EcosystemManager : MonoBehaviour {
                 if (threadIndex < 3) //si no es el de reparar
                     Instantiate(threats[threadIndex], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
                 else
-                    RepairThread();
+                    RepairThreat();
             }
             else
                 yield return null;
@@ -125,8 +125,18 @@ public class EcosystemManager : MonoBehaviour {
         activeCorals.Remove(coral);
     }
     
-    void RepairThread()
+    void RepairThreat()
     {
+        int numOfCoralsToBleach = Mathf.Clamp(Random.Range(3, 8), 3, activeCorals.Count);
+        int coralsBleaching = 0;
 
+        while (coralsBleaching < numOfCoralsToBleach)
+        {
+            GameObject t = activeCorals[Random.Range(0, activeCorals.Count)];
+            if (t.GetComponent<Bleaching>() != null && !t.GetComponent<Bleaching>().IsBleaching) //si no es planta i no l'hem activat ja
+            {
+                t.GetComponent<Bleaching>().StartBleaching();
+            }
+        }
     }
 }
