@@ -65,9 +65,11 @@ public class Net : MonoBehaviour {
                 collision.gameObject.GetComponent<HealthSystem>().UpdateHealth(-35);
 
             //Fish
-            //set captured = true
-            //set offset
-            //añadir al array
+            if (collision.gameObject.GetComponent<FishMovement>() != null)
+            {
+                collision.gameObject.GetComponent<FishMovement>().captured = true; //pq no es mogui
+                collision.transform.SetParent(transform); //que segueixi a la reixa
+            }           
         }
     }
 }
