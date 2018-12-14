@@ -53,14 +53,16 @@ public class Net : MonoBehaviour {
         if ((collision.tag == "CORAL" || collision.tag.Contains("FISH")) && state == States.moving)
         {
             //Coral
-            Color col = collision.gameObject.GetComponent<SpriteRenderer>().color;
+            /*Color col = collision.gameObject.GetComponent<SpriteRenderer>().color;
             col.a -= 0.35f;
             collision.gameObject.GetComponent<SpriteRenderer>().color = col;
             if (col.a <= 0)
             {
                 col.a = 1;
                 Camera.main.GetComponent<EcosystemManager>().HideCoral(collision.gameObject);
-            }
+            }*/
+            if (collision.gameObject.GetComponent<HealthSystem>() != null)
+                collision.gameObject.GetComponent<HealthSystem>().UpdateHealth(-35);
 
             //Fish
             //set captured = true

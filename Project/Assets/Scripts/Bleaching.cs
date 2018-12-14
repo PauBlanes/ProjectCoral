@@ -8,8 +8,8 @@ public class Bleaching : MonoBehaviour {
     
     private bool blinking;
 
-    private readonly int curedHealth = 100; //a quin numero hem d'arrivar per considerarlo curat
-    private float health = 100;
+    private readonly int noBleachLevel = 100; //a quin numero hem d'arrivar per considerarlo curat
+    private float currentBleachLevel = 100;
     private int secondsToFullyHeal = 3;
 
 	// Use this for initialization
@@ -25,16 +25,16 @@ public class Bleaching : MonoBehaviour {
     public bool Healing()
     {
         //Anem curant
-        health += Time.deltaTime * (curedHealth/secondsToFullyHeal);
+        currentBleachLevel += Time.deltaTime * (noBleachLevel/secondsToFullyHeal);
         if (!blinking) //si no esta parpellejant fem que es vagi traient el blanc
         {
             Color newColor = bleachedSprite.GetComponent<SpriteRenderer>().color;
-            newColor.a = 1 - (health/100);
+            newColor.a = 1 - (currentBleachLevel/100);
             bleachedSprite.GetComponent<SpriteRenderer>().color = newColor;
         }
 
         //S'ha curat?
-        if (health >= curedHealth)
+        if (currentBleachLevel >= noBleachLevel)
         {
             if (blinking)
             {
@@ -67,7 +67,7 @@ public class Bleaching : MonoBehaviour {
     public void StartBleaching ()
     {
         Robot.bleachedCorals.Add(gameObject);
-        health = 50; //mentre parpellegi es 50 encara
+        currentBleachLevel = 50; //mentre parpellegi es 50 encara
         StartCoroutine(Bleach());
     }    
 
@@ -106,9 +106,10 @@ public class Bleaching : MonoBehaviour {
             }
         }        
 
-        if (health < curedHealth) //si s'ha passat el temps de parpelleig i no l'hem curat
+        if (currentBleachLevel < noBleachLevel) //si s'ha passat el temps de parpelleig i no l'hem curat
         {            
-            health = 0; //abans tenia 50 ara ja 0
+            currentBleachLevel = 0; //abans tenia 50 ara ja 0
+            StartCoroutine(Starving());
 
             //Deixar el color blanc
             Color newColor = bleachedSprite.GetComponent<SpriteRenderer>().color;
@@ -118,5 +119,14 @@ public class Bleaching : MonoBehaviour {
             //restar punts al sistema
             Camera.main.GetComponent<EcosystemManager>().ecosystemEvolution -= 10;            
         }        
+    }
+
+    IEnumerator Starving()
+    {
+        while(currentBleachLevel <= 0)
+        {
+           GetComponent<HealthSystem>().UpdateHealth(-5); 
+           yield return new WaitForSeconds(2);
+        }
     }
 }

@@ -80,6 +80,14 @@ public class EcosystemManager : MonoBehaviour {
             {
                 if (ecosystemEvolution - lastCheckpoint > breakPoint)
                 {
+
+                    //tots els corals guanyen una mica de vida
+                    foreach (GameObject coral in activeCorals)
+                    {
+                        coral.GetComponent<HealthSystem>().UpdateHealth(20);
+                    }
+
+                    //apareixen nous corals i peixos
                     if (hiddenCorals.Count > 0)
                     {
                         GameObject temp = hiddenCorals[Random.Range(0, hiddenCorals.Count - 1)];
@@ -97,19 +105,26 @@ public class EcosystemManager : MonoBehaviour {
                 }
                 if (ecosystemEvolution - lastCheckpoint < -breakPoint)
                 {
+
+                    //tots els corals perden una mica de vida
+                    foreach (GameObject coral in activeCorals)
+                    {
+                        coral.GetComponent<HealthSystem>().UpdateHealth(-10);
+                    }
+
+                    //desapareixen corals
                     if (activeCorals.Count > 0)
                     {
                         GameObject temp = activeCorals[Random.Range(0, activeCorals.Count - 1)];
                         hiddenCorals.Add(temp);
                         temp.SetActive(false);
                         activeCorals.Remove(temp);
-                        Robot.investigableObjects.Remove(temp);
+                        Robot.investigableObjects.Remove(temp);                        
                     }
                     lastCheckpoint = ecosystemEvolution;
                     if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
                     {
-                        Camera.main.GetComponent<FishManager>().maxFishes--;
-                        //sumar maxFishType
+                        Camera.main.GetComponent<FishManager>().maxFishes--;                        
                     }
                 }
                 yield return new WaitForSeconds(1f);
