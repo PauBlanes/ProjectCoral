@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EcosystemManager : MonoBehaviour {
 
@@ -13,6 +14,9 @@ public class EcosystemManager : MonoBehaviour {
 
     public GameObject[] threats;
     private float timeToWait;
+
+    //per mostrar quantes coses hi ha investigades
+    public Text investigationText;
 
 	// Use this for initialization
 	void Start () {
@@ -42,7 +46,9 @@ public class EcosystemManager : MonoBehaviour {
         StartCoroutine(SpawnThreads());
 
         //Començar rutina de mirar levolucio del nivell
-        StartCoroutine(CheckCoralReefState());       
+        StartCoroutine(CheckCoralReefState());
+
+        UpdateInvestigationUI();
 
     }
 
@@ -91,7 +97,10 @@ public class EcosystemManager : MonoBehaviour {
                     {
                         GameObject temp = hiddenCorals[Random.Range(0, hiddenCorals.Count - 1)];
                         activeCorals.Add(temp);
-                        Robot.investigableObjects.Add(temp);
+
+                        if(!Robot.alreadyInvestigated.Contains(temp))
+                            Robot.investigableObjects.Add(temp);
+
                         temp.SetActive(true);
                         hiddenCorals.Remove(temp);
                     }
@@ -162,5 +171,10 @@ public class EcosystemManager : MonoBehaviour {
             t.GetComponent<Bleaching>().StartBleaching();
             coralsToBleach.Remove(t);
         }        
+    }
+
+    public void UpdateInvestigationUI()
+    {
+        investigationText.text = Robot.alreadyInvestigated.Count + "/43";
     }
 }

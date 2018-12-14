@@ -21,8 +21,8 @@ public class Robot : MonoBehaviour {
     public RobotType rT;
 
     //Pel robot de investigació
-    public static List<GameObject> investigableObjects = new List<GameObject>();
-    private static List<GameObject> investigatedFish = new List<GameObject>();
+    public static List<GameObject> investigableObjects = new List<GameObject>();    
+    public static List<GameObject> alreadyInvestigated = new List<GameObject>();
 
     //Pel robot de reparar blanqueamiento
     public static List<GameObject> bleachedCorals = new List<GameObject>();
@@ -153,7 +153,9 @@ public class Robot : MonoBehaviour {
                         if (timeLeft <= 0) //quan hem acabat d'investigar mostrem info i morim
                         {
                             investigableObjects.Remove(target.gameObject); //treiem l'objecte que ja hem investigat
+                            alreadyInvestigated.Add(target.gameObject);
                             target.GetComponent<InvestigableObj>().ShowInfo();
+                            Camera.main.GetComponent<EcosystemManager>().UpdateInvestigationUI();
                             Die();
                         }
                     }
@@ -281,11 +283,11 @@ public class Robot : MonoBehaviour {
             do
             {
                 chosen = fishes[Random.Range(0, fishes.Length)];
-            } while (chosen.transform.position.x > 8 && chosen.transform.position.x < -8 && !investigatedFish.Contains(chosen));
+            } while (chosen.transform.position.x > 8 && chosen.transform.position.x < -8 && !alreadyInvestigated.Contains(chosen)); //si està al centre de la pantalla i no l'haviem investigat
+
             target = chosen.transform;
             speed *= 2;
-            lifeTime *= 0.5f;
-            investigatedFish.Add(chosen);
+            lifeTime *= 0.5f;            
         }
             
         
