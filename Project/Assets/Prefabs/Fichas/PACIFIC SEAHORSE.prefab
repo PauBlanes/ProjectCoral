@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 222329304255855248}
   - component: {fileID: 114490913468699288}
   - component: {fileID: 114943806100827104}
+  - component: {fileID: 114244180483328570}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -161,6 +162,17 @@ MonoBehaviour:
     INFO : The Pacific seahorse, also known as the giant seahorse, (Hippocampus ingens)
     is a species of fish in the family Syngnathidae. This species is the only seahorse
     species found in the eastern Pacific Ocean.'
+--- !u!114 &114244180483328570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1889390750195870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fde295a04f2954a830844e9fa065c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114291037156949880
 MonoBehaviour:
   m_ObjectHideFlags: 1

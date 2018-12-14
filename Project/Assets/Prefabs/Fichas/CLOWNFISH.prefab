@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222808244142873960}
   - component: {fileID: 114186188976152090}
   - component: {fileID: 114027774854818904}
+  - component: {fileID: 114333337257408728}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -261,6 +262,17 @@ MonoBehaviour:
 
     INFO : Clownfish or anemonefish are fishes from the subfamily Amphiprioninae in
     the family Pomacentridae. '
+--- !u!114 &114333337257408728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1267151709708744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fde295a04f2954a830844e9fa065c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114433105842453870
 MonoBehaviour:
   m_ObjectHideFlags: 1

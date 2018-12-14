@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222392196155873246}
   - component: {fileID: 114865262956938050}
   - component: {fileID: 114851685410764856}
+  - component: {fileID: 114946391470180244}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -285,6 +286,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Jasmine Polyp, Orange
+--- !u!114 &114946391470180244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579872628718388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fde295a04f2954a830844e9fa065c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222005250509959320
 CanvasRenderer:
   m_ObjectHideFlags: 1

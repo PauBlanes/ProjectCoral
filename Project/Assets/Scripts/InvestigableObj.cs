@@ -16,6 +16,7 @@ public class InvestigableObj : MonoBehaviour {
 	}
     public void ShowInfo()
     {
+        Time.timeScale = 0;
         GameObject newInfo = Instantiate(info, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         newInfo.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);        
     }    

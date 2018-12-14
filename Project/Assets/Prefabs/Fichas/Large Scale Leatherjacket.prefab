@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222549310372939648}
   - component: {fileID: 114184502313243714}
   - component: {fileID: 114818044087764888}
+  - component: {fileID: 114644618788625660}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -184,6 +185,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Large Scale Leatherjacket
+--- !u!114 &114644618788625660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1303573065601284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fde295a04f2954a830844e9fa065c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114766260156150010
 MonoBehaviour:
   m_ObjectHideFlags: 1
