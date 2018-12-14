@@ -39,6 +39,7 @@ public class Robot : MonoBehaviour {
 
     //UI
     public Image lifeBar;
+    public Image workIcon;
 
     // Use this for initialization
     void Start()
@@ -53,8 +54,9 @@ public class Robot : MonoBehaviour {
         else //cojemos el coral blanqueado más cercano
         {
             target = GetCloserRepairTarget();
-        }           
+        }
 
+        workIcon.enabled = false;
     }
 	
 	// Update is called once per frame
@@ -111,6 +113,7 @@ public class Robot : MonoBehaviour {
                     if ((transform.position - target.position).magnitude < 0.1f)
                     {
                         state = States.working;
+                        StartCoroutine(WorkingUI());
                     }
                     else
                     {                        
@@ -291,6 +294,17 @@ public class Robot : MonoBehaviour {
         }
             
         
+    }
+    IEnumerator WorkingUI()
+    {
+        while(state == States.working)
+        {
+            workIcon.enabled = true;
+            yield return new WaitForSeconds(0.2f);
+            workIcon.enabled = false;
+        }
+
+        workIcon.enabled = false;
     }
         
 }
