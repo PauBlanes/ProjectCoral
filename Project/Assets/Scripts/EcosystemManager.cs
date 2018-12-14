@@ -42,7 +42,8 @@ public class EcosystemManager : MonoBehaviour {
         StartCoroutine(SpawnThreads());
 
         //Començar rutina de mirar levolucio del nivell
-        StartCoroutine(CheckCoralReefState());
+        StartCoroutine(CheckCoralReefState());       
+
     }
 
     // Update is called once per frame
@@ -51,19 +52,20 @@ public class EcosystemManager : MonoBehaviour {
     }
     
     IEnumerator SpawnThreads()
-    {
+    {        
         while (true)
         {            
             if (!Tutorial.showingInfo && Tutorial.acceptedThreads - 1 >= 0)
             {
-                timeToWait = Random.Range(20, 20);
+                timeToWait = Random.Range(6, 15);
                 yield return new WaitForSeconds(timeToWait);
 
-                int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);
+                //int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);
+                int threadIndex = 3;
                 if (threadIndex < 3) //si no es el de reparar
                     Instantiate(threats[threadIndex], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
                 else
-                    RepairThreat();
+                    RepairThreat();                
             }
             else
                 yield return null;
@@ -127,16 +129,21 @@ public class EcosystemManager : MonoBehaviour {
     
     void RepairThreat()
     {
-        int numOfCoralsToBleach = Mathf.Clamp(Random.Range(3, 8), 3, activeCorals.Count);
-        int coralsBleaching = 0;
-
-        while (coralsBleaching < numOfCoralsToBleach)
+        List<GameObject> coralsToBleach = new List<GameObject>(); //corals possibles per a que es blanquegin
+        foreach (GameObject coral in activeCorals)
         {
-            GameObject t = activeCorals[Random.Range(0, activeCorals.Count)];
-            if (t.GetComponent<Bleaching>() != null && !Robot.bleachedCorals.Contains(t)) //si no es planta i no l'hem activat ja
-            {                
-                t.GetComponent<Bleaching>().StartBleaching();
+            if (coral.GetComponent<Bleaching>() != null && !Robot.bleachedCorals.Contains(coral)) //si no és planta i no està ja blanquejat
+            {
+                coralsToBleach.Add(coral);
             }
         }
+        int numOfCoralsToBleach = Mathf.Clamp(Random.Range(2, 4), 0, coralsToBleach.Count);
+        
+        for (int i = 0; i < numOfCoralsToBleach; i++)
+        {
+            GameObject t = coralsToBleach[Random.Range(0, coralsToBleach.Count)];
+            t.GetComponent<Bleaching>().StartBleaching();
+            coralsToBleach.Remove(t);
+        }        
     }
 }

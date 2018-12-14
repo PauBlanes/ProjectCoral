@@ -10,7 +10,7 @@ public class Robot : MonoBehaviour {
     private Transform target;
     public float speed;
 
-    public float workTime;
+    public float lifeTime;
     private float waitCounter;
 
     public States state = States.walking;
@@ -39,7 +39,7 @@ public class Robot : MonoBehaviour {
     // Use this for initialization
     void Start()
     {        
-        waitCounter = workTime;
+        waitCounter = lifeTime;
 
         //Cojemos el más cercano como target
         if (rT != RobotType.Investigation && rT != RobotType.Repair)
@@ -79,7 +79,11 @@ public class Robot : MonoBehaviour {
                     transform.position += wanderDirection.normalized * speed * Time.deltaTime;
 
                     //Comprovem si tenim objectiu
-                    target = GetCloserTarget(GameObject.FindGameObjectsWithTag(rT.ToString()));
+                    if (rT != RobotType.Repair)
+                        target = GetCloserTarget(GameObject.FindGameObjectsWithTag(rT.ToString()));
+                    else
+                        target = GetCloserRepairTarget();
+
                     if (target != null)
                     {
                         speed *= 1.5f;
@@ -231,8 +235,8 @@ public class Robot : MonoBehaviour {
 
     float Investigate()
     {
-        workTime -= Time.deltaTime;
-        return workTime;
+        lifeTime -= Time.deltaTime;
+        return lifeTime;
     }
 
     void KillEnemy()
@@ -274,7 +278,7 @@ public class Robot : MonoBehaviour {
             } while (chosen.transform.position.x > 8 && chosen.transform.position.x < -8 && !investigatedFish.Contains(chosen));
             target = chosen.transform;
             speed *= 2;
-            workTime *= 0.5f;
+            lifeTime *= 0.5f;
             investigatedFish.Add(chosen);
         }
             

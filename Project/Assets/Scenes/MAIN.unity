@@ -2223,7 +2223,7 @@ MonoBehaviour:
     cooldownIcon: {fileID: 1801410752}
   - tagName: Repair
     robotButton: {fileID: 1837991322}
-    cost: 7
+    cost: 0
     robot: {fileID: 1017088702319696, guid: 0870f5cbd0d086a45b4a8169b79b4668, type: 2}
     cooldownIcon: {fileID: 1797695599}
   iRobotTimer: 5
@@ -10665,7 +10665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2080548996
 Transform:
   m_ObjectHideFlags: 0

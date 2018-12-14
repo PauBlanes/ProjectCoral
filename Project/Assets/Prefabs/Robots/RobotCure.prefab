@@ -236,10 +236,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  workTime: 10
+  lifeTime: 20
   state: 0
   workPerSecond: 0
-  rT: 0
+  rT: 1
 --- !u!212 &212273826356470762
 SpriteRenderer:
   m_ObjectHideFlags: 1

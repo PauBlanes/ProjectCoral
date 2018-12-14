@@ -6,12 +6,11 @@ public class Bleaching : MonoBehaviour {
 
     private GameObject bleachedSprite;    
     
-    
     private bool blinking;
 
     private readonly int curedHealth = 100; //a quin numero hem d'arrivar per considerarlo curat
     private float health = 100;
-    private int secondsToFullyHeal = 4;
+    private int secondsToFullyHeal = 3;
 
 	// Use this for initialization
 	void Start () {
@@ -71,14 +70,16 @@ public class Bleaching : MonoBehaviour {
         health = 50; //mentre parpellegi es 50 encara
         StartCoroutine(Bleach());
     }    
+
     IEnumerator Bleach()
     {
         blinking = true;
-        StartCoroutine(BleachBlink(0.5f));
-        yield return new WaitForSeconds(8);
+        StartCoroutine(BleachBlink(0.3f));
+        yield return new WaitForSeconds(5);
         blinking = false;        
 
     }
+
     IEnumerator BleachBlink (float aTime)
     {
         //Parpallejar
@@ -115,14 +116,7 @@ public class Bleaching : MonoBehaviour {
             bleachedSprite.GetComponent<SpriteRenderer>().color = newColor;
 
             //restar punts al sistema
-            Camera.main.GetComponent<EcosystemManager>().ecosystemEvolution -= 10;
-        }
-        else
-        {
-            //Deixar el color normal
-            Color newColor = bleachedSprite.GetComponent<SpriteRenderer>().color;
-            newColor.a = 1;
-            bleachedSprite.GetComponent<SpriteRenderer>().color = newColor;
-        }
+            Camera.main.GetComponent<EcosystemManager>().ecosystemEvolution -= 10;            
+        }        
     }
 }
