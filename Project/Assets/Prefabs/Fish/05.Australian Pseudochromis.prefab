@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b088228b677784aaf0bf54eee758f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: {fileID: 1919716293489846, guid: 756f6dfdfedf28042bb157f53992e0b2, type: 2}
+  info: {fileID: 1245283094867140, guid: 8bc864beb83cf7c4087fa9b0ee133aa5, type: 2}
 --- !u!114 &114412209876538436
 MonoBehaviour:
   m_ObjectHideFlags: 1

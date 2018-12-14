@@ -60,8 +60,7 @@ public class EcosystemManager : MonoBehaviour {
                 timeToWait = Random.Range(6, 15);
                 yield return new WaitForSeconds(timeToWait);
 
-                //int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);
-                int threadIndex = 3;
+                int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);                
                 if (threadIndex < 3) //si no es el de reparar
                     Instantiate(threats[threadIndex], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
                 else
