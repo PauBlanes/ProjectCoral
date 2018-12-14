@@ -19,8 +19,12 @@ public class Robot : MonoBehaviour {
 
     public RobotType rT;
 
+    //Pel robot de investigació
     public static List<GameObject> investigableObjects = new List<GameObject>();
     private static List<GameObject> investigatedFish = new List<GameObject>();
+
+    //Pel robot de reparar blanqueamiento
+    public static List<GameObject> bleachedCorals = new List<GameObject>();
 
     //Wander
     float wanderAngle = 0;
@@ -38,13 +42,15 @@ public class Robot : MonoBehaviour {
         waitCounter = workTime;
 
         //Cojemos el más cercano como target
-        if (rT != RobotType.Investigation)
+        if (rT != RobotType.Investigation && rT != RobotType.Repair)
             target = GetCloserTarget(GameObject.FindGameObjectsWithTag(rT.ToString()));
-        else
+        else if (rT == RobotType.Investigation) //cojemos un random entre todo lo que podemos investigar
             ChooseInvestigationTarget();
-        
-        //nos guardamos todos los corales como investigalbles
-        
+        else //cojemos el coral blanqueado más cercano
+        {
+            target = GetCloserRepairTarget();
+        }           
+
     }
 	
 	// Update is called once per frame
@@ -102,18 +108,33 @@ public class Robot : MonoBehaviour {
                         transform.position = Vector2.MoveTowards(transform.position, target.position, step);
                     }
                 }
-                else if (state == States.working) //l'ataquem
-                {
-                    //manternirse enganxat
-                    transform.position = target.position; //per si encara estava moventse l'enemic quan l'atrapem que el continui seguint
-
-                    //Quant triga a destruir l'amenaça
-                    if (rT != RobotType.Investigation)
+                else if (state == States.working) 
+                {                    
+                    if (rT != RobotType.Investigation && rT != RobotType.Repair)
                     {
+                        //manternirse enganxat
+                        transform.position = target.position; //per si encara estava moventse l'enemic quan l'atrapem que el continui seguint
+
+                        //Restar vida a l'amenaça
                         float enemyHealth = Attack();
                         if (enemyHealth <= 0)
                         {
                             KillEnemy();
+                        }
+                    }
+                    else if (rT == RobotType.Repair)
+                    {
+                        bool curedCoral = target.GetComponent<Bleaching>().Healing();
+                        if(curedCoral)
+                        {
+                            //buscar nou coral
+                            target = GetCloserRepairTarget();
+                            if (target == null) //si ja no hi ha més pasem a wander
+                            {
+                                StartWander();
+                            }
+                            else //si hi ha un altre perseguim aquest
+                                state = States.walking;
                         }
                     }
                     else
@@ -142,6 +163,20 @@ public class Robot : MonoBehaviour {
         Transform result = null;
 
         foreach (GameObject o in objs)
+        {
+            float distance = (o.transform.position - transform.position).magnitude;
+            if (distance > maxDist)
+                result = o.transform;
+        }
+        return result;
+    }
+
+    Transform GetCloserRepairTarget ()
+    {
+        float maxDist = 0;
+        Transform result = null;
+
+        foreach (GameObject o in bleachedCorals)
         {
             float distance = (o.transform.position - transform.position).magnitude;
             if (distance > maxDist)
@@ -186,12 +221,13 @@ public class Robot : MonoBehaviour {
 
     float Attack ()
     {
+
         Color col = target.GetComponent<SpriteRenderer>().color;
         col.a -= Time.deltaTime * workPerSecond;
         target.GetComponent<SpriteRenderer>().color = col;
 
         return col.a;
-    }
+    }    
 
     float Investigate()
     {
@@ -244,5 +280,5 @@ public class Robot : MonoBehaviour {
             
         
     }
-    
+        
 }

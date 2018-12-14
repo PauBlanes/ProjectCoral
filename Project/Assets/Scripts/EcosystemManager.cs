@@ -133,8 +133,8 @@ public class EcosystemManager : MonoBehaviour {
         while (coralsBleaching < numOfCoralsToBleach)
         {
             GameObject t = activeCorals[Random.Range(0, activeCorals.Count)];
-            if (t.GetComponent<Bleaching>() != null && !t.GetComponent<Bleaching>().IsBleaching) //si no es planta i no l'hem activat ja
-            {
+            if (t.GetComponent<Bleaching>() != null && !Robot.bleachedCorals.Contains(t)) //si no es planta i no l'hem activat ja
+            {                
                 t.GetComponent<Bleaching>().StartBleaching();
             }
         }
