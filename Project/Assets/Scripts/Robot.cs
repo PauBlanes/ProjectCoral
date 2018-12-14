@@ -11,7 +11,7 @@ public class Robot : MonoBehaviour {
     public float speed;
 
     public float lifeTime;
-    private float waitCounter;
+    private float lifeCounter;
 
     public States state = States.walking;
 
@@ -39,7 +39,7 @@ public class Robot : MonoBehaviour {
     // Use this for initialization
     void Start()
     {        
-        waitCounter = lifeTime;
+        lifeCounter = lifeTime;
 
         //Cojemos el más cercano como target
         if (rT != RobotType.Investigation && rT != RobotType.Repair)
@@ -56,10 +56,10 @@ public class Robot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (waitCounter > 0 || rT == RobotType.Investigation) //si encara te temps de vida. AL de investigacio li dona igual
+        if (lifeCounter > 0 || rT == RobotType.Investigation) //si encara te temps de vida. AL de investigacio li dona igual
         {
             //restem temps de vida
-            waitCounter -= Time.deltaTime;
+            lifeCounter -= Time.deltaTime;
 
             //Si no tenim objectiu fem wander
             if (target == null)
