@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour {
 
@@ -14,7 +15,8 @@ public class HealthSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        lifeBar = transform.GetChild(transform.childCount-1).GetChild(0).GetChild(0).GetComponent<Image>();        
+        if(SceneManager.GetActiveScene().name == "MAIN")
+            lifeBar = transform.GetChild(transform.childCount-1).GetChild(0).GetChild(0).GetComponent<Image>();        
 	}
 	
 	// Update is called once per frame
