@@ -32,6 +32,7 @@ public class RobotManager : MonoBehaviour {
 
     public void SelectRobot(Button b)
     {
+        print("HOLA");
         if (b.transform.GetChild(0).GetComponent<Image>().fillAmount == 0) //si tens suficient diners
         {            
             foreach (RobotHud r in robots)

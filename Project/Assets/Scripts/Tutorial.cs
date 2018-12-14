@@ -29,10 +29,7 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0) && showingInfo)
-        {
-            showingInfo = false;
-        }
+		
 	}
 
     IEnumerator TutorialCoroutine()
@@ -44,11 +41,10 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[0].SetActive(false);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
 
         //Mostrar primera info de botó i activar el primer botó
-        infoImages[1].SetActive(true);
-        skillButtons[0].SetActive(true);        
+        infoImages[1].SetActive(true);               
         showingInfo = true;
         yield return new WaitUntil(() => !showingInfo);
 
@@ -57,8 +53,7 @@ public class Tutorial : MonoBehaviour {
         yield return new WaitForSeconds(20f);
 
         //Mostrar segona info de botó i activar el primer botó
-        infoImages[2].SetActive(true);
-        skillButtons[1].SetActive(true);
+        infoImages[2].SetActive(true);        
         acceptedThreads++;
         showingInfo = true;
         yield return new WaitUntil(() => !showingInfo);
@@ -68,8 +63,7 @@ public class Tutorial : MonoBehaviour {
         yield return new WaitForSeconds(20f);
 
         //Mostrar tercera info de botó i activar el primer botó
-        infoImages[3].SetActive(true);
-        skillButtons[2].SetActive(true);
+        infoImages[3].SetActive(true);             
         acceptedThreads++;
         showingInfo = true;
         yield return new WaitUntil(() => !showingInfo);
@@ -79,8 +73,7 @@ public class Tutorial : MonoBehaviour {
         yield return new WaitForSeconds(20f);
 
         //Mostrar quarta info de botó i activar el primer botó
-        infoImages[4].SetActive(true);
-        skillButtons[3].SetActive(true);
+        infoImages[4].SetActive(true);       
         acceptedThreads++;
         showingInfo = true;
         yield return new WaitUntil(() => !showingInfo);
@@ -90,8 +83,8 @@ public class Tutorial : MonoBehaviour {
         yield return new WaitForSeconds(20f);
 
         //Mostrar cinquena info de botó i activar el primer botó
-        infoImages[5].SetActive(true);
-        skillButtons[4].SetActive(true);
+        infoImages[5].SetActive(true);        
+        
         acceptedThreads++;
         showingInfo = true;
         yield return new WaitUntil(() => !showingInfo);
@@ -101,5 +94,10 @@ public class Tutorial : MonoBehaviour {
         yield return new WaitForSeconds(20f);
     }
 
-
+    public void Exit(int buttonIndex)
+    {
+        showingInfo = false;
+        if (buttonIndex >= 0)
+            skillButtons[buttonIndex].SetActive(true);
+    }
 }

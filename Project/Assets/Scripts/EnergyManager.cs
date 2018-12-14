@@ -26,7 +26,8 @@ public class EnergyManager : MonoBehaviour {
     }
 
     IEnumerator WaitAndSpawn()
-    {        
+    {
+        yield return new WaitForSeconds(5); //un wait inicial pq es pogui llegir la info primer
         while (true)
         {
             if (!Tutorial.showingInfo)
