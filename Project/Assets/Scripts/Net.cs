@@ -31,11 +31,11 @@ public class Net : MonoBehaviour {
     void Update () {
         if (state == States.goDown)
         {
-            float step = 6 * Time.deltaTime;
+            float step = 3 * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, targetY, transform.position.z), step);
             if (Mathf.Approximately(transform.position.y, targetY))
             {
-                state = States.moving;                
+                StartCoroutine(WaitAndStartMoving());                    
             }
         }
         else if (state == States.moving)
@@ -46,6 +46,12 @@ public class Net : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
+    }
+
+    IEnumerator WaitAndStartMoving()
+    {
+        yield return new WaitForSeconds(2);
+        state = States.moving;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,7 +68,7 @@ public class Net : MonoBehaviour {
                 Camera.main.GetComponent<EcosystemManager>().HideCoral(collision.gameObject);
             }*/
             if (collision.gameObject.GetComponent<HealthSystem>() != null)
-                collision.gameObject.GetComponent<HealthSystem>().UpdateHealth(-35);
+                collision.gameObject.GetComponent<HealthSystem>().UpdateHealth(-25);
 
             //Fish
             if (collision.gameObject.GetComponent<FishMovement>() != null)

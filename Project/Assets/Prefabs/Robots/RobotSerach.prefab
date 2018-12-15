@@ -258,9 +258,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  lifeTime: 8
+  lifeTime: 5
   state: 0
-  workPerSecond: 1
+  workPerSecond: 2
   rT: 0
   lifeBar: {fileID: 0}
   workIcon: {fileID: 114501567734010970}

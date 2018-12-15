@@ -246,7 +246,7 @@ public class Robot : MonoBehaviour {
 
     float Investigate()
     {
-        lifeTime -= Time.deltaTime;
+        lifeTime -= Time.deltaTime*workPerSecond;
         return lifeTime;
     }
 
@@ -276,7 +276,9 @@ public class Robot : MonoBehaviour {
     
     void ChooseInvestigationTarget()
     {
-        int fishOrCoral = Random.Range(0, 1);
+        int fishOrCoral = Random.Range(0, 2);
+        fishOrCoral = Mathf.Clamp(fishOrCoral, 0, 1);
+
         if (fishOrCoral == 0)
             target = investigableObjects[Random.Range(0, investigableObjects.Count)].transform;
         else

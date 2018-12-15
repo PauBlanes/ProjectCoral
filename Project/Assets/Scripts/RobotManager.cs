@@ -42,7 +42,7 @@ public class RobotManager : MonoBehaviour {
                     
                     if (r.tagName != "Investigable") //si no es de investigacio restem el cost
                     {
-                        Camera.main.GetComponent<EnergyManager>().energyCounter -= r.cost;
+                        Camera.main.GetComponent<EnergyManager>().UpdateCounter(-r.cost);
                     }
                     else //si es de investigació resetegem el temps
                     {

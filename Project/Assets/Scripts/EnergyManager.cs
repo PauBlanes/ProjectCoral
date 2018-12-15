@@ -47,9 +47,9 @@ public class EnergyManager : MonoBehaviour {
             Quaternion.identity); //cuidao que aixo funciona pq el script el té la camera
     }
 
-    public void UpdateCounter ()
+    public void UpdateCounter (int sum)
     {
-        energyCounter++;
+        energyCounter += sum;
         energyText.text = "" + energyCounter;
     }
 
@@ -58,9 +58,8 @@ public class EnergyManager : MonoBehaviour {
         return energyCounter;
     }
     public void InvestigationReward(GameObject info, int reward)
-    {
-        Camera.main.GetComponent<EnergyManager>().energyCounter += reward;
-        UpdateCounter();
+    {        
+        UpdateCounter(reward);
         Time.timeScale = 1;
         Destroy(info);
     }

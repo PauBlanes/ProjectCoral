@@ -37,6 +37,7 @@ public class Tutorial : MonoBehaviour {
         //Mostrem imatge amb info general
         infoImages[0].SetActive(true);
         showingInfo = true;
+        Time.timeScale = 0;
         yield return new WaitUntil(() => !showingInfo);
 
         //amagar imatge i esperar
@@ -46,6 +47,7 @@ public class Tutorial : MonoBehaviour {
         //Mostrar primera info de botó i activar el primer botó
         infoImages[1].SetActive(true);               
         showingInfo = true;
+        Time.timeScale = 0;
         yield return new WaitUntil(() => !showingInfo);
 
         //amagar imatge i esperar
@@ -56,6 +58,7 @@ public class Tutorial : MonoBehaviour {
         infoImages[2].SetActive(true);        
         acceptedThreads++;
         showingInfo = true;
+        Time.timeScale = 0;
         yield return new WaitUntil(() => !showingInfo);
 
         //amagar imatge i esperar
@@ -66,6 +69,7 @@ public class Tutorial : MonoBehaviour {
         infoImages[3].SetActive(true);             
         acceptedThreads++;
         showingInfo = true;
+        Time.timeScale = 0;
         yield return new WaitUntil(() => !showingInfo);
 
         //amagar imatge i esperar
@@ -76,6 +80,7 @@ public class Tutorial : MonoBehaviour {
         infoImages[4].SetActive(true);       
         acceptedThreads++;
         showingInfo = true;
+        Time.timeScale = 0;
         yield return new WaitUntil(() => !showingInfo);
 
         //amagar imatge i esperar
@@ -87,6 +92,7 @@ public class Tutorial : MonoBehaviour {
         
         acceptedThreads++;
         showingInfo = true;
+        Time.timeScale = 0;
         yield return new WaitUntil(() => !showingInfo);
 
         //amagar imatge i esperar
@@ -94,10 +100,27 @@ public class Tutorial : MonoBehaviour {
         yield return new WaitForSeconds(20f);
     }
 
+    IEnumerator WaitAndSpawnThreat(int i)
+    {
+        yield return new WaitForSeconds(2);
+        if (i < 3)
+            Camera.main.GetComponent<EcosystemManager>().SpawnConcreteThread(i);
+        else
+            Camera.main.GetComponent<EcosystemManager>().RepairThreat();
+
+    }
+
     public void Exit(int buttonIndex)
     {
         showingInfo = false;
+        Time.timeScale = 1;
+
         if (buttonIndex >= 0)
             skillButtons[buttonIndex].SetActive(true);
+
+        if (buttonIndex > 0)    //no es de investigació
+        {
+            StartCoroutine(WaitAndSpawnThreat(buttonIndex-1));
+        }
     }
 }

@@ -787,6 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &108004111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,6 +2177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &361799524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,6 +2517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &411096905
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,6 +3261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &488866979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3669,12 +3673,12 @@ MonoBehaviour:
     cooldownIcon: {fileID: 1542350310}
   - tagName: Rubbish
     robotButton: {fileID: 1053034960}
-    cost: 3
+    cost: 5
     robot: {fileID: 1999844737649432, guid: aa47a55f572cedd499e6e6f5178b53a1, type: 2}
     cooldownIcon: {fileID: 725823004}
   - tagName: Net
     robotButton: {fileID: 425542308}
-    cost: 4
+    cost: 5
     robot: {fileID: 1536682777461618, guid: 04e6cb4724e47e74c983eaee7198e143, type: 2}
     cooldownIcon: {fileID: 1679596725}
   - tagName: Investigable
@@ -3684,7 +3688,7 @@ MonoBehaviour:
     cooldownIcon: {fileID: 1801410752}
   - tagName: Repair
     robotButton: {fileID: 1837991322}
-    cost: 0
+    cost: 5
     robot: {fileID: 1017088702319696, guid: 0870f5cbd0d086a45b4a8169b79b4668, type: 2}
     cooldownIcon: {fileID: 1797695599}
   iRobotTimer: 5
@@ -4662,6 +4666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &622589264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4853,6 +4858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &636737516
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,6 +5589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &725029523
 GameObject:
   m_ObjectHideFlags: 0
@@ -6320,6 +6327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &790979629
 GameObject:
   m_ObjectHideFlags: 0
@@ -6976,6 +6984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &859397948
 GameObject:
   m_ObjectHideFlags: 0
@@ -7309,6 +7318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &880367036
 GameObject:
   m_ObjectHideFlags: 0
@@ -7706,6 +7716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &920118596
 GameObject:
   m_ObjectHideFlags: 0
@@ -9666,6 +9677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1116785466
 GameObject:
   m_ObjectHideFlags: 0
@@ -10544,6 +10556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1225026987
 GameObject:
   m_ObjectHideFlags: 0
@@ -11088,6 +11101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1284055845
 GameObject:
   m_ObjectHideFlags: 0
@@ -11462,6 +11476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1326661156
 GameObject:
   m_ObjectHideFlags: 0
@@ -11986,6 +12001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1420939711
 GameObject:
   m_ObjectHideFlags: 0
@@ -12335,6 +12351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1445779882
 GameObject:
   m_ObjectHideFlags: 0
@@ -12490,6 +12507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1450211406
 GameObject:
   m_ObjectHideFlags: 0
@@ -13003,6 +13021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1484719989
 GameObject:
   m_ObjectHideFlags: 0
@@ -14195,6 +14214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1601167450
 GameObject:
   m_ObjectHideFlags: 0
@@ -14860,6 +14880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1712722351
 GameObject:
   m_ObjectHideFlags: 0
@@ -15163,6 +15184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1742384049
 GameObject:
   m_ObjectHideFlags: 0
@@ -16498,6 +16520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895af7c1830bba40a10851cc8a43873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 100
 --- !u!1 &1903465372
 GameObject:
   m_ObjectHideFlags: 0

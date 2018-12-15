@@ -57,18 +57,23 @@ public class EcosystemManager : MonoBehaviour {
         
     }
     
+    public void SpawnConcreteThread(int i)
+    {
+        Instantiate(threats[i], new Vector3(Random.Range(-12, 12), 15, 0), Quaternion.identity);
+    }
+
     IEnumerator SpawnThreads()
     {        
         while (true)
         {            
             if (!Tutorial.showingInfo && Tutorial.acceptedThreads - 1 >= 0)
             {
-                timeToWait = Random.Range(6, 15);
+                timeToWait = Random.Range(10, 25);
                 yield return new WaitForSeconds(timeToWait);
 
                 int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);                
                 if (threadIndex < 3) //si no es el de reparar
-                    Instantiate(threats[threadIndex], new Vector3(Random.Range(-15, 15), 15, 0), Quaternion.identity);
+                    Instantiate(threats[threadIndex], new Vector3(Random.Range(-12, 12), 15, 0), Quaternion.identity);
                 else
                     RepairThreat();                
             }
@@ -153,7 +158,7 @@ public class EcosystemManager : MonoBehaviour {
         activeCorals.Remove(coral);
     }
     
-    void RepairThreat()
+    public void RepairThreat()
     {
         List<GameObject> coralsToBleach = new List<GameObject>(); //corals possibles per a que es blanquegin
         foreach (GameObject coral in activeCorals)

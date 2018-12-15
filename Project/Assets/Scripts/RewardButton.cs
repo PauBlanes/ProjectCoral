@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RewardButton : MonoBehaviour {
 
-    public static int reward = 20;
+    public static int reward = 10;
 
 	// Use this for initialization
 	void Start () {

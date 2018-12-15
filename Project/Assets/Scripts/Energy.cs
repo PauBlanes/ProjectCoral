@@ -29,7 +29,7 @@ public class Energy : MonoBehaviour {
     //Is clicked?
     private void OnMouseDown()
     {
-        Camera.main.GetComponent<EnergyManager>().UpdateCounter();
+        Camera.main.GetComponent<EnergyManager>().UpdateCounter(1);
         Destroy(gameObject);
     }
 }

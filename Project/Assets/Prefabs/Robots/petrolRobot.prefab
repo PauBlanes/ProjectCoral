@@ -443,8 +443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd48e4cc7a3f992499778271843b22df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  lifeTime: 10
+  speed: 4
+  lifeTime: 15
   state: 0
   workPerSecond: 1
   rT: 4
