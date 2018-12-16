@@ -122,12 +122,12 @@ public class Robot : MonoBehaviour {
                     }
                 }
                 else if (state == States.working) 
-                {                    
+                {
+                    //manternirse enganxat
+                    transform.position = target.position; //per si encara estava moventse l'enemic quan l'atrapem que el continui seguint
+
                     if (rT != RobotType.Investigation && rT != RobotType.Repair)
                     {
-                        //manternirse enganxat
-                        transform.position = target.position; //per si encara estava moventse l'enemic quan l'atrapem que el continui seguint
-
                         //Restar vida a l'amenaça
                         float enemyHealth = Attack();
                         if (enemyHealth <= 0)
@@ -278,7 +278,7 @@ public class Robot : MonoBehaviour {
     {
         int fishOrCoral = Random.Range(0, 2);
         fishOrCoral = Mathf.Clamp(fishOrCoral, 0, 1);
-
+        
         if (fishOrCoral == 0)
             target = investigableObjects[Random.Range(0, investigableObjects.Count)].transform;
         else
@@ -291,7 +291,7 @@ public class Robot : MonoBehaviour {
             } while (chosen.transform.position.x > 8 && chosen.transform.position.x < -8 && !alreadyInvestigated.Contains(chosen)); //si està al centre de la pantalla i no l'haviem investigat
 
             target = chosen.transform;
-            speed *= 2;
+            speed *= 1.5f;
             lifeTime *= 0.5f;            
         }
             
