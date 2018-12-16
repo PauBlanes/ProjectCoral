@@ -170,7 +170,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 30 cm
 
-    INFO : '
+    INFO : It is a bony fish named for its characteristic mode of predation, in which
+    a fleshy growth from the fish''s head (the esca or illicium) acts as a lure.'
 --- !u!114 &114477343553292150
 MonoBehaviour:
   m_ObjectHideFlags: 1

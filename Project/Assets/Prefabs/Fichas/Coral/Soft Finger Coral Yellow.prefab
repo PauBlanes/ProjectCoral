@@ -182,7 +182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'COLOR:  Purple'
+  m_Text: 'COLOR:  Yellow'
 --- !u!114 &114490885605442106
 MonoBehaviour:
   m_ObjectHideFlags: 1

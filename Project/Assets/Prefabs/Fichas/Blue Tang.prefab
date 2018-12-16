@@ -197,7 +197,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 25 cm
 
-    INFO : '
+    INFO :   A popular fish in marine aquaria, it is the only member of the genus
+    Paracanthurus. It has a royal blue body, yellow tail, and black "palette" design.'
 --- !u!114 &114581118891300816
 MonoBehaviour:
   m_ObjectHideFlags: 1

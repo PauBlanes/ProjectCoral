@@ -233,7 +233,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 15 cm
 
-    INFO : '
+    INFO : Green Wrasse body color is a most attractive. It will eat fireworms and
+    pyramidellid snails protecting corals and clams.'
 --- !u!114 &114732712003235270
 MonoBehaviour:
   m_ObjectHideFlags: 1

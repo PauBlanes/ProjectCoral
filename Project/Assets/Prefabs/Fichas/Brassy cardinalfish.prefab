@@ -238,7 +238,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 9.5 cm
 
-    INFO : '
+    INFO : Not surprisingly, the Yellow Cardinalfish is primarily yellow in colouration.
+    There is a distinct dark spot on the caudal peduncle.'
 --- !u!114 &114667219398768060
 MonoBehaviour:
   m_ObjectHideFlags: 1

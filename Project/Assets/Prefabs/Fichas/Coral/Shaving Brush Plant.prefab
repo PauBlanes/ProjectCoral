@@ -236,7 +236,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'COLOR: Blue'
+  m_Text: 'COLOR: Green'
 --- !u!114 &114929901957023852
 MonoBehaviour:
   m_ObjectHideFlags: 1
