@@ -5,9 +5,17 @@ using UnityEngine.UI;
 
 public class EcosystemManager : MonoBehaviour {
 
-    public int ecosystemEvolution; //per controlar cada quan passa algo. Aquest es el numero que es necessita pq passi algo
+    [System.Serializable]
+    public struct Popup
+    {
+        public GameObject popup;
+        public bool alreadyShown;
+    }
+
+    private int ecosystemEvolution; //per controlar cada quan passa algo. Aquest es el numero que es necessita pq passi algo
     private int lastCheckpoint;
     public int breakPoint = 5; //quant ha d'augmentar o disminuir pq passi algo
+    public int maxHealth;
 
     public List<GameObject> activeCorals;
     List<GameObject> hiddenCorals = new List<GameObject>();
@@ -17,6 +25,11 @@ public class EcosystemManager : MonoBehaviour {
 
     //per mostrar quantes coses hi ha investigades
     public Text investigationText;
+
+    //Per mostrar barra de vida
+    public Image healthBar;
+    public Popup[] positivePopups;
+    public Popup[] negativePopups;
 
 	// Use this for initialization
 	void Start () {
@@ -50,11 +63,14 @@ public class EcosystemManager : MonoBehaviour {
 
         UpdateInvestigationUI();
 
+        //Actualitzar UI inicialment
+        ecosystemEvolution = maxHealth / 2;
+        lastCheckpoint = ecosystemEvolution;
+        UpdateSystemHealth(0);    
     }
 
     // Update is called once per frame
-    void Update () {
-        
+    void Update () {        
     }
     
     public void SpawnConcreteThread(int i)
@@ -88,7 +104,7 @@ public class EcosystemManager : MonoBehaviour {
         {
             if (!Tutorial.showingInfo) // no fer això mentre estem mostran info del tutorial
             {
-                if (ecosystemEvolution - lastCheckpoint > breakPoint)
+                if (ecosystemEvolution - lastCheckpoint > breakPoint) //si hem creuat un limit
                 {
 
                     //tots els corals guanyen una mica de vida
@@ -113,9 +129,14 @@ public class EcosystemManager : MonoBehaviour {
                     if (Camera.main.GetComponent<FishManager>().maxFishes < 25)
                     {
                         Camera.main.GetComponent<FishManager>().maxFishes++;
-                        Camera.main.GetComponent<FishManager>().maxFishType++;
-                        //ensenyar popup
+                        Camera.main.GetComponent<FishManager>().maxFishType++;                        
                     }
+
+                    //Mostrar popup si cal
+                    if (ecosystemEvolution >= ((float)maxHealth/2 + (float)maxHealth/4) && !positivePopups[0].alreadyShown)
+                        ShowPopup(positivePopups[0], true);
+                    if (ecosystemEvolution >= maxHealth && !positivePopups[1].alreadyShown)
+                        ShowPopup(positivePopups[1], true);
                 }
                 if (ecosystemEvolution - lastCheckpoint < -breakPoint)
                 {
@@ -139,9 +160,14 @@ public class EcosystemManager : MonoBehaviour {
                     if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
                     {
                         Camera.main.GetComponent<FishManager>().maxFishes--;
-                        Camera.main.GetComponent<FishManager>().maxFishType--;
-                        //ensenyar popup
+                        Camera.main.GetComponent<FishManager>().maxFishType--;                        
                     }
+
+                    //Mostrar popup si cal
+                    if (ecosystemEvolution <= ((float)maxHealth/2 - (float)maxHealth/4) && !negativePopups[0].alreadyShown)
+                        ShowPopup(negativePopups[0], true);
+                    if (ecosystemEvolution <= 0 && !negativePopups[1].alreadyShown)
+                        ShowPopup(negativePopups[1], true);
                 }
                 yield return new WaitForSeconds(1f);
             }
@@ -182,4 +208,27 @@ public class EcosystemManager : MonoBehaviour {
     {
         investigationText.text = Robot.alreadyInvestigated.Count + "/43";
     }
+
+    public void UpdateSystemHealth(int value)
+    {
+        //Actualitzar dades
+        ecosystemEvolution += value;
+        float uiHealth = Mathf.Clamp(ecosystemEvolution, 0, maxHealth);       
+
+        //Pintar UI
+        healthBar.fillAmount = uiHealth / maxHealth;        
+    }
+
+    public void CloseUIElement (GameObject e)
+    {
+        e.SetActive(false);
+        Time.timeScale = 1;
+    }
+    void ShowPopup (Popup p, bool state)
+    {
+        p.popup.SetActive(state);
+        p.alreadyShown = state;
+        Time.timeScale = 0;
+    }
+    
 }

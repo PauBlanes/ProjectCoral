@@ -35,7 +35,7 @@ public class Rubbish : MonoBehaviour {
         if (collision.tag.Contains("FISH"))
         {   
             //Si un peix el toca es debilita l'ecosistema
-            Camera.main.GetComponent<EcosystemManager>().ecosystemEvolution--;
+            Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(-5);
             
             //debilitar el peix
             collision.gameObject.GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, 0.3f);

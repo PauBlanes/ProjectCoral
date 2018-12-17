@@ -252,8 +252,8 @@ public class Robot : MonoBehaviour {
 
     void KillEnemy()
     {
-        //Sumar al nivell del sistema
-        Camera.main.GetComponent<EcosystemManager>().ecosystemEvolution += 10;
+        //Sumar al nivell del sistema per destruir petroli, reixa o oli
+        Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(10);
 
         //destruir enemic
         Destroy(target.gameObject);

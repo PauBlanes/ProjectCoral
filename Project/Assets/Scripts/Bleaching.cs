@@ -59,7 +59,7 @@ public class Bleaching : MonoBehaviour {
         bleachedSprite.GetComponent<SpriteRenderer>().color = newColor;
 
         //Sumar punts al sistema, i sumem bastant pq ho ha curat ràpid
-        Camera.main.GetComponent<EcosystemManager>().ecosystemEvolution += reward;        
+        Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(reward);        
         
         Robot.bleachedCorals.Remove(gameObject);
     }
@@ -117,7 +117,7 @@ public class Bleaching : MonoBehaviour {
             bleachedSprite.GetComponent<SpriteRenderer>().color = newColor;
 
             //restar punts al sistema
-            Camera.main.GetComponent<EcosystemManager>().ecosystemEvolution -= 10;            
+            Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(-10);            
         }        
     }
 
