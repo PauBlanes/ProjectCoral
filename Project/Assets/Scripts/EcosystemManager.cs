@@ -17,6 +17,8 @@ public class EcosystemManager : MonoBehaviour {
     public int breakPoint = 5; //quant ha d'augmentar o disminuir pq passi algo
     public int maxHealth;
 
+    int minThreatTime = 10;
+
     public List<GameObject> activeCorals;
     List<GameObject> hiddenCorals = new List<GameObject>();
 
@@ -84,7 +86,7 @@ public class EcosystemManager : MonoBehaviour {
         {            
             if (!Tutorial.showingInfo && Tutorial.acceptedThreads - 1 >= 0)
             {
-                timeToWait = Random.Range(10, 25);
+                timeToWait = Random.Range(minThreatTime, 25);
                 yield return new WaitForSeconds(timeToWait);
 
                 int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);                

@@ -120,6 +120,11 @@ public class Robot : MonoBehaviour {
                         float step = speed * Time.deltaTime;                        
                         transform.position = Vector2.MoveTowards(transform.position, target.position, step);
                     }
+
+                    if (rT == RobotType.Investigation && target == null)
+                    {
+                        ChooseInvestigationTarget();
+                    }
                 }
                 else if (state == States.working) 
                 {
