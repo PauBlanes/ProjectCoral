@@ -296,7 +296,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'COLOR:  Purple'
+  m_Text: 'COLOR:  Purple
+
+    INFO: The Ricordea or Flower Mushroom Coral, has short, club, or berry-shaped
+    tentacles. Is also termed a Disc Anemone.'
 --- !u!222 &222263594409199034
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -387,8 +390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 95}
-  m_SizeDelta: {x: -60, y: 125}
+  m_AnchoredPosition: {x: 0, y: 53.3}
+  m_SizeDelta: {x: -60, y: 166.7}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224865175601444238
 RectTransform:

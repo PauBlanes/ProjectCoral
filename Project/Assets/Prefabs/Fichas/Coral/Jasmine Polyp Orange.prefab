@@ -184,7 +184,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'COLOR:   Orange'
+  m_Text: 'COLOR:   Orange
+
+    INFO: They are colonial animals with several individual polyps attached to a single
+    piece of live rock and are often stung and damaged by other aggressive corals. '
 --- !u!114 &114851685410764856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,8 +368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 95}
-  m_SizeDelta: {x: -60, y: 125}
+  m_AnchoredPosition: {x: 0, y: 66.2}
+  m_SizeDelta: {x: -60, y: 153.8}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224238061622975266
 RectTransform:
