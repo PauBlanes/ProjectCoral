@@ -130,9 +130,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'LENGTH : 18 cm
-
-    INFO : '
+  m_Text: "LENGTH : 18 cm\nINFO : Found singly or in pairs on coral and rocky areas
+    of coastal reefs.\r They feed on benthic invertebrates and christmas-tree worms."
 --- !u!114 &114325035325152948
 MonoBehaviour:
   m_ObjectHideFlags: 1

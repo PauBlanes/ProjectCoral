@@ -198,9 +198,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'LENGTH : 35 cm
-
-    INFO : '
+  m_Text: "LENGTH : 35 cm\nINFO : Found singly on coral and rocky reefs.\r Can changes
+    colour to match its surroundings.\r They feed on bivalves, fish, shrimp, crabs
+    and other Octopus."
 --- !u!114 &114609851679379938
 MonoBehaviour:
   m_ObjectHideFlags: 1

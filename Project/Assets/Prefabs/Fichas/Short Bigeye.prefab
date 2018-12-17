@@ -236,7 +236,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Large Scale Leatherjacket
+  m_Text: Short Bigeye
 --- !u!114 &114754864761383366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,7 +271,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 25 cm
 
-    INFO : '
+    INFO : They are named for their large eyes and are characterized by a strongly
+    compressed, deep body and a large upturned mouth with a projecting lower jaw. '
 --- !u!114 &114953675658309602
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -298,7 +298,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 25 cm
 
-    INFO : '
+    INFO : Colourful leatherjacket with distinctive tail markings and blue spots under
+    chin.'
 --- !u!222 &222230514565728134
 CanvasRenderer:
   m_ObjectHideFlags: 1

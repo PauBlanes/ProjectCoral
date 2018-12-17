@@ -184,9 +184,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'LENGTH : 13 cm
-
-    INFO : '
+  m_Text: "LENGTH : 13 cm\nINFO : It's a small size fish, found singly or in small
+    schools close to algae covered coral and rubble areas of inner reef slopes.\r\n"
 --- !u!114 &114547624969008040
 MonoBehaviour:
   m_ObjectHideFlags: 1

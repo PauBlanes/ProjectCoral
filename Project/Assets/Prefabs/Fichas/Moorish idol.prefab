@@ -165,9 +165,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'LENGTH : 28 cm
-
-    INFO : '
+  m_Text: "LENGTH : 28 cm\nINFO : Found singly, pairs or large schools over murky
+    inner lagoons and clear water seaward coral and rocky reefs.\r They feed on benthic
+    invertebrates, coral polyps."
 --- !u!114 &114543020715654416
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -159,7 +159,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LENGTH : 28 cm
 
-    INFO : '
+    INFO : Lives around seaward reefs and shallow lagoons. It is solitary and is often
+    found around coral looking for small invertebrates.'
 --- !u!114 &114425243731277674
 MonoBehaviour:
   m_ObjectHideFlags: 1

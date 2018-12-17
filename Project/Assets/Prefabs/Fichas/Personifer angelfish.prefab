@@ -222,9 +222,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'LENGTH : 35 cm
-
-    INFO : '
+  m_Text: "LENGTH : 35 cm\nINFO : Found singly, pairs or small schools over open bottoms
+    with coral, rock, sea whips and sponges under jetties, in lagoons and around reef
+    faces.\r "
 --- !u!114 &114931644149890682
 MonoBehaviour:
   m_ObjectHideFlags: 1
