@@ -36,24 +36,37 @@ public class CameraMovement : MonoBehaviour {
 	void Update () {
 
         GetInputs();
+        
+        if(Input.GetKey(KeyCode.W))
+            movement.y = speed * Time.deltaTime;
+        if (Input.GetKey(KeyCode.S))
+            movement.y = -speed * Time.deltaTime;
+        if (Input.GetKey(KeyCode.A))
+            movement.x = -speed * Time.deltaTime;
+        if (Input.GetKey(KeyCode.D))
+            movement.x = speed * Time.deltaTime;
 
-        if (mousePosition.y > camHeight/2 - 1)
+        /*float maxMouseX = Mathf.Clamp(mousePosition.x, -12, 12);
+        float maxMouseY = Mathf.Clamp(mousePosition.y, -6, 6);
+        mousePosition = new Vector2(maxMouseX, maxMouseY);*/
+
+        /*if (mousePosition.y > camHeight/2 - 15)
         {
             movement.y = speed * Time.deltaTime;
         }
-        else if (mousePosition.y < -(camHeight/2 - 1))
+        else if (mousePosition.y < -(camHeight/2 - 15))
         {
             movement.y = -speed * Time.deltaTime;
-        }
+        }*/
 
-        if (mousePosition.x > camWidth/2 - 1)
+        /*if (mousePosition.x > camWidth/2 - 10)
         {
             movement.x = speed * Time.deltaTime;
         }
-        else if (mousePosition.x < -(camWidth/2 - 1))
+        else if (mousePosition.x < -(camWidth/2 - 200))
         {
             movement.x = -speed * Time.deltaTime;
-        }
+        }*/
 
         movement = new Vector2(Mathf.Clamp(transform.position.x + movement.x, minX, maxX), 
             Mathf.Clamp(transform.position.y + movement.y, minY, maxY));
