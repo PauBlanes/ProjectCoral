@@ -9,7 +9,12 @@ public class EcosystemManager : MonoBehaviour {
     public struct Popup
     {
         public GameObject popup;
-        public bool alreadyShown;
+        private bool alreadyShown;
+        public bool AlreadyShown
+        {
+            get { return alreadyShown; }
+            set { alreadyShown = value; }
+        }
     }
 
     private int ecosystemEvolution; //per controlar cada quan passa algo. Aquest es el numero que es necessita pq passi algo
@@ -17,7 +22,8 @@ public class EcosystemManager : MonoBehaviour {
     public int breakPoint = 5; //quant ha d'augmentar o disminuir pq passi algo
     public int maxHealth;
 
-    int minThreatTime = 10;
+    int minThreatTime = 9;
+    int maxThreadTime = 20;
 
     public List<GameObject> activeCorals;
     List<GameObject> hiddenCorals = new List<GameObject>();
@@ -35,6 +41,7 @@ public class EcosystemManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        
         //amaguem uns quants corals
         int coralsToHide = Random.Range((activeCorals.Count/2), (activeCorals.Count/2) +3);
         while(hiddenCorals.Count < coralsToHide)
@@ -86,7 +93,7 @@ public class EcosystemManager : MonoBehaviour {
         {            
             if (!Tutorial.showingInfo && Tutorial.acceptedThreads - 1 >= 0)
             {
-                timeToWait = Random.Range(minThreatTime, 25);
+                timeToWait = Random.Range(minThreatTime, maxThreadTime);
                 yield return new WaitForSeconds(timeToWait);
 
                 int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);                
@@ -135,10 +142,24 @@ public class EcosystemManager : MonoBehaviour {
                     }
 
                     //Mostrar popup si cal
-                    if (ecosystemEvolution >= ((float)maxHealth/2 + (float)maxHealth/4) && !positivePopups[0].alreadyShown)
-                        ShowPopup(positivePopups[0], true);
-                    if (ecosystemEvolution >= maxHealth && !positivePopups[1].alreadyShown)
-                        ShowPopup(positivePopups[1], true);
+                    if (ecosystemEvolution >= ((float)maxHealth/2 + (float)maxHealth/4) && !positivePopups[0].AlreadyShown)
+                    {
+                        maxThreadTime = 16; //fem més difícil
+                        positivePopups[0].AlreadyShown = true; //no em deixa dins de la funció
+                        positivePopups[0].popup.SetActive(true);
+                        Time.timeScale = 0;
+                        //ShowPopup(positivePopups[0], true);
+                    }
+                        
+                    if (ecosystemEvolution >= maxHealth && !positivePopups[1].AlreadyShown)
+                    {
+                        maxThreadTime = 12; //fem més difícil
+                        positivePopups[1].AlreadyShown = true; //no em deixa dins de la funció
+                        positivePopups[1].popup.SetActive(true);
+                        Time.timeScale = 0;
+                        //ShowPopup(positivePopups[1], true);
+                    }
+                        
                 }
                 if (ecosystemEvolution - lastCheckpoint < -breakPoint)
                 {
@@ -166,10 +187,21 @@ public class EcosystemManager : MonoBehaviour {
                     }
 
                     //Mostrar popup si cal
-                    if (ecosystemEvolution <= ((float)maxHealth/2 - (float)maxHealth/4) && !negativePopups[0].alreadyShown)
-                        ShowPopup(negativePopups[0], true);
-                    if (ecosystemEvolution <= 0 && !negativePopups[1].alreadyShown)
+                    if (ecosystemEvolution <= ((float)maxHealth/2 - (float)maxHealth/4) && !negativePopups[0].AlreadyShown)
+                    {
+                        negativePopups[0].AlreadyShown = true;
+                        negativePopups[0].popup.SetActive(true);
+                        Time.timeScale = 0;
+                        //ShowPopup(negativePopups[0], true);
+                    }                        
+                    if (ecosystemEvolution <= 0 && !negativePopups[1].AlreadyShown)
+                    {
+                        negativePopups[1].AlreadyShown = true;
+                        negativePopups[1].popup.SetActive(true);
+                        Time.timeScale = 0;
                         ShowPopup(negativePopups[1], true);
+                    }
+                        
                 }
                 yield return new WaitForSeconds(1f);
             }
@@ -228,8 +260,7 @@ public class EcosystemManager : MonoBehaviour {
     }
     void ShowPopup (Popup p, bool state)
     {
-        p.popup.SetActive(state);
-        p.alreadyShown = state;
+        p.popup.SetActive(state);        
         Time.timeScale = 0;
     }
     

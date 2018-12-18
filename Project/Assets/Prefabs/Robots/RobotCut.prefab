@@ -265,7 +265,7 @@ MonoBehaviour:
   speed: 6
   lifeTime: 5
   state: 0
-  workPerSecond: 1
+  workPerSecond: 0.75
   rT: 3
   lifeBar: {fileID: 114381209978000420}
   workIcon: {fileID: 114171561742209524}

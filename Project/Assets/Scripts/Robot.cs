@@ -100,7 +100,12 @@ public class Robot : MonoBehaviour {
                         
                 }
                 else
+                {
+                    if (rT == RobotType.Investigation)
+                        ChooseInvestigationTarget();
                     StartWander();
+                }
+                    
             }            
             else //si tenim objectiu
             {
@@ -283,17 +288,24 @@ public class Robot : MonoBehaviour {
     {
         int fishOrCoral = Random.Range(0, 2);
         fishOrCoral = Mathf.Clamp(fishOrCoral, 0, 1);
-        
+        print(fishOrCoral);
         if (fishOrCoral == 0)
             target = investigableObjects[Random.Range(0, investigableObjects.Count)].transform;
         else
         {
             GameObject[] fishes = GameObject.FindGameObjectsWithTag("FISH");
             GameObject chosen;
+            int saveNum = 0;
             do
             {
+                saveNum++;
                 chosen = fishes[Random.Range(0, fishes.Length)];
-            } while (chosen.transform.position.x > 8 && chosen.transform.position.x < -8 && !alreadyInvestigated.Contains(chosen)); //si està al centre de la pantalla i no l'haviem investigat
+                if (saveNum > 100)
+                {
+                    target = investigableObjects[Random.Range(0, investigableObjects.Count)].transform;
+                    return;
+                }                    
+            } while (chosen.transform.position.x > 6 && chosen.transform.position.x < -6 && !alreadyInvestigated.Contains(chosen)); //si està al centre de la pantalla i no l'haviem investigat
 
             target = chosen.transform;
             speed *= 1.5f;

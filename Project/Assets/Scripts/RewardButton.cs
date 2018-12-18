@@ -26,11 +26,6 @@ public class RewardButton : MonoBehaviour {
         Camera.main.GetComponent<EnergyManager>().InvestigationReward(transform.parent.gameObject, reward);        
     }
 
-    void SomethingFailed ()
-    {
-        Camera.main.GetComponent<EnergyManager>().UpdateCounter(1);
-        Time.timeScale = 1;
-        transform.parent.gameObject.SetActive(false);
-    }
+    
 
 }
