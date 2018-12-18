@@ -7,11 +7,10 @@ public class Energy : MonoBehaviour {
     public float speed;
     public float mapYLimit;
     public AudioClip bubbleDestroy;
-    public AudioSource BDestroy;
-    private bool clicked = false;
+    
     // Use this for initialization
     void Start () {
-        BDestroy.clip = bubbleDestroy;
+        
 	}
 	
 	// Update is called once per frame
@@ -24,30 +23,20 @@ public class Energy : MonoBehaviour {
         if (transform.position.y - GetComponent<SpriteRenderer>().size.y / 2 > mapYLimit)
         {
             Destroy(gameObject);
-        }
-        //Debug.Log(clicked);
-        if (clicked==true) {
-            Debug.Log(clicked);
-            BDestroy.Play();
-            clicked = false;
-        }
+        }       
     }
     
     //Is clicked?
     private void OnMouseDown()
     {
         
+        GetComponent<AudioSource>().Play();
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;//per si a cas que no detecti el click
+
         Camera.main.GetComponent<EnergyManager>().UpdateCounter(1);
-        clicked = true;
-        //Debug.Log(clicked);
-        if (clicked == true)
-        {
-            //Debug.Log(clicked);
-            BDestroy.Play();
-            clicked = false;
-        }
-        
-        Destroy(gameObject);
+                
+        Destroy(gameObject, bubbleDestroy.length);
         
     }
 }
