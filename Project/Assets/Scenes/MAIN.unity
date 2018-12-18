@@ -4887,9 +4887,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e06b1fc37d7d49747ad5a93ed79a3d55, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4b5085c0528bb2044b7f93c01ba7da3e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5614,7 +5614,7 @@ MonoBehaviour:
         m_MethodName: CloseUIElement
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 595082342}
+          m_ObjectArgument: {fileID: 926925691}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -19246,7 +19246,7 @@ MonoBehaviour:
         m_MethodName: CloseUIElement
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1893785962}
+          m_ObjectArgument: {fileID: 602160687}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -19720,7 +19720,7 @@ MonoBehaviour:
         m_MethodName: CloseUIElement
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1905441571}
+          m_ObjectArgument: {fileID: 1254155712}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -19990,7 +19990,7 @@ MonoBehaviour:
         m_MethodName: CloseUIElement
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1932037772}
+          m_ObjectArgument: {fileID: 2096780476}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
