@@ -15,12 +15,22 @@ public class RewardButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+		if (Input.GetKey(KeyCode.Escape) && isActiveAndEnabled)
+        {
+            DoOnClick();
+        }
+	}    
 
     void DoOnClick ()
     {
-        Camera.main.GetComponent<EnergyManager>().InvestigationReward(transform.parent.gameObject, reward);
+        Camera.main.GetComponent<EnergyManager>().InvestigationReward(transform.parent.gameObject, reward);        
+    }
+
+    void SomethingFailed ()
+    {
+        Camera.main.GetComponent<EnergyManager>().UpdateCounter(1);
+        Time.timeScale = 1;
+        transform.parent.gameObject.SetActive(false);
     }
 
 }
