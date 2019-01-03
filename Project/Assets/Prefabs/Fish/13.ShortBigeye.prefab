@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementType: 0
-  speed: 5
+  speed: 3
   captured: 0
 --- !u!114 &114730892963110408
 MonoBehaviour:

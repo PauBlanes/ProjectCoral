@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementType: 0
-  speed: 5
+  speed: 3
   captured: 0
 --- !u!212 &212532418719804810
 SpriteRenderer:

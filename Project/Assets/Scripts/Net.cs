@@ -62,7 +62,7 @@ public class Net : MonoBehaviour {
             Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(-5);
 
             if (collision.gameObject.GetComponent<HealthSystem>() != null)
-                collision.gameObject.GetComponent<HealthSystem>().UpdateHealth(-25);
+                collision.gameObject.GetComponent<HealthSystem>().UpdateHealth(-5);
 
             //Fish
             if (collision.gameObject.GetComponent<FishMovement>() != null)

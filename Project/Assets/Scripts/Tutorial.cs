@@ -106,7 +106,7 @@ public class Tutorial : MonoBehaviour {
         if (i < 3)
             Camera.main.GetComponent<EcosystemManager>().SpawnConcreteThread(i);
         else
-            Camera.main.GetComponent<EcosystemManager>().RepairThreat();
+            Camera.main.GetComponent<EcosystemManager>().BleachThreat();
 
     }
 

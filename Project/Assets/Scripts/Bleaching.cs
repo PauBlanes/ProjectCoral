@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bleaching : MonoBehaviour {
 
@@ -126,7 +127,7 @@ public class Bleaching : MonoBehaviour {
         while(currentBleachLevel <= 0)
         {
            GetComponent<HealthSystem>().UpdateHealth(-5); 
-           yield return new WaitForSeconds(2);
+           yield return new WaitForSeconds(5);
         }
     }
 }

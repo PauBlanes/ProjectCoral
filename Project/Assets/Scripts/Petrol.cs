@@ -38,7 +38,7 @@ public class Petrol : MonoBehaviour {
         if (collision.tag.Contains("FISH"))
         {
             //Si un peix el toca es debilita l'ecosistema
-            Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(-5);
+            Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(-3);
 
             //embrutar el peix
             collision.gameObject.GetComponent<SpriteRenderer>().color = Color.black;       

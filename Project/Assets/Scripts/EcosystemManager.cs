@@ -39,6 +39,10 @@ public class EcosystemManager : MonoBehaviour {
     public Popup[] positivePopups;
     public Popup[] negativePopups;
 
+    //Icono per el blanqueamiento
+    public Image bleachIcon;
+    private IEnumerator blinkCoroutine;
+
 	// Use this for initialization
 	void Start () {
         
@@ -75,7 +79,11 @@ public class EcosystemManager : MonoBehaviour {
         //Actualitzar UI inicialment
         ecosystemEvolution = maxHealth / 2;
         lastCheckpoint = ecosystemEvolution;
-        UpdateSystemHealth(0);    
+        UpdateSystemHealth(0);
+
+        //amaguen el icono de bleach
+        bleachIcon.enabled = false;
+        blinkCoroutine = blinkIcon();        
     }
 
     // Update is called once per frame
@@ -100,7 +108,7 @@ public class EcosystemManager : MonoBehaviour {
                 if (threadIndex < 3) //si no es el de reparar
                     Instantiate(threats[threadIndex], new Vector3(Random.Range(-12, 12), 15, 0), Quaternion.identity);
                 else
-                    RepairThreat();                
+                    BleachThreat();                
             }
             else
                 yield return null;
@@ -218,7 +226,7 @@ public class EcosystemManager : MonoBehaviour {
         activeCorals.Remove(coral);
     }
     
-    public void RepairThreat()
+    public void BleachThreat()
     {
         List<GameObject> coralsToBleach = new List<GameObject>(); //corals possibles per a que es blanquegin
         foreach (GameObject coral in activeCorals)
@@ -235,7 +243,11 @@ public class EcosystemManager : MonoBehaviour {
             GameObject t = coralsToBleach[Random.Range(0, coralsToBleach.Count)];
             t.GetComponent<Bleaching>().StartBleaching();
             coralsToBleach.Remove(t);
-        }        
+        }
+
+        //Feedback de que empieza un blanqueamiento
+        StopCoroutine(blinkCoroutine); //per si estava activada d'un altre encara
+        StartCoroutine(blinkCoroutine);
     }
 
     public void UpdateInvestigationUI()
@@ -264,4 +276,15 @@ public class EcosystemManager : MonoBehaviour {
         Time.timeScale = 0;
     }
     
+    IEnumerator blinkIcon ()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            bleachIcon.enabled = true;
+            yield return new WaitForSeconds(0.35f);
+            bleachIcon.enabled = false;
+            yield return new WaitForSeconds(0.35f);
+        }
+        
+    }
 }
