@@ -288,7 +288,7 @@ public class Robot : MonoBehaviour {
     {
         int fishOrCoral = Random.Range(0, 2);
         fishOrCoral = Mathf.Clamp(fishOrCoral, 0, 1);
-        print(fishOrCoral);
+        
         if (fishOrCoral == 0)
             target = investigableObjects[Random.Range(0, investigableObjects.Count)].transform;
         else

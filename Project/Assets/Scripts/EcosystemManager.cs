@@ -83,16 +83,17 @@ public class EcosystemManager : MonoBehaviour {
 
         //amaguen el icono de bleach
         bleachIcon.enabled = false;
-        blinkCoroutine = blinkIcon();        
+        blinkCoroutine = BlinkIcon();        
     }
 
     // Update is called once per frame
     void Update () {        
     }
     
-    public void SpawnConcreteThread(int i)
+    public void SpawnConcreteThread(int i) //per quan acabes d'aconseguir el robot i volem mostrar quina és l'amenaça
     {
         Instantiate(threats[i], new Vector3(Random.Range(-12, 12), 15, 0), Quaternion.identity);
+        GetComponent<Metrics>().AddThreatInfo(i, Time.time);
     }
 
     IEnumerator SpawnThreads()
@@ -101,14 +102,20 @@ public class EcosystemManager : MonoBehaviour {
         {            
             if (!Tutorial.showingInfo && Tutorial.acceptedThreads - 1 >= 0)
             {
+                
                 timeToWait = Random.Range(minThreatTime, maxThreadTime);
                 yield return new WaitForSeconds(timeToWait);
-
-                int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);                
+                
+                int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);
                 if (threadIndex < 3) //si no es el de reparar
+                {                    
                     Instantiate(threats[threadIndex], new Vector3(Random.Range(-12, 12), 15, 0), Quaternion.identity);
+                }
                 else
-                    BleachThreat();                
+                    BleachThreat();
+
+                
+                GetComponent<Metrics>().AddThreatInfo(threadIndex, Time.time);
             }
             else
                 yield return null;
@@ -276,7 +283,7 @@ public class EcosystemManager : MonoBehaviour {
         Time.timeScale = 0;
     }
     
-    IEnumerator blinkIcon ()
+    IEnumerator BlinkIcon ()
     {
         for (int i = 0; i < 8; i++)
         {

@@ -43,11 +43,12 @@ public class RobotManager : MonoBehaviour {
                     if (r.tagName != "Investigable") //si no es de investigacio restem el cost
                     {
                         Camera.main.GetComponent<EnergyManager>().UpdateCounter(-r.cost);
+                        GetComponent<Metrics>().RobotSelected(r.tagName, Time.time); //per contar el temps que triga a responder a l'amenaça
                     }
                     else //si es de investigació resetegem el temps
                     {
                         iRobotCounter = iRobotTimer;
-                    }
+                    }                    
                 }
             }            
         }

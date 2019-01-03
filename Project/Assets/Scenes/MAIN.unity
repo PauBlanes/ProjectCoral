@@ -4671,6 +4671,7 @@ GameObject:
   - component: {fileID: 519420036}
   - component: {fileID: 519420037}
   - component: {fileID: 519420038}
+  - component: {fileID: 519420040}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5025,6 +5026,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 318241989}
+--- !u!114 &519420040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9853c7dd46f5fee4cb5dc0b8e0d198da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &527163957
 GameObject:
   m_ObjectHideFlags: 0
@@ -17396,7 +17408,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 705529f8e6d5cfe4aa6b3e048035da9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 677c8fa6627b7114885b9c62629497d2, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21849,7 +21861,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d2431237c5291d942baa708780dea92a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2df510f5eed8b524394a30c046fc80e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
