@@ -4,82 +4,56 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
 
-    private Vector2 mousePosition, movement;
+    private Vector2 movement;
 
-    private Camera cam;
+    private float maxX, minX, maxY, minY;
 
-    private float camWidth, camHeight, maxX, minX, maxY, minY;
+    public int speedMagnitude;
+    public int zoomSpeed;
 
-    public int speed;
+    private Vector3 speed = Vector3.zero;
 
-    private SpriteRenderer sprRendererBG;
+    private SpriteRenderer sprRendererBG;    
 
     // Use this for initialization
     void Start ()
     {
-        sprRendererBG = GameObject.FindGameObjectWithTag("BG").GetComponent<SpriteRenderer>();
+        //calcular bordes de la pantalla segon el sprite del fons
+        sprRendererBG = GameObject.FindGameObjectWithTag("BG").GetComponent<SpriteRenderer>();        
+        maxX = sprRendererBG.size.x / 2;
+        minX = -(sprRendererBG.size.x / 2);
 
-        cam = GetComponent<Camera>();
-        
-        camHeight = cam.orthographicSize * 2f;
-        camWidth = camHeight * cam.aspect;
-
-        maxX = sprRendererBG.size.x / 2 - camWidth / 2;
-        minX = -(sprRendererBG.size.x / 2) + camWidth / 2;
-
-        maxY = sprRendererBG.size.y / 2 - camHeight / 2;
-        minY = -(sprRendererBG.size.y / 2) + camHeight / 2;
-
+        maxY = sprRendererBG.size.y / 2;
+        minY = -(sprRendererBG.size.y / 2);
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        GetInputs();
-        
-        if(Input.GetKey(KeyCode.W))
-            movement.y = speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.S))
-            movement.y = -speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.A))
-            movement.x = -speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.D))
-            movement.x = speed * Time.deltaTime;
-
-        /*float maxMouseX = Mathf.Clamp(mousePosition.x, -12, 12);
-        float maxMouseY = Mathf.Clamp(mousePosition.y, -6, 6);
-        mousePosition = new Vector2(maxMouseX, maxMouseY);*/
-
-        /*if (mousePosition.y > camHeight/2 - 15)
+        //Fer zoom
+        if (Input.GetAxis("Mouse ScrollWheel") != 0)
         {
-            movement.y = speed * Time.deltaTime;
+            float camSize = Camera.main.orthographicSize;
+            camSize -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+            camSize = Mathf.Clamp(camSize, 4, 10);
+            Camera.main.orthographicSize = camSize;
         }
-        else if (mousePosition.y < -(camHeight/2 - 15))
-        {
-            movement.y = -speed * Time.deltaTime;
-        }*/
 
-        /*if (mousePosition.x > camWidth/2 - 10)
-        {
-            movement.x = speed * Time.deltaTime;
-        }
-        else if (mousePosition.x < -(camWidth/2 - 200))
-        {
-            movement.x = -speed * Time.deltaTime;
-        }*/
+        //Recalculem els bordes de la camera
+        float vertExtent = Camera.main.orthographicSize;
+        float horzExtent = vertExtent * Screen.width / Screen.height;
+                
+        //Setegem nova pos
+        speed.x = Input.GetAxis("Horizontal") * speedMagnitude * Time.deltaTime;
+        speed.y = Input.GetAxis("Vertical") * speedMagnitude * Time.deltaTime;
+        Vector3 newPos = transform.position + speed;
+                        
+        //Clampejar nova posicio              
+        newPos.x = Mathf.Clamp(newPos.x, minX + horzExtent, maxX - horzExtent);
+        newPos.y = Mathf.Clamp(newPos.y, minY + vertExtent, maxY - vertExtent);
 
-        movement = new Vector2(Mathf.Clamp(transform.position.x + movement.x, minX, maxX), 
-            Mathf.Clamp(transform.position.y + movement.y, minY, maxY));
-
-        transform.position = new Vector3(movement.x, movement.y, transform.position.z);
-
-        movement = Vector2.zero;
-
+        //Setejar la pos
+        transform.position = newPos;
     }
-
-    void GetInputs() {
-
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-
-    }
+   
 }
