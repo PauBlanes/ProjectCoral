@@ -22,8 +22,8 @@ public class EcosystemManager : MonoBehaviour {
     public int breakPoint = 5; //quant ha d'augmentar o disminuir pq passi algo
     public int maxHealth;
 
-    int minThreatTime = 9;
-    int maxThreadTime = 20;
+    float minThreatTime = 9;
+    float maxThreadTime = 20;
 
     public List<GameObject> activeCorals;
     List<GameObject> hiddenCorals = new List<GameObject>();
@@ -42,6 +42,10 @@ public class EcosystemManager : MonoBehaviour {
     //Icono per el blanqueamiento
     public Image bleachIcon;
     private IEnumerator blinkCoroutine;
+
+
+    //Popup para cuando aparece una especie nueva
+    public GameObject newSpecies_popup;
 
 	// Use this for initialization
 	void Start () {
@@ -83,7 +87,9 @@ public class EcosystemManager : MonoBehaviour {
 
         //amaguen el icono de bleach
         bleachIcon.enabled = false;
-        blinkCoroutine = BlinkIcon();        
+        blinkCoroutine = BlinkIcon();  
+        
+        
     }
 
     // Update is called once per frame
@@ -148,18 +154,27 @@ public class EcosystemManager : MonoBehaviour {
 
                         temp.SetActive(true);
                         hiddenCorals.Remove(temp);
-                    }
-                    lastCheckpoint = ecosystemEvolution;
+
+                        //Avisar que hay una nueva especie
+                        ShowNewSpecies();
+                    }                    
                     if (Camera.main.GetComponent<FishManager>().maxFishes < 25)
                     {
                         Camera.main.GetComponent<FishManager>().maxFishes++;
-                        Camera.main.GetComponent<FishManager>().maxFishType++;                        
-                    }
+                        Camera.main.GetComponent<FishManager>().maxFishType++;
 
-                    //Mostrar popup si cal
+                        //Avisar que hay una nueva especie
+                        ShowNewSpecies();
+                    }
+                    lastCheckpoint = ecosystemEvolution;
+
+                    //Fem més difícil
+                    minThreatTime -= 0.2f;
+                    maxThreadTime -= 0.5f;
+                    
+                    //Mostrar popup de millora del sistema si cal
                     if (ecosystemEvolution >= ((float)maxHealth/2 + (float)maxHealth/4) && !positivePopups[0].AlreadyShown)
-                    {
-                        maxThreadTime = 16; //fem més difícil
+                    {                        
                         positivePopups[0].AlreadyShown = true; //no em deixa dins de la funció
                         positivePopups[0].popup.SetActive(true);
                         Time.timeScale = 0;
@@ -167,8 +182,7 @@ public class EcosystemManager : MonoBehaviour {
                     }
                         
                     if (ecosystemEvolution >= maxHealth && !positivePopups[1].AlreadyShown)
-                    {
-                        maxThreadTime = 12; //fem més difícil
+                    {                        
                         positivePopups[1].AlreadyShown = true; //no em deixa dins de la funció
                         positivePopups[1].popup.SetActive(true);
                         Time.timeScale = 0;
@@ -293,5 +307,14 @@ public class EcosystemManager : MonoBehaviour {
             yield return new WaitForSeconds(0.35f);
         }
         
+    }
+
+    void ShowNewSpecies()
+    {
+        if (!newSpecies_popup.activeInHierarchy)
+        {
+            newSpecies_popup.SetActive(true);
+            Time.timeScale = 0;
+        }       
     }
 }

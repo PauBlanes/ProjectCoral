@@ -42,7 +42,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[0].SetActive(false);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(7f);
 
         //Mostrar primera info de botó i activar el primer botó
         infoImages[1].SetActive(true);               
@@ -52,7 +52,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[1].SetActive(false);
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(30f);
 
         //Mostrar segona info de botó i activar el primer botó
         infoImages[2].SetActive(true);        
@@ -63,7 +63,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[2].SetActive(false);
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(30f);
 
         //Mostrar tercera info de botó i activar el primer botó
         infoImages[3].SetActive(true);             
@@ -74,7 +74,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[3].SetActive(false);
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(30f);
 
         //Mostrar quarta info de botó i activar el primer botó
         infoImages[4].SetActive(true);       
@@ -85,7 +85,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[4].SetActive(false);
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(30f);
 
         //Mostrar cinquena info de botó i activar el primer botó
         infoImages[5].SetActive(true);        
@@ -97,7 +97,7 @@ public class Tutorial : MonoBehaviour {
 
         //amagar imatge i esperar
         infoImages[5].SetActive(false);
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(30f);
     }
 
     IEnumerator WaitAndSpawnThreat(int i)
