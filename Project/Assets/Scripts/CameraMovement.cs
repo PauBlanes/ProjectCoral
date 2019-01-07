@@ -20,11 +20,11 @@ public class CameraMovement : MonoBehaviour {
     {
         //calcular bordes de la pantalla segon el sprite del fons
         sprRendererBG = GameObject.FindGameObjectWithTag("BG").GetComponent<SpriteRenderer>();        
-        maxX = sprRendererBG.size.x / 2;
-        minX = -(sprRendererBG.size.x / 2);
+        maxX = GameObject.FindGameObjectWithTag("RBorder").transform.position.x;
+        minX = GameObject.FindGameObjectWithTag("LBorder").transform.position.x;
 
-        maxY = sprRendererBG.size.y / 2;
-        minY = -(sprRendererBG.size.y / 2);
+        maxY = GameObject.FindGameObjectWithTag("TBorder").transform.position.x;
+        minY = GameObject.FindGameObjectWithTag("DBorder").transform.position.x;
     }
 	
 	// Update is called once per frame
