@@ -59,11 +59,11 @@ public class Net : MonoBehaviour {
         if ((collision.tag == "CORAL" || collision.tag.Contains("FISH")) && state == States.moving)
         {
 
-            Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(-5);
+            Camera.main.GetComponent<EcosystemManager>().UpdateSystemHealth(-0.5f); //restar vida al sistema
 
             if (collision.gameObject.GetComponent<HealthSystem>() != null)
-                collision.gameObject.GetComponent<HealthSystem>().UpdateHealth(-5);
-
+                collision.gameObject.GetComponent<HealthSystem>().UpdateHealth(-5); //Resta vida al coral
+            print(collision);
             //Fish
             if (collision.gameObject.GetComponent<FishMovement>() != null)
             {

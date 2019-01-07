@@ -17,12 +17,12 @@ public class EcosystemManager : MonoBehaviour {
         }
     }
 
-    private int ecosystemEvolution; //per controlar cada quan passa algo. Aquest es el numero que es necessita pq passi algo
-    private int lastCheckpoint;
-    public int breakPoint = 5; //quant ha d'augmentar o disminuir pq passi algo
+    private float ecosystemEvolution; //per controlar cada quan passa algo. Aquest es el numero que es necessita pq passi algo
+    private float lastCheckpoint;
+    public int breakPoint = 10; //quant ha d'augmentar o disminuir pq passi algo
     public int maxHealth;
 
-    float minThreatTime = 9;
+    float minThreatTime = 10;
     float maxThreadTime = 20;
 
     public List<GameObject> activeCorals;
@@ -46,6 +46,8 @@ public class EcosystemManager : MonoBehaviour {
 
     //Popup para cuando aparece una especie nueva
     public GameObject newSpecies_popup;
+    int currCountToSpecie = 0;
+    int countToSpecie = 3;
 
 	// Use this for initialization
 	void Start () {
@@ -144,33 +146,43 @@ public class EcosystemManager : MonoBehaviour {
                     }
 
                     //apareixen nous corals i peixos
-                    if (hiddenCorals.Count > 0)
-                    {
-                        GameObject temp = hiddenCorals[Random.Range(0, hiddenCorals.Count - 1)];
-                        activeCorals.Add(temp);
+                    currCountToSpecie++;
+                    if(currCountToSpecie >= countToSpecie)
+                    {                        
+                        if (hiddenCorals.Count > 0)
+                        {
+                            GameObject temp = hiddenCorals[Random.Range(0, hiddenCorals.Count - 1)];
+                            activeCorals.Add(temp);
 
-                        if(!Robot.alreadyInvestigated.Contains(temp))
-                            Robot.investigableObjects.Add(temp);
+                            if (!Robot.alreadyInvestigated.Contains(temp))
+                                Robot.investigableObjects.Add(temp);
 
-                        temp.SetActive(true);
-                        hiddenCorals.Remove(temp);
+                            temp.SetActive(true);
+                            hiddenCorals.Remove(temp);
 
-                        //Avisar que hay una nueva especie
-                        ShowNewSpecies();
-                    }                    
-                    if (Camera.main.GetComponent<FishManager>().maxFishes < 25)
-                    {
-                        Camera.main.GetComponent<FishManager>().maxFishes++;
-                        Camera.main.GetComponent<FishManager>().maxFishType++;
+                            //Avisar que hay una nueva especie
+                            ShowNewSpecies();
+                        }
+                        if (Camera.main.GetComponent<FishManager>().maxFishes < 25)
+                        {
+                            Camera.main.GetComponent<FishManager>().maxFishes++;
+                            Camera.main.GetComponent<FishManager>().maxFishType++;
 
-                        //Avisar que hay una nueva especie
-                        ShowNewSpecies();
+                            //Avisar que hay una nueva especie
+                            ShowNewSpecies();
+                        }
+
+                        currCountToSpecie = 0;
                     }
+                    
                     lastCheckpoint = ecosystemEvolution;
 
                     //Fem més difícil
-                    minThreatTime -= 0.2f;
-                    maxThreadTime -= 0.5f;
+                    if (minThreatTime >= 0.5 && maxThreadTime >= 0.5)
+                    {
+                        minThreatTime -= 0.5f;
+                        maxThreadTime -= 0.5f;
+                    }                  
                     
                     //Mostrar popup de millora del sistema si cal
                     if (ecosystemEvolution >= ((float)maxHealth/2 + (float)maxHealth/4) && !positivePopups[0].AlreadyShown)
@@ -199,21 +211,32 @@ public class EcosystemManager : MonoBehaviour {
                         coral.GetComponent<HealthSystem>().UpdateHealth(-10);
                     }
 
-                    //desapareixen corals
-                    if (activeCorals.Count > 0)
-                    {
-                        GameObject temp = activeCorals[Random.Range(0, activeCorals.Count - 1)];
-                        hiddenCorals.Add(temp);
-                        temp.SetActive(false);
-                        activeCorals.Remove(temp);
-                        Robot.investigableObjects.Remove(temp);                        
+                    //desapareixen corals i peixos
+                    currCountToSpecie--;                    
+                    if (currCountToSpecie < -countToSpecie)
+                    {                        
+                        if (activeCorals.Count > 0)
+                        {
+                            GameObject temp = activeCorals[Random.Range(0, activeCorals.Count - 1)];
+                            hiddenCorals.Add(temp);
+                            temp.SetActive(false);
+                            activeCorals.Remove(temp);
+                            Robot.investigableObjects.Remove(temp);
+                        }
+                        
+                        if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
+                        {
+                            Camera.main.GetComponent<FishManager>().maxFishes--;
+                            Camera.main.GetComponent<FishManager>().maxFishType--;
+                        }
+
+                        currCountToSpecie = 0;
                     }
                     lastCheckpoint = ecosystemEvolution;
-                    if (Camera.main.GetComponent<FishManager>().maxFishes > 0)
-                    {
-                        Camera.main.GetComponent<FishManager>().maxFishes--;
-                        Camera.main.GetComponent<FishManager>().maxFishType--;                        
-                    }
+
+                    //Fem més fàcil
+                    minThreatTime += 1f;
+                    maxThreadTime += 1f;
 
                     //Mostrar popup si cal
                     if (ecosystemEvolution <= ((float)maxHealth/2 - (float)maxHealth/4) && !negativePopups[0].AlreadyShown)
@@ -276,7 +299,7 @@ public class EcosystemManager : MonoBehaviour {
         investigationText.text = Robot.alreadyInvestigated.Count + "/43";
     }
 
-    public void UpdateSystemHealth(int value)
+    public void UpdateSystemHealth(float value)
     {
         //Actualitzar dades
         ecosystemEvolution += value;
