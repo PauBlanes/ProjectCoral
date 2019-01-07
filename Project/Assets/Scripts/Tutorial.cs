@@ -11,6 +11,8 @@ public class Tutorial : MonoBehaviour {
     public static bool showingInfo;
     public static int acceptedThreads = 0; //al principi no deixem fer spawn a cap amenaça
 
+    private bool activeSkillButtons = false;
+
 	// Use this for initialization
 	void Start () {
         //Amagar tot
@@ -29,6 +31,22 @@ public class Tutorial : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(Time.timeScale == 0) {
+
+            foreach (GameObject button in skillButtons) {
+                button.SetActive(false);
+            }
+
+        } else {
+
+            if (activeSkillButtons) {
+                for (int i = 0; i <= acceptedThreads; i++) {
+                    skillButtons[i].SetActive(true);
+                }
+            }
+
+        }
 		
 	}
 
@@ -47,6 +65,7 @@ public class Tutorial : MonoBehaviour {
         //Mostrar primera info de botó i activar el primer botó
         infoImages[1].SetActive(true);               
         showingInfo = true;
+        activeSkillButtons = true;
         Time.timeScale = 0;
         yield return new WaitUntil(() => !showingInfo);
 
