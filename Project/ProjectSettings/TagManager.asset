@@ -15,6 +15,10 @@ TagManager:
   - Net
   - Investigation
   - Canvas
+  - LBorder
+  - RBorder
+  - TBorder
+  - DBorder
   layers:
   - Default
   - TransparentFX

@@ -11,9 +11,7 @@ public class FishMovement : MonoBehaviour {
 
     public int speed;
 
-    private SpriteRenderer sprFish;
-
-    private SpriteRenderer sprRendererBG;
+    private SpriteRenderer sprFish;    
 
     private Vector3 movement = Vector3.zero;
 
@@ -24,12 +22,27 @@ public class FishMovement : MonoBehaviour {
 
     public bool captured = false;
 
+    //per fer els bordes de la pantall
+    struct Borders
+    {
+        public float left;
+        public float right;
+        public float top;
+        public float down;
+    }
+    Borders borders;
+
+
     // Use this for initialization
     void Start () {
 
         sprFish = GetComponent<SpriteRenderer>();
 
-        sprRendererBG = GameObject.FindGameObjectWithTag("BG").GetComponent<SpriteRenderer>();
+        //definir els bordes        
+        borders.left = GameObject.FindGameObjectWithTag("LBorder").transform.position.x;
+        borders.right = GameObject.FindGameObjectWithTag("RBorder").transform.position.x;
+        borders.top = GameObject.FindGameObjectWithTag("TBorder").transform.position.x;
+        borders.down = GameObject.FindGameObjectWithTag("DBorder").transform.position.x;
 
         alive = true;
 
@@ -48,18 +61,18 @@ public class FishMovement : MonoBehaviour {
                 sprFish.flipX = true;
             }
             
-            initPos.x = -(sprRendererBG.size.x / 2 + sprFish.size.x / 2);
-            initPos.y = Random.Range(-(sprRendererBG.size.y / 2 - sprFish.size.y / 2), sprRendererBG.size.y / 2 - sprFish.size.y / 2);
+            initPos.x = borders.left - sprFish.size.x / 2;
+            initPos.y = Random.Range(-8, borders.top - sprFish.size.y / 2);
 
         } else if (movementType == Type.HorizontalToLeft) {
 
-            initPos.x = sprRendererBG.size.x / 2 + sprFish.size.x / 2;
-            initPos.y = Random.Range(-(sprRendererBG.size.y / 2 - sprFish.size.y / 2), sprRendererBG.size.y / 2 - sprFish.size.y / 2);
+            initPos.x = borders.right + sprFish.size.x / 2;
+            initPos.y = Random.Range(-8, borders.top - sprFish.size.y / 2);
 
         } else {
 
-            initPos.y = -(sprRendererBG.size.y / 2 + sprFish.size.y / 2);
-            initPos.x = Random.Range(-(sprRendererBG.size.x / 2 - sprFish.size.x / 2), sprRendererBG.size.x / 2 - sprFish.size.x / 2);
+            initPos.y = borders.down - sprFish.size.y / 2;
+            initPos.x = Random.Range((borders.left - sprFish.size.x / 2), borders.right + sprFish.size.x / 2);
 
             circleDistance = sprFish.size.y * 5f;
             circleRadius = sprFish.size.x / 2;
@@ -79,17 +92,17 @@ public class FishMovement : MonoBehaviour {
 
             switch (movementType) {
                 case Type.HorizontalToLeft:
-                    if (transform.position.x + sprFish.size.x / 2 < -(sprRendererBG.size.x / 2)) alive = false;
+                    if (transform.position.x + sprFish.size.x / 2 < borders.left) alive = false;
                     movement.x = -speed * Time.deltaTime;
                     break;
 
                 case Type.HorizontalToRight:
-                    if (transform.position.x - sprFish.size.x / 2 > sprRendererBG.size.x / 2) alive = false;
+                    if (transform.position.x - sprFish.size.x / 2 > borders.right) alive = false;
                     movement.x = speed * Time.deltaTime;
                     break;
 
                 case Type.Vertical:
-                    if (transform.position.y - sprFish.size.y / 2 > sprRendererBG.size.y / 2) alive = false;
+                    if (transform.position.y - sprFish.size.y / 2 > borders.top) alive = false;
                     movement.y = speed * Time.deltaTime;
                     break;
             }

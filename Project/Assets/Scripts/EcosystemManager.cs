@@ -71,9 +71,6 @@ public class EcosystemManager : MonoBehaviour {
             Robot.investigableObjects.Add(activeCoral);
         }
 
-        //Setegem els peixos
-        Camera.main.GetComponent<FishManager>().maxFishes = 5;
-
         //Spawnejar amenaces
         StartCoroutine(SpawnThreads());
 
@@ -117,7 +114,7 @@ public class EcosystemManager : MonoBehaviour {
                 int threadIndex = Random.Range(0, Tutorial.acceptedThreads - 1);
                 if (threadIndex < 3) //si no es el de reparar
                 {                    
-                    Instantiate(threats[threadIndex], new Vector3(Random.Range(-12, 12), 15, 0), Quaternion.identity);
+                    Instantiate(threats[threadIndex], new Vector3(Random.Range(-25, 25), 15, 0), Quaternion.identity);
                 }
                 else
                     BleachThreat();

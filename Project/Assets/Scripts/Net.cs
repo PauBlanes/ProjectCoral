@@ -12,6 +12,9 @@ public class Net : MonoBehaviour {
 
     public float speed;
 
+    float leftBorder;
+    float rightBorder;
+
     // Use this for initialization
     void Start()
     {
@@ -25,6 +28,10 @@ public class Net : MonoBehaviour {
             direction = -1;
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
+
+        //setejar bordes
+        leftBorder = GameObject.FindGameObjectWithTag("LBorder").transform.position.x;
+        rightBorder = GameObject.FindGameObjectWithTag("RBorder").transform.position.x;
     }
 
     // Update is called once per frame
@@ -41,7 +48,8 @@ public class Net : MonoBehaviour {
         else if (state == States.moving)
         {            
             transform.position += new Vector3(direction,0,0) * Time.deltaTime * speed; 
-            if (transform.position.x > 23 || transform.position.x < -23)
+            if (transform.position.x - GetComponent<SpriteRenderer>().size.x/2 > rightBorder 
+                || transform.position.x + GetComponent<SpriteRenderer>().size.x / 2 < leftBorder)
             {
                 Destroy(gameObject);
             }
