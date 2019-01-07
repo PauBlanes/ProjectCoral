@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class RewardButton : MonoBehaviour {
 
     public static int reward = 10;
-
-	// Use this for initialization
-	void Start () {
+   
+    // Use this for initialization
+    void Start () {
         Button button = GetComponent<Button>();
         button.onClick.AddListener(DoOnClick);
+
+                
     }
 	
 	// Update is called once per frame
@@ -23,7 +25,8 @@ public class RewardButton : MonoBehaviour {
 
     void DoOnClick ()
     {
-        Camera.main.GetComponent<EnergyManager>().InvestigationReward(transform.parent.gameObject, reward);        
+        Camera.main.GetComponent<EnergyManager>().InvestigationReward(transform.parent.gameObject, reward);
+        Camera.main.GetComponent<RobotManager>().PlayRewardSound();
     }
 
     

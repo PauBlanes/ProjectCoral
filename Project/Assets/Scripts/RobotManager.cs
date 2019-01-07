@@ -20,8 +20,12 @@ public class RobotManager : MonoBehaviour {
     public float iRobotTimer;
     private float iRobotCounter;
 
-	// Use this for initialization
-	void Start () {
+    //Investigacio
+    public AudioClip investigationReward;
+    AudioSource aS;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -85,5 +89,18 @@ public class RobotManager : MonoBehaviour {
                 rH.robotButton.GetComponent<Image>().color = color;
             }*/
         }
-    }   
+    }
+    
+    public void PlayRewardSound()
+    {
+        aS = gameObject.AddComponent<AudioSource>();
+        aS.clip = investigationReward;
+        aS.playOnAwake = false;
+        aS.Play();        
+    }
+    IEnumerator DestroyAudioSource()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(aS);
+    }
 }

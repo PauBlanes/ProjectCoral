@@ -276,6 +276,8 @@ public class Robot : MonoBehaviour {
         }
         else //si hi ha un altre perseguim aquest
             state = States.walking;
+
+        Camera.main.GetComponent<RobotManager>().PlayRewardSound();
     }
 
     void Die ()

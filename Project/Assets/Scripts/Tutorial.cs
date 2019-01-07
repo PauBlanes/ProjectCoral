@@ -21,7 +21,7 @@ public class Tutorial : MonoBehaviour {
         foreach (GameObject button in skillButtons)
         {
             button.SetActive(false);
-        }
+        }       
 
         //Començar routina
         StartCoroutine(TutorialCoroutine());
