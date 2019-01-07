@@ -4925,6 +4925,7 @@ MonoBehaviour:
     robot: {fileID: 1017088702319696, guid: 0870f5cbd0d086a45b4a8169b79b4668, type: 2}
     cooldownIcon: {fileID: 1797695599}
   iRobotTimer: 5
+  investigationReward: {fileID: 8300000, guid: 68f891c638fb8134e8539b0c8b0bbe3f, type: 3}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
