@@ -41,8 +41,8 @@ public class FishMovement : MonoBehaviour {
         //definir els bordes        
         borders.left = GameObject.FindGameObjectWithTag("LBorder").transform.position.x;
         borders.right = GameObject.FindGameObjectWithTag("RBorder").transform.position.x;
-        borders.top = GameObject.FindGameObjectWithTag("TBorder").transform.position.x;
-        borders.down = GameObject.FindGameObjectWithTag("DBorder").transform.position.x;
+        borders.top = GameObject.FindGameObjectWithTag("TBorder").transform.position.y;       
+        borders.down = GameObject.FindGameObjectWithTag("DBorder").transform.position.y;
 
         alive = true;
 
@@ -62,12 +62,12 @@ public class FishMovement : MonoBehaviour {
             }
             
             initPos.x = borders.left - sprFish.size.x / 2;
-            initPos.y = Random.Range(-8, borders.top - sprFish.size.y / 2);
+            initPos.y = Random.Range(-5, 11);
 
         } else if (movementType == Type.HorizontalToLeft) {
 
             initPos.x = borders.right + sprFish.size.x / 2;
-            initPos.y = Random.Range(-8, borders.top - sprFish.size.y / 2);
+            initPos.y = Random.Range(-5, 11);
 
         } else {
 

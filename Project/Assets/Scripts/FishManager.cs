@@ -20,7 +20,7 @@ public class FishManager : MonoBehaviour {
             Debug.Log(fish.name + " : " + (fish.GetComponent<SpriteRenderer>().size * fish.transform.localScale).magnitude);
         }*/
 
-        maxFishes = 15;
+        maxFishes = 10;
         StartCoroutine(FishSpawnRoutine());
 
     }

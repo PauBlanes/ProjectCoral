@@ -21,8 +21,8 @@ public class CameraMovement : MonoBehaviour {
         maxX = GameObject.FindGameObjectWithTag("RBorder").transform.position.x;
         minX = GameObject.FindGameObjectWithTag("LBorder").transform.position.x;
 
-        maxY = GameObject.FindGameObjectWithTag("TBorder").transform.position.x;
-        minY = GameObject.FindGameObjectWithTag("DBorder").transform.position.x;
+        maxY = GameObject.FindGameObjectWithTag("TBorder").transform.position.y;
+        minY = GameObject.FindGameObjectWithTag("DBorder").transform.position.y;
     }
 	
 	// Update is called once per frame
@@ -48,7 +48,7 @@ public class CameraMovement : MonoBehaviour {
                         
         //Clampejar nova posicio              
         newPos.x = Mathf.Clamp(newPos.x, minX + horzExtent, maxX - horzExtent);
-        newPos.y = Mathf.Clamp(newPos.y, minY - vertExtent/2, maxY + vertExtent/2);
+        newPos.y = Mathf.Clamp(newPos.y, minY + vertExtent, maxY - vertExtent);
 
         //Setejar la pos
         transform.position = newPos;
