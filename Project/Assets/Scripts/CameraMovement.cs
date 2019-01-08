@@ -12,14 +12,12 @@ public class CameraMovement : MonoBehaviour {
     public int zoomSpeed;
 
     private Vector3 speed = Vector3.zero;
-
-    private SpriteRenderer sprRendererBG;    
+    
 
     // Use this for initialization
     void Start ()
     {
-        //calcular bordes de la pantalla segon el sprite del fons
-        sprRendererBG = GameObject.FindGameObjectWithTag("BG").GetComponent<SpriteRenderer>();        
+        //calcular bordes de la pantalla                
         maxX = GameObject.FindGameObjectWithTag("RBorder").transform.position.x;
         minX = GameObject.FindGameObjectWithTag("LBorder").transform.position.x;
 
@@ -50,7 +48,7 @@ public class CameraMovement : MonoBehaviour {
                         
         //Clampejar nova posicio              
         newPos.x = Mathf.Clamp(newPos.x, minX + horzExtent, maxX - horzExtent);
-        newPos.y = Mathf.Clamp(newPos.y, minY + vertExtent, maxY - vertExtent);
+        newPos.y = Mathf.Clamp(newPos.y, minY - vertExtent/2, maxY + vertExtent/2);
 
         //Setejar la pos
         transform.position = newPos;
